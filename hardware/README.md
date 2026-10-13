@@ -53,7 +53,7 @@ Décision du 2026-10-13 : la première sonde est câblée sur une **plaque à pa
 
 | Fichier | Contenu | Régénération |
 |---|---|---|
-| `kicad/sonde-i2c-passive.kicad_sch` | Schéma KiCad 9 (ERC : 0 erreur, 0 avertissement) | `python3 hardware/kicad/gen_sch.py` |
+| `kicad/sonde-i2c-passive.kicad_sch` | Schéma KiCad, outils KiCad 10 (ERC : 0 erreur, 0 avertissement) | `python3 hardware/kicad/gen_sch.py` |
 | `kicad/export/` | PDF, SVG, PNG et nomenclature CSV | `kicad-cli sch export pdf/svg/bom` |
 | `fritzing/sonde-i2c-passive.fzz` | Câblage réel en vue platine : BA → sonde → analyseur FX2 → Raspberry Pi | `python3 hardware/fritzing/gen_fzz.py` |
 | `fritzing/export/` | Vue platine exportée par Fritzing (SVG, PNG) | `Fritzing -svg <dossier contenant le .fzz>` |

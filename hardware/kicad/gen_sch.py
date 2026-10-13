@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Génère le schéma KiCad 9 de la sonde passive (``sonde-i2c-passive.kicad_sch``).
+"""Génère le schéma KiCad (outils KiCad 10) de la sonde passive (``sonde-i2c-passive.kicad_sch``).
 
 Feature i2c-ba-sniffer-2026-10-009 (essensys-hub/essensys-feature-lifecycle#29), tâche 5.2.
 Réalisation sur plaque à pastilles (tâche 5.3) : pas de PCB.
 
-Usage : ``python3 hardware/kicad/gen_sch.py`` (KiCad 9 installé ; chemin des symboles
+Usage : ``python3 hardware/kicad/gen_sch.py`` (KiCad 10 installé ; chemin des symboles
 dans ``KICAD9_SYMBOL_DIR`` ou emplacement macOS par défaut). Utilitaires S-expression
 repris de essensys-i2c-etoile-0v/scripts/gen_sch.py.
 """
