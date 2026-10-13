@@ -1,0 +1,5 @@
+1005-1005 i2c-1: Start
+1160-1180 i2c-1: Write
+1020-1160 i2c-1: Address write: 12
+1180-1200 i2c-1: NACK
+1205-1205 i2c-1: Stop

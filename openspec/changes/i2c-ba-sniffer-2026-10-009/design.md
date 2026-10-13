@@ -43,15 +43,24 @@ Le change `essensys-i2c-ba-sniffer-2026-07-038` (essensys-memory) contient l'ana
 - GPIO du Pi avec `pigpio` : Linux n'est pas temps réel, les captures sont moins fiables qu'un échantillonnage matériel.
 - Module ESP32 N2 : c'est la cible permanente, mais il n'est pas encore fabriqué.
 
-### D2 — Entrée du décodeur : annotations sigrok avec numéros d'échantillon
+### D2 — Un seul flux brut, partagé entre sigrok et la détection des lignes bloquées
 
-**Choix :** le décodeur consomme la sortie texte de `sigrok-cli -P i2c:scl=D0:sda=D1 -A i2c --protocol-decoder-samplenum`. Il la lit en direct depuis un tube, ou en rejeu depuis une session `.sr` relue par `sigrok-cli -i`.
+**Choix :** l'acquisition (`sigrok-cli -d fx2lafw -O binary`), ou la relecture d'une capture (`sigrok-cli -i x.sr -O binary`), produit un **flux brut** (un octet par échantillon, bit n = voie Dn). Le décodeur Python :
+- l'envoie sur l'entrée standard d'un second `sigrok-cli -I binary -i - -P i2c:scl=…:sda=… -A i2c=… --protocol-decoder-samplenum`, qui fournit les événements I2C avec leurs numéros d'échantillon ;
+- le parcourt lui-même avec `bytes.translate` et `bytes.find` pour repérer une ligne SDA ou SCL au niveau bas pendant plus de 10 ms.
 
-Les lignes bloquées sont détectées par le décodeur `timing` de sigrok, lancé sur les mêmes voies dans la même commande : une période au niveau bas de plus de 10 ms constitue un défaut.
+Les enregistrements des deux sources sont fusionnés par numéro d'échantillon, derrière un filigrane commun. Le résultat ne dépend ni de la taille des blocs ni du rythme d'arrivée.
 
-**Pourquoi :** une seule source de vérité bas niveau, la même en direct et en rejeu, ce qui satisfait l'exigence de rejeu identique. Les numéros d'échantillon donnent un horodatage déterministe, indépendant de l'horloge de l'hôte.
+**Pourquoi :**
+- le direct et le rejeu passent par **exactement** le même code ;
+- le décodeur I2C de sigrok reste la seule source bas niveau du protocole (oracle) ;
+- les numéros d'échantillon donnent un horodatage déterministe.
 
-**Alternative écartée :** relire les échantillons bruts en Python (`-O csv`). Cela réimplémente le décodage I2C et perd l'oracle sigrok. Un décodeur empilé `libsigrokdecode` « essensys », pour afficher le décodage dans PulseView, est un bonus de phase 2.
+**Alternatives écartées :**
+- Décodeur `timing` de sigrok pour les lignes bloquées : il donne la durée entre deux fronts mais pas le niveau de la ligne. Il ne distingue donc pas le repos du bus (haut, 100 ms entre transactions) d'une ligne bloquée basse. Écarté après essai.
+- Réimplémenter le décodage I2C en Python : cela ferait perdre l'oracle sigrok.
+
+Un décodeur empilé `libsigrokdecode` « essensys », pour afficher le décodage dans PulseView, reste un bonus de phase 2.
 
 ### D3 — Décodeur Python, bibliothèque standard uniquement
 

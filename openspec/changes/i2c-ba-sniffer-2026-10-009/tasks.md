@@ -1,32 +1,32 @@
 ## 1. Amorçage du dépôt (#1)
 
-- [ ] 1.1 Créer l'arborescence `decoder/essensys_i2c_sniffer/`, `tests/`, `captures/`, `hardware/kicad/`, `hardware/fritzing/`, `docs/`, et un `pyproject.toml` (Python ≥ 3.11, aucune dépendance d'exécution, CLI `essensys-i2c-sniff`). Vérifier : `pip install -e .` puis `essensys-i2c-sniff --help` répond.
+- [x] 1.1 Créer l'arborescence `decoder/essensys_i2c_sniffer/`, `tests/`, `captures/`, `hardware/kicad/`, `hardware/fritzing/`, `docs/`, et un `pyproject.toml` (Python ≥ 3.11, aucune dépendance d'exécution, CLI `essensys-i2c-sniff`). Vérifier : `pip install -e .` puis `essensys-i2c-sniff --help` répond.
 - [ ] 1.2 Ajouter la CI GitHub Actions avec `pytest`, `kicad-cli sch erc` dans une image KiCad 9, et un contrôle d'anonymisation (`git grep` des IP du LAN privé et des MAC). Vérifier : la CI passe sur la branche.
-- [ ] 1.3 Rédiger le README : objectif, avertissement « strictement passif », renvoi vers `docs/debug/`. Vérifier : relu, sans donnée privée.
+- [x] 1.3 Rédiger le README : objectif, avertissement « strictement passif », renvoi vers `docs/debug/`. Vérifier : relu, sans donnée privée.
 
 ## 2. Décodeur : transactions et trames (#2)
 
-- [ ] 2.1 Parser la sortie `sigrok-cli -P i2c -A i2c --protocol-decoder-samplenum`, en direct par tube et en rejeu `.sr`, en événements typés (START, Sr, STOP, adresse W/R, données, ACK/NACK). Vérifier par des tests unitaires sur des extraits annotés, lignes tronquées comprises.
-- [ ] 2.2 Reconstruire les transactions écriture → repeated START → lecture de 5 octets → STOP, avec le cas « écriture sans réponse ». Vérifier par des tests unitaires.
-- [ ] 2.3 Qualifier un NACK d'adresse comme « BA absent », avec un compteur par adresse, et résoudre l'identité 0x11 / 0x12 / 0x13 en gardant l'adresse brute. Vérifier par un test (NR-i2c-ba-sniffer-2).
-- [ ] 2.4 Valider la longueur selon le code de trame (11 / 11 / 19 / 11 / 4) et signaler les codes inconnus. Vérifier par des tests unitaires.
-- [ ] 2.5 Recalculer le CRC-16/MODBUS de la requête et décoder la réponse de 5 octets (écho du code, écho du CRC, CRC de la réponse). Vérifier par des tests sur des vecteurs calculés avec l'algorithme de `crc.c` (NR-i2c-ba-sniffer-3).
-- [ ] 2.6 Détecter les répétitions d'une même trame et l'abandon après épuisement. Vérifier par un test sur une séquence synthétique (NR-i2c-ba-sniffer-4).
+- [x] 2.1 Parser la sortie `sigrok-cli -P i2c -A i2c --protocol-decoder-samplenum`, en direct par tube et en rejeu `.sr`, en événements typés (START, Sr, STOP, adresse W/R, données, ACK/NACK). Vérifier par des tests unitaires sur des extraits annotés, lignes tronquées comprises.
+- [x] 2.2 Reconstruire les transactions écriture → repeated START → lecture de 5 octets → STOP, avec le cas « écriture sans réponse ». Vérifier par des tests unitaires.
+- [x] 2.3 Qualifier un NACK d'adresse comme « BA absent », avec un compteur par adresse, et résoudre l'identité 0x11 / 0x12 / 0x13 en gardant l'adresse brute. Vérifier par un test (NR-i2c-ba-sniffer-2).
+- [x] 2.4 Valider la longueur selon le code de trame (11 / 11 / 19 / 11 / 4) et signaler les codes inconnus. Vérifier par des tests unitaires.
+- [x] 2.5 Recalculer le CRC-16/MODBUS de la requête et décoder la réponse de 5 octets (écho du code, écho du CRC, CRC de la réponse). Vérifier par des tests sur des vecteurs calculés avec l'algorithme de `crc.c` (NR-i2c-ba-sniffer-3).
+- [x] 2.6 Détecter les répétitions d'une même trame et l'abandon après épuisement. Vérifier par un test sur une séquence synthétique (NR-i2c-ba-sniffer-4).
 
 ## 3. Décodeur : sémantique domotique (#3)
 
-- [ ] 3.1 Décoder `FORCAGE_SORTIES` en commandes observées (lampes 0-15, variateurs, volets sens 1 / sens 2) avec les priorités du firmware BA. Vérifier par des tests unitaires, conflits compris.
-- [ ] 3.2 Appliquer les profils de sorties par adresse (PDV 5/3/6, CHB 7/4/5, PDE 13/1/4, surchargeables) et signaler les bits hors plage. Vérifier par des tests unitaires.
-- [ ] 3.3 Décoder `CONF_SORTIES`, `TPS_EXTINCTION`, `TPS_ACTION` et `ACTIONS`, en restituant en brut les octets de bourrage et les bits réservés. Vérifier par des tests unitaires.
-- [ ] 3.4 Reconstruire un état commandé cumulé, marqué « inféré » (les sorties jamais vues sont « inconnues »). Vérifier par un test.
+- [x] 3.1 Décoder `FORCAGE_SORTIES` en commandes observées (lampes 0-15, variateurs, volets sens 1 / sens 2) avec les priorités du firmware BA. Vérifier par des tests unitaires, conflits compris.
+- [x] 3.2 Appliquer les profils de sorties par adresse (PDV 5/3/6, CHB 7/4/5, PDE 13/1/4, surchargeables) et signaler les bits hors plage. Vérifier par des tests unitaires.
+- [x] 3.3 Décoder `CONF_SORTIES`, `TPS_EXTINCTION`, `TPS_ACTION` et `ACTIONS`, en restituant en brut les octets de bourrage et les bits réservés. Vérifier par des tests unitaires.
+- [x] 3.4 Reconstruire un état commandé cumulé, marqué « inféré » (les sorties jamais vues sont « inconnues »). Vérifier par un test.
 
 ## 4. Outillage : CLI, NDJSON, corrélation, corpus (#4)
 
-- [ ] 4.1 Implémenter la CLI : capture en direct (lance `sigrok-cli` avec `fx2lafw`, voies D0 = SCL et D1 = SDA, au moins 1 MHz, refus en dessous), rejeu `.sr`, sorties texte et NDJSON versionnée (`schema`). Vérifier qu'une fréquence de 500 kHz est refusée et que la sortie NDJSON est valide.
-- [ ] 4.2 Détecter les lignes bloquées plus de 10 ms (décodeur `timing` de sigrok) et les débordements d'acquisition, en marquant la période concernée comme incomplète. Vérifier par un test sur une capture synthétique (NR-i2c-ba-sniffer-5).
-- [ ] 4.3 Implémenter la corrélation avec un fichier de journaux backend (`Sending Actions` / `Action acknowledged`) : recalage d'horloge et rapport « acquittée mais non reçue par le BA ». Vérifier par un test sur un journal anonymisé et une capture associée.
-- [ ] 4.4 Constituer le corpus de référence : 5 codes de trame, NACK d'adresse, CRC faux, répétitions puis abandon, ligne bloquée, chacun avec sa sortie NDJSON attendue. Vérifier : le rejeu est strictement identique (NR-i2c-ba-sniffer-6).
-- [ ] 4.5 Garantir l'absence de toute commande d'émission ou d'injection. Vérifier par un test qui inspecte la CLI et le paquet (NR-i2c-ba-sniffer-1).
+- [x] 4.1 Implémenter la CLI : capture en direct (lance `sigrok-cli` avec `fx2lafw`, voies D0 = SCL et D1 = SDA, au moins 1 MHz, refus en dessous), rejeu `.sr`, sorties texte et NDJSON versionnée (`schema`). Vérifier qu'une fréquence de 500 kHz est refusée et que la sortie NDJSON est valide.
+- [x] 4.2 Détecter les lignes bloquées plus de 10 ms (analyse du flux brut, voir design D2) et les débordements d'acquisition, en marquant la période concernée comme incomplète. Vérifier par un test sur une capture synthétique (NR-i2c-ba-sniffer-5).
+- [x] 4.3 Implémenter la corrélation avec un fichier de journaux backend (`Sending Actions` / `Action acknowledged`) : recalage d'horloge et rapport « acquittée mais non reçue par le BA ». Vérifier par un test sur un journal anonymisé et une capture associée.
+- [x] 4.4 Constituer le corpus de référence : 5 codes de trame, NACK d'adresse, CRC faux, répétitions puis abandon, ligne bloquée, chacun avec sa sortie NDJSON attendue. Vérifier : le rejeu est strictement identique (NR-i2c-ba-sniffer-6).
+- [x] 4.5 Garantir l'absence de toute commande d'émission ou d'injection. Vérifier par un test qui inspecte la CLI et le paquet (NR-i2c-ba-sniffer-1).
 
 ## 5. Sonde matérielle : KiCad et Fritzing (#5)
 

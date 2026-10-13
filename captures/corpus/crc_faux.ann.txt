@@ -1,0 +1,41 @@
+1005-1005 i2c-1: Start
+1160-1180 i2c-1: Write
+1020-1160 i2c-1: Address write: 11
+1180-1200 i2c-1: ACK
+1200-1360 i2c-1: Data write: 01
+1360-1380 i2c-1: ACK
+1380-1540 i2c-1: Data write: 00
+1540-1560 i2c-1: ACK
+1560-1720 i2c-1: Data write: 01
+1720-1740 i2c-1: ACK
+1740-1900 i2c-1: Data write: 00
+1900-1920 i2c-1: ACK
+1920-2080 i2c-1: Data write: 00
+2080-2100 i2c-1: ACK
+2100-2260 i2c-1: Data write: 00
+2260-2280 i2c-1: ACK
+2280-2440 i2c-1: Data write: 00
+2440-2460 i2c-1: ACK
+2460-2620 i2c-1: Data write: 00
+2620-2640 i2c-1: ACK
+2640-2800 i2c-1: Data write: 00
+2800-2820 i2c-1: ACK
+2820-2980 i2c-1: Data write: E8
+2980-3000 i2c-1: ACK
+3000-3160 i2c-1: Data write: A0
+3160-3180 i2c-1: ACK
+3185-3185 i2c-1: Start repeat
+3340-3360 i2c-1: Read
+3200-3340 i2c-1: Address read: 11
+3360-3380 i2c-1: ACK
+3380-3540 i2c-1: Data read: 01
+3540-3560 i2c-1: ACK
+3560-3720 i2c-1: Data read: 00
+3720-3740 i2c-1: ACK
+3740-3900 i2c-1: Data read: 00
+3900-3920 i2c-1: ACK
+3920-4080 i2c-1: Data read: 20
+4080-4100 i2c-1: ACK
+4100-4260 i2c-1: Data read: 00
+4260-4280 i2c-1: NACK
+4285-4285 i2c-1: Stop

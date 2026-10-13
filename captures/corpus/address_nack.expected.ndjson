@@ -1,0 +1,1 @@
+{"addr": "0x12", "anomalies": [], "ba": 1, "ba_name": "chambres", "end_sample": 1205, "kind": "address_nack", "label": "BA 1 (chambres)", "nack_count": 1, "sample": 1005, "schema": "essensys-i2c-sniff/1", "status": "absent", "summary": "BA absent : NACK d'adresse", "t_ms": 1.005, "type": "exchange"}
