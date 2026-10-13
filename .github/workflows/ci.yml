@@ -45,4 +45,6 @@ jobs:
           sch=(hardware/kicad/*.kicad_sch); pcb=(hardware/kicad/*.kicad_pcb)
           if [ ${#sch[@]} -eq 0 ]; then echo "Pas encore de schéma KiCad (groupe 5) : contrôle ignoré."; exit 0; fi
           for f in "${sch[@]}"; do kicad-cli sch erc --exit-code-violations -o /tmp/erc.rpt "$f"; done
+          kicad-cli sch export netlist --format kicadsexpr -o /tmp/sonde.net hardware/kicad/sonde-i2c-passive.kicad_sch
+          python3 hardware/kicad/check_netlist.py /tmp/sonde.net
           for f in "${pcb[@]}"; do kicad-cli pcb drc --exit-code-violations -o /tmp/drc.rpt "$f"; done
