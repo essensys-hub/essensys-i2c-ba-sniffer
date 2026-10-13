@@ -19,18 +19,17 @@ La sonde utilise un boîtier à 4 positions dans lequel **seuls les contacts 1, 
 
 ## Schéma de principe
 
+Le schéma KiCad (`kicad/export/sonde-i2c-passive.png`) se lit de gauche à droite : SCL sur la rangée du haut, SDA sur celle du bas.
+
 ```
-BA J1/J2          sonde                                     analyseur FX2
- 1 SDA ──[1 kΩ]──┬──────────────► 74LVC2G17 (A2→Y2) ──────► D1 (SDA)
-                 └─ ESD faible capacité vers 0 V
- 2 SCL ──[1 kΩ]──┬──────────────► 74LVC2G17 (A1→Y1) ──────► D0 (SCL)
-                 └─ ESD faible capacité vers 0 V
- 3 0 V ───────────────────────────── 0 V ───────────────────► GND
- 4 +15 V   (position vide, aucun contact)
-                              VCC 74LVC2G17 = 3,3 V de l'analyseur ou de la broche 1 du GPIO du Pi
+BA J1/J2      sonde                                                   J2 (vers l'analyseur et le Pi)
+ 2 SCL ──[R2 1 kΩ]──┬── R4 1 MΩ → 0 V ── D1 ── U1A (1→6) ───────────► 2 SCL → D0
+ 1 SDA ──[R1 1 kΩ]──┬── R3 1 MΩ → 0 V ── D1 ── U1B (3→4) ───────────► 3 SDA → D1
+ 3 0 V ──────────────────────────────────────────────────────────────► 4 0 V → GND analyseur + broche 9 du GPIO
+ 4 +15 V (position vide, aucun contact)                  U1 VCC + C1 ◄── 1 +3,3 V ← broche 1 du GPIO du Pi
 ```
 
-Ni pull-up ni alimentation ne sont prélevées sur le bus. Le 74LVC2G17 accepte 5,5 V en entrée lorsqu'il est alimenté en 3,3 V.
+Ni pull-up ni alimentation ne sont prélevées sur le bus. Le 74LVC2G17 accepte 5,5 V en entrée sous 3,3 V, même non alimenté (Ioff). Le 0 V de la sonde est celui de l'armoire : l'hôte (analyseur et Pi) reste sur batterie, sans Ethernet ni chargeur secteur.
 
 ## Réalisation : plaque à pastilles (tâche 5.3)
 
@@ -47,16 +46,17 @@ Décision du 2026-10-13 : la première sonde est câblée sur une **plaque à pa
 | D1 | SP0502BAHT | Protection ESD 2 voies, 5,5 V |
 | U1 | 74LVC2G17 | Tampon tolérant au 5 V, alimenté en 3,3 V |
 | C1 | 100 nF | Découplage de U1 |
-| J2 | Barrette 1×4 | 1 GND, 2 D0 (SCL), 3 D1 (SDA), 4 +3,3 V |
+| J2 | Barrette 1×4 | 1 +3,3 V, 2 SCL vers D0, 3 SDA vers D1, 4 0 V |
 
 ## Fichiers
 
 | Fichier | Contenu | Régénération |
 |---|---|---|
-| `kicad/sonde-i2c-passive.kicad_sch` | Schéma KiCad, outils KiCad 10 (ERC : 0 erreur, 0 avertissement) | `python3 hardware/kicad/gen_sch.py` |
-| `kicad/export/` | PDF, SVG, PNG et nomenclature CSV | `kicad-cli sch export pdf/svg/bom` |
-| `fritzing/sonde-i2c-passive.fzz` | Câblage réel en vue platine : BA → sonde → analyseur FX2 → Raspberry Pi | `python3 hardware/fritzing/gen_fzz.py` |
-| `fritzing/export/` | Vue platine exportée par Fritzing (SVG, PNG) | `Fritzing -svg <dossier contenant le .fzz>` |
-| `fritzing/partfactory/` | Pièces génériques générées par Fritzing 1.0 (licence CC-BY-SA), pour une génération reproductible | — |
+| `kicad/sonde-i2c-passive.kicad_sch` | Schéma câblé, outils KiCad 10 (ERC : 0 erreur, 0 avertissement) | `python3 hardware/kicad/gen_sch.py` |
+| `kicad/check_netlist.py` | Vérifie que la netlist exportée correspond au circuit voulu (lancé en CI) | `kicad-cli sch export netlist --format kicadsexpr -o sonde.net …` puis `python3 hardware/kicad/check_netlist.py sonde.net` |
+| `kicad/export/` | PDF, SVG, PNG recadré et nomenclature CSV | `kicad-cli sch export pdf/svg/bom` |
+| `fritzing/sonde-i2c-passive-implantation.fzz` | Plan d'implantation sur plaque à pastilles : repères, valeurs, jonctions soudées, croisements isolés signalés | `python3 hardware/fritzing/gen_fzz.py` |
+| `fritzing/sonde-i2c-passive-ensemble.fzz` | Montage d'ensemble : BA, câble, sonde, analyseur FX2, Raspberry Pi sur batterie, câble USB, masse commune | idem |
+| `fritzing/export/` | Vues platine exportées par Fritzing (SVG, PNG) | `Fritzing -svg <dossier contenant les .fzz>` |
 
-Le générateur Fritzing lit la position de chaque connecteur dans les SVG des pièces (90 px par pouce en vue platine). Les fils tombent ainsi exactement sur les broches. Les pièces sont désignées par leur `moduleIdRef`, sans chemin local.
+Les deux croquis Fritzing embarquent leurs pièces, dessinées par le générateur ; seul le Raspberry Pi 3 est une pièce de base de Fritzing. Les pièces sont désignées par leur `moduleIdRef`, sans chemin local.
