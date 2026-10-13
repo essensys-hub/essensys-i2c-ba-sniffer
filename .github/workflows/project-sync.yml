@@ -1,0 +1,53 @@
+name: project-sync
+
+# Fait avancer l'item Feature du GitHub Project essensys-hub #6 à partir des PR
+# de ce dépôt (transitions vers l'avant uniquement), via le workflow réutilisable
+# essensys-feature-lifecycle/.github/workflows/project-sync.yml.
+# Le Feature ID est lu dans le corps de la PR (ligne « Feature: <id> »).
+#
+#   PR ouverte, rouverte ou sortie du brouillon → pr-opened       (Prêt → En cours)
+#   PR fusionnée                                → all-prs-merged  (→ Test)
+#
+# Secret requis : PROJECT_SYNC_TOKEN (scopes project + issues), au niveau de
+# l'organisation ou du dépôt. Absent : la synchronisation est ignorée avec un
+# avertissement, la CI ne casse pas.
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, closed]
+
+permissions:
+  contents: read
+
+jobs:
+  token:
+    runs-on: ubuntu-latest
+    outputs:
+      available: ${{ steps.check.outputs.available }}
+    steps:
+      - id: check
+        env:
+          TOKEN: ${{ secrets.PROJECT_SYNC_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::PROJECT_SYNC_TOKEN absent : synchronisation du Project #6 ignorée."
+          fi
+
+  pr-opened:
+    needs: token
+    if: needs.token.outputs.available == 'true' && github.event.action != 'closed'
+    uses: essensys-hub/essensys-feature-lifecycle/.github/workflows/project-sync.yml@main
+    with:
+      event: pr-opened
+    secrets: inherit
+
+  merged:
+    needs: token
+    if: needs.token.outputs.available == 'true' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    uses: essensys-hub/essensys-feature-lifecycle/.github/workflows/project-sync.yml@main
+    with:
+      event: all-prs-merged
+    secrets: inherit
