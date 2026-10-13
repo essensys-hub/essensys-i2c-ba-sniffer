@@ -1,0 +1,60 @@
+{
+  "$schema": "./schema/feature.schema.json",
+  "id": "i2c-ba-sniffer-2026-10-009",
+  "title": "Outil de debug I2C : espion passif sigrok + décodeur Python BP↔BA, doc /docs/debug",
+  "status": "proposed",
+  "owner": "nrineau",
+  "github": {
+    "issue": "essensys-hub/essensys-feature-lifecycle#29",
+    "project_item": "PVTI_lADODqt0Wc4BavHTzhAbCAM"
+  },
+  "git": { "branch": "feat/i2c-ba-sniffer-2026-10-009", "pr_url": null },
+  "openspec": {
+    "change_id": "i2c-ba-sniffer-2026-10-009",
+    "path": "openspec/changes/i2c-ba-sniffer-2026-10-009",
+    "proposal": "openspec/changes/i2c-ba-sniffer-2026-10-009/proposal.md",
+    "design": "openspec/changes/i2c-ba-sniffer-2026-10-009/design.md",
+    "tasks": "openspec/changes/i2c-ba-sniffer-2026-10-009/tasks.md",
+    "specs": [
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/sigrok-capture/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/i2c-frame-decode/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/ba-event-semantics/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-tooling/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/sniffer-probe-hardware/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-documentation/spec.md"
+    ]
+  },
+  "implementation": {
+    "paths": ["README.md", "LICENSE"],
+    "primary_surface": "ops"
+  },
+  "userguide": { "pages": ["README.md"], "language": "fr", "i18n_keys": [], "screenshots": [] },
+  "tests": {
+    "playwright": [],
+    "coverage_must_test": [
+      "NR-i2c-ba-sniffer-1 aucune commande d'emission ou d'injection exposee",
+      "NR-i2c-ba-sniffer-2 NACK d'adresse qualifie BA absent",
+      "NR-i2c-ba-sniffer-3 CRC de requete faux signale",
+      "NR-i2c-ba-sniffer-4 repetitions puis abandon detectes",
+      "NR-i2c-ba-sniffer-5 ligne SDA ou SCL bloquee detectee",
+      "NR-i2c-ba-sniffer-6 rejeu identique au direct sur le corpus"
+    ],
+    "smoke_tags": ["@nr"]
+  },
+  "release": {
+    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug.",
+    "target_tag": null,
+    "surfaces": ["essensys-i2c-ba-sniffer", "essensys-doc", "essensys-memory"],
+    "paths": ["openspec/changes/i2c-ba-sniffer-2026-10-009/design.md"]
+  },
+  "security": {
+    "sca_tool": "dependabot",
+    "dependabot_alerts_url": null,
+    "last_scan_at": null,
+    "cve_findings": { "critical": 0, "high": 0, "medium": 0, "low": 0 },
+    "secret_scan": { "status": "clean", "tool": "gitleaks", "last_scan_at": null },
+    "muted_findings": [],
+    "threat_model_url": "openspec/changes/i2c-ba-sniffer-2026-10-009/design.md",
+    "owner_security": "nrineau"
+  }
+}
