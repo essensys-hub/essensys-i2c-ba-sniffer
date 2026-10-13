@@ -33,7 +33,9 @@ jobs:
 
   kicad:
     runs-on: ubuntu-24.04
-    container: kicad/kicad:9.0
+    container:
+      image: kicad/kicad:9.0
+      options: --user root
     steps:
       - uses: actions/checkout@v4
       - name: ERC / DRC de la sonde
