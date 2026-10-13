@@ -1,0 +1,8 @@
+"Repère","Valeur","Empreinte","Fabricant","Référence","Note","Qté"
+"C1","100n","Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm","","","Découplage au plus près de U1","1"
+"D1","SP0502BAHT","Package_TO_SOT_SMD:SOT-23","Littelfuse","SP0502BAHT","TVS 2 voies, sur adaptateur SOT-23 vers DIP","1"
+"J1","Vers BA J1/J2 (WR-MPC3 2x2, position 4 VIDE)","Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical","Würth Elektronik","WR-MPC3 2x2 boîtier femelle câble (à confirmer, tâche 5.1)","Seuls les contacts 1, 2, 3 sont sertis ; la position 4 (+15 V) reste vide","1"
+"J2","Vers analyseur logique FX2","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","","","1 GND, 2 voie D0 (SCL), 3 voie D1 (SDA), 4 +3,3 V de l'analyseur ou broche 1 du GPIO du Raspberry Pi","1"
+"R1,R2","1k","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","","","Résistance série : limite le courant en cas d'erreur","2"
+"R3,R4","1M","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","","","Rappel au 0 V si la sonde est débranchée,Rappel au 0 V si la sonde est débranchée (5 µA sous 5 V, négligeable)","2"
+"U1","74LVC2G17","Package_TO_SOT_SMD:SOT-363_SC-70-6","Nexperia / TI","74LVC2G17GW / SN74LVC2G17DCK","Entrées tolérantes 5,5 V sous VCC = 3,3 V ; sur adaptateur SC-70 vers DIP","1"

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "essensys-i2c-sniffer"
+version = "0.1.0"
+description = "Décodeur passif du bus I2C BP↔BA Essensys (sigrok)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+essensys-i2c-sniff = "essensys_i2c_sniffer.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "decoder" }
+
+[tool.setuptools.packages.find]
+where = ["decoder"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

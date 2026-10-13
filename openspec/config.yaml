@@ -1,0 +1,21 @@
+schema: spec-driven
+
+context: |
+  Language: fr
+  All artifacts must be written in fr.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  Essensys — espion I2C passif du bus interne de l'armoire : Boîtier Principal SC944D (maître I2C,
+  ColdFire MCF52259, firmware 099-37, adresse station 0x10) et boîtiers auxiliaires SC940D (0x11, pièces
+  de vie), SC942C (0x12, chambres), SC941C (0x13, pièces d'eau) (PIC16F946, firmware v1.7). Bus I2C
+  50 kHz, niveaux 5 V côté BA, câble 4 fils (J1/J2-1 SDA, -2 SCL, -3 0 V, -4 +15 V). Capture par analyseur
+  logique USB (fx2lafw) et sigrok-cli sur Raspberry Pi sur batterie ; décodeur Python du protocole
+  Essensys (codes de trame 1 à 5, CRC-16 de crc.c, réponse 5 octets). Le change Pico
+  essensys-i2c-ba-sniffer-2026-07-038 (essensys-memory) reste la phase 2 ; le module ESP32 N2
+  (n2-esp32-spy-alarm-2026-10-008) reste la version permanente.
+  STRICTEMENT PASSIF : aucune émission sur le bus, aucune pull-up ajoutée, jamais le +15 V.
+  TBTS : le 0 V n'est JAMAIS relié au PE ; la sonde ne doit pas créer de pont de masse (batterie,
+  isolateur USB). Dépôt PUBLIC : aucune donnée privée (adresse, numéro de série, IP, MAC, installateur).
+  Protocole HTTP legacy IoT inchangé. Gouvernance : essensys-feature-lifecycle/claude/GOVERNANCE.md
+  (ticket GitHub Project #6, OpenSpec, /checkup, tests NR-*, jamais d'armoire pilotée par les tests ;
+  captures réelles uniquement passives). Conventional commits référençant l'issue. Français.
