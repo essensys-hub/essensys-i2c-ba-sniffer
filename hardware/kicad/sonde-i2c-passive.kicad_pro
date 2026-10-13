@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "filename": "sonde-i2c-passive.kicad_pro",
+    "version": 3
+  },
+  "schematic": {
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
+  },
+  "sheets": [
+    [
+      "8e21473a-9912-552b-aa84-74540a51dc78",
+      "Root"
+    ]
+  ],
+  "text_variables": {}
+}

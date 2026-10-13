@@ -6,3 +6,4 @@ build/
 dist/
 captures/local/
 *.sr.tmp
+*.kicad_prl

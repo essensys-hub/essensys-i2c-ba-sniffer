@@ -31,9 +31,9 @@
 ## 5. Sonde matérielle : KiCad et Fritzing (#5)
 
 - [ ] 5.1 Relever la référence du connecteur J1/J2 des BA dans les BOM SC940D/SC941C/SC942C et la consigner dans `hardware/README.md`. Vérifier par recoupement avec une photo de la carte, floutée si elle est publiée.
-- [ ] 5.2 Dessiner le schéma KiCad de la sonde : connecteur sans broche 4, 1 kΩ série, protection ESD de faible capacité, `74LVC2G17` alimenté en 3,3 V, sortie vers l'analyseur, aucune pull-up. Vérifier : ERC sans erreur en CI.
-- [ ] 5.3 Décider entre PCB et plaque à pastilles. Si PCB : router et vérifier un DRC sans erreur, puis exporter Gerber, BOM et PDF dans `hardware/kicad/export/`.
-- [ ] 5.4 Réaliser le câblage Fritzing (`.fzz`) BA → sonde → analyseur FX2 → Raspberry Pi sur batterie, avec ses exports SVG et PNG. Vérifier : le fichier s'ouvre et les exports sont versionnés.
+- [x] 5.2 Dessiner le schéma KiCad de la sonde : connecteur sans broche 4, 1 kΩ série, protection ESD de faible capacité, `74LVC2G17` alimenté en 3,3 V, sortie vers l'analyseur, aucune pull-up. Vérifier : ERC sans erreur en CI.
+- [x] 5.3 Décider entre PCB et plaque à pastilles. Si PCB : router et vérifier un DRC sans erreur, puis exporter Gerber, BOM et PDF dans `hardware/kicad/export/`.
+- [x] 5.4 Réaliser le câblage Fritzing (`.fzz`) BA → sonde → analyseur FX2 → Raspberry Pi sur batterie, avec ses exports SVG et PNG. Vérifier : le fichier s'ouvre et les exports sont versionnés.
 - [ ] 5.5 Contrôler la sonde fabriquée à l'ohmmètre (aucune continuité vers la position de broche 4) et l'entrée tolérant 5,5 V. Vérifier par une fiche de mesures dans `hardware/`.
 
 ## 6. Validation sur banc et capture passive réelle (#6)

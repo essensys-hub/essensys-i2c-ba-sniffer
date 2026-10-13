@@ -27,9 +27,36 @@ BA J1/J2          sonde                                     analyseur FX2
                  └─ ESD faible capacité vers 0 V
  3 0 V ───────────────────────────── 0 V ───────────────────► GND
  4 +15 V   (position vide, aucun contact)
-                              VCC 74LVC2G17 = 3,3 V fourni par l'analyseur
+                              VCC 74LVC2G17 = 3,3 V de l'analyseur ou de la broche 1 du GPIO du Pi
 ```
 
 Ni pull-up ni alimentation ne sont prélevées sur le bus. Le 74LVC2G17 accepte 5,5 V en entrée lorsqu'il est alimenté en 3,3 V.
 
-Les sources KiCad (`kicad/`) et Fritzing (`fritzing/`) viennent avec les tâches 5.2 à 5.4.
+## Réalisation : plaque à pastilles (tâche 5.3)
+
+Décision du 2026-10-13 : la première sonde est câblée sur une **plaque à pastilles**, sans circuit imprimé. Un PCB pourra suivre.
+
+- D1 (SP0502BAHT, SOT-23) se monte sur un adaptateur SOT-23 vers SIP3.
+- U1 (74LVC2G17, SC-70-6) se monte sur un adaptateur SC-70 vers DIP6.
+
+| Repère | Valeur | Rôle |
+|---|---|---|
+| J1 | Boîtier WR-MPC3 2×2 + 3 contacts sertis | Câble vers J1/J2 du BA (position 4 vide) |
+| R1, R2 | 1 kΩ | Résistances série SDA et SCL |
+| R3, R4 | 1 MΩ | Rappel au 0 V si la sonde est débranchée (5 µA sous 5 V) |
+| D1 | SP0502BAHT | Protection ESD 2 voies, 5,5 V |
+| U1 | 74LVC2G17 | Tampon tolérant au 5 V, alimenté en 3,3 V |
+| C1 | 100 nF | Découplage de U1 |
+| J2 | Barrette 1×4 | 1 GND, 2 D0 (SCL), 3 D1 (SDA), 4 +3,3 V |
+
+## Fichiers
+
+| Fichier | Contenu | Régénération |
+|---|---|---|
+| `kicad/sonde-i2c-passive.kicad_sch` | Schéma KiCad 9 (ERC : 0 erreur, 0 avertissement) | `python3 hardware/kicad/gen_sch.py` |
+| `kicad/export/` | PDF, SVG, PNG et nomenclature CSV | `kicad-cli sch export pdf/svg/bom` |
+| `fritzing/sonde-i2c-passive.fzz` | Câblage réel en vue platine : BA → sonde → analyseur FX2 → Raspberry Pi | `python3 hardware/fritzing/gen_fzz.py` |
+| `fritzing/export/` | Vue platine exportée par Fritzing (SVG, PNG) | `Fritzing -svg <dossier contenant le .fzz>` |
+| `fritzing/partfactory/` | Pièces génériques générées par Fritzing 1.0 (licence CC-BY-SA), pour une génération reproductible | — |
+
+Le générateur Fritzing lit la position de chaque connecteur dans les SVG des pièces (90 px par pouce en vue platine). Les fils tombent ainsi exactement sur les broches. Les pièces sont désignées par leur `moduleIdRef`, sans chemin local.
