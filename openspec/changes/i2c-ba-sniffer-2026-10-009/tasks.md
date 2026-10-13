@@ -1,7 +1,7 @@
 ## 1. Amorçage du dépôt (#1)
 
 - [x] 1.1 Créer l'arborescence `decoder/essensys_i2c_sniffer/`, `tests/`, `captures/`, `hardware/kicad/`, `hardware/fritzing/`, `docs/`, et un `pyproject.toml` (Python ≥ 3.11, aucune dépendance d'exécution, CLI `essensys-i2c-sniff`). Vérifier : `pip install -e .` puis `essensys-i2c-sniff --help` répond.
-- [ ] 1.2 Ajouter la CI GitHub Actions avec `pytest`, `kicad-cli sch erc` dans une image KiCad 9, et un contrôle d'anonymisation (`git grep` des IP du LAN privé et des MAC). Vérifier : la CI passe sur la branche.
+- [x] 1.2 Ajouter la CI GitHub Actions avec `pytest`, `kicad-cli sch erc` dans une image KiCad 9, et un contrôle d'anonymisation (`git grep` des IP du LAN privé et des MAC). Vérifier : la CI passe sur la branche.
 - [x] 1.3 Rédiger le README : objectif, avertissement « strictement passif », renvoi vers `docs/debug/`. Vérifier : relu, sans donnée privée.
 
 ## 2. Décodeur : transactions et trames (#2)
