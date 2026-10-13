@@ -65,5 +65,5 @@
 
 ## 8. Mémoire projet (essensys-hub/essensys-memory#16)
 
-- [ ] 8.1 Ajouter au wiki essensys-memory une page sur l'outil (entité du dépôt et concept « espion I2C passif »), et noter que le change `essensys-i2c-ba-sniffer-2026-07-038` devient la phase 2 (Pico). Vérifier : wikilinks résolus et index mis à jour.
+- [x] 8.1 Ajouter au wiki essensys-memory une page sur l'outil (entité du dépôt et concept « espion I2C passif »), et noter que le change `essensys-i2c-ba-sniffer-2026-07-038` devient la phase 2 (Pico). Vérifier : wikilinks résolus et index mis à jour.
 - [ ] 8.2 Après la capture réelle (6.4), consigner la synthèse anonymisée dans la page de l'incident foudre. Vérifier : relecture, aucune donnée privée.
