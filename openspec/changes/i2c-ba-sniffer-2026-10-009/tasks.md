@@ -46,8 +46,8 @@
 
 ## 7. Documentation publique `docs/debug/` (essensys-hub/essensys-doc#9)
 
-- [ ] 7.1 Créer la section Debug dans essensys-doc (`docs/debug/index.md`, entrée de navigation mkdocs). Vérifier : `mkdocs build --strict` passe.
-- [ ] 7.2 Rédiger `docs/debug/espion-i2c.md` avec ces sections :
+- [x] 7.1 Créer la section Debug dans essensys-doc (`docs/debug/index.md`, entrée de navigation mkdocs). Vérifier : `mkdocs build --strict` passe.
+- [x] 7.2 Rédiger `docs/debug/espion-i2c.md` avec ces sections :
   - objectif ;
   - nomenclature ;
   - encadré de sécurité placé avant tout branchement ;
@@ -59,8 +59,8 @@
   - liens vers `install/ajout-bp.md` et `install/remise-en-service-surtension.md`.
 
   Vérifier : relecture et build strict.
-- [ ] 7.3 Produire le schéma Archify de la chaîne de debug (source JSON versionnée, rendu en iframe) et intégrer les exports Fritzing et KiCad. Vérifier : les trois schémas s'affichent dans le site construit.
-- [ ] 7.4 Contrôler l'anonymisation de la section (IP, MAC, n° de série, lieu). Vérifier : la recherche ne trouve rien.
+- [x] 7.3 Produire le schéma Archify de la chaîne de debug (source JSON versionnée, rendu en iframe) et intégrer les exports Fritzing et KiCad. Vérifier : les trois schémas s'affichent dans le site construit.
+- [x] 7.4 Contrôler l'anonymisation de la section (IP, MAC, n° de série, lieu). Vérifier : la recherche ne trouve rien.
 - [ ] 7.5 Après relecture et fusion, publier avec le rôle Ansible `docs_site`. Vérifier : `https://www.essensys.fr/docs/debug/` répond.
 
 ## 8. Mémoire projet (essensys-hub/essensys-memory#16)
