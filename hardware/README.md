@@ -40,7 +40,7 @@ Décision du 2026-10-13 : la première sonde est câblée sur une **plaque à pa
 
 | Repère | Valeur | Rôle |
 |---|---|---|
-| J1 | Boîtier WR-MPC3 2×2 + 3 contacts sertis | Câble vers J1/J2 du BA (position 4 vide) |
+| J1 | Boîtier WR-MPC3 2×2 + 3 contacts sertis, ou boîtier imprimé (`mecanique/`) | Câble vers J1/J2 du BA (position 4 vide) |
 | R1, R2 | 1 kΩ | Résistances série SDA et SCL |
 | R3, R4 | 1 MΩ | Rappel au 0 V si la sonde est débranchée (5 µA sous 5 V) |
 | D1 | SP0502BAHT | Protection ESD 2 voies, 5,5 V |
@@ -58,5 +58,6 @@ Décision du 2026-10-13 : la première sonde est câblée sur une **plaque à pa
 | `fritzing/sonde-i2c-passive-implantation.fzz` | Plan d'implantation sur plaque à pastilles : repères, valeurs, jonctions soudées, croisements isolés signalés | `python3 hardware/fritzing/gen_fzz.py` |
 | `fritzing/sonde-i2c-passive-ensemble.fzz` | Montage d'ensemble : BA, câble, sonde, analyseur FX2, Raspberry Pi sur batterie, câble USB, masse commune | idem |
 | `fritzing/export/` | Vues platine exportées par Fritzing (SVG, PNG) | `Fritzing -svg <dossier contenant les .fzz>` |
+| `mecanique/*.step` | Boîtier J1 imprimable, capot, calibre de contacts, assemblage sur l'embase (voir [`mecanique/README.md`](mecanique/README.md)) | `uv run --no-project --python 3.12 --with cadquery python hardware/mecanique/gen_boitier_j1.py --rendu` |
 
 Les deux croquis Fritzing embarquent leurs pièces, dessinées par le générateur ; seul le Raspberry Pi 3 est une pièce de base de Fritzing. Les pièces sont désignées par leur `moduleIdRef`, sans chemin local.
