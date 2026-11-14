@@ -20,6 +20,29 @@ des connexions ; l'interface BA/VPP encore ouverte est signalée sur le dessin.
 
 ![Schéma KiCad R0 : USB, RP2350, FX2 huit voies, traversée I2C et ports BP/BA](essensys-integrated-study.png)
 
+## Branchements et proposition d'implantation
+
+Le [PDF de deux pages](visuals/essensys-branchements-implantation.pdf) présente
+les câbles entre le PC, la carte, le BP et le BA, puis une proposition de
+répartition des composants sur le PCB. Les deux ports de programmation sont
+distincts ; l'étage BA/VPP reste à concevoir sur la carte. Les adaptateurs
+FC14P et les niveaux électriques restent à qualifier.
+
+![Branchements : USB, traversée I2C, BP BDM et BA ICSP](visuals/branchements.png)
+
+![Implantation proposée : analyseur, RP2350, hub et interfaces BP/BA](visuals/implantation-proposee.png)
+
+Ces vues ne sont ni un routage KiCad, ni des empreintes validées, ni un dossier
+de fabrication. Les tailles, formes et placements sont symboliques. Les
+[sources SVG de branchement](visuals/branchements.svg) et
+[d'implantation](visuals/implantation-proposee.svg) restent éditables.
+
+Reproduction avec ReportLab et Poppler :
+
+```sh
+uv run --with reportlab python hardware/integrated/draw_connections.py
+```
+
 ## Architecture et fichiers
 
 ```mermaid
