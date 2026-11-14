@@ -12,6 +12,13 @@ Le change `essensys-i2c-ba-sniffer-2026-07-038` (essensys-memory) prévoit un es
 
 Ticket : [essensys-hub/essensys-feature-lifecycle#29](https://github.com/essensys-hub/essensys-feature-lifecycle/issues/29).
 
+## Extension approuvée : ticket #10
+
+La phase Pico est désormais ajoutée à ce même change : carte JLCPCB à huit voies,
+nappe FC14P 1 m, traversée quatre fils et programmateur ICSP séparé. Le plan
+`essensys-i2c-ba-sniffer-2026-07-038` reste une source historique, sans nouvelle
+Feature. Les descriptions de phase 1 ci-dessous restent applicables à la sonde FX2.
+
 ## What Changes
 
 - **Capture passive par sigrok.** Analyseur logique USB (pilote `fx2lafw`) piloté par `sigrok-cli` sur un Raspberry Pi alimenté sur batterie (ou un portable sur batterie).
@@ -35,6 +42,7 @@ Ticket : [essensys-hub/essensys-feature-lifecycle#29](https://github.com/essensy
 ## Capabilities
 
 ### New Capabilities
+- `sniffer-pcb-card` : carte Pico 2, huit voies, IDC14 et ICSP des BA (ticket #10).
 - `sigrok-capture` : acquisition passive par analyseur logique et sigrok (configuration, direct ou rejeu), détection électrique logique (NACK d'adresse, ligne bloquée, trame tronquée), garantie de non-émission.
 - `i2c-frame-decode` : reconstruction des transactions BP↔BA, identité des BA, longueurs par code de trame, CRC-16, écho de réponse, répétitions et abandons, rejeu identique au direct.
 - `ba-event-semantics` : traduction des trames en commandes observées, avec les profils de sorties par type de BA, les règles de priorité du firmware BA et les drapeaux ACTIONS.

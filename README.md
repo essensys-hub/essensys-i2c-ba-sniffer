@@ -18,6 +18,14 @@ Espion I2C **strictement passif** du bus interne de l'armoire Essensys : boîtie
 
 ## Installation
 
+La [phase Pico 2 huit voies](hardware/pico2/README.md), avec programmation ICSP
+des BA prévue, est en conception dans le ticket #10. Le firmware de capture
+et son [outil hôte](firmware/README.md) sont disponibles pour qualification sur
+banc. Le PCB complet et la programmation PIC restent à réaliser. Les consignes
+« trois fils, jamais +15 V » ci-dessus concernent la sonde FX2 historique ; le
+projet Pico prévoit une traversée J1/J2 à quatre conducteurs, sans alimentation
+du Pico par le +15 V. Aucun dossier de fabrication final n'est encore fourni.
+
 ```bash
 sudo apt install sigrok-cli sigrok-firmware-fx2lafw   # Raspberry Pi OS / Debian
 pip install git+https://github.com/essensys-hub/essensys-i2c-ba-sniffer

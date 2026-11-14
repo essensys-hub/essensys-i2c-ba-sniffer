@@ -145,3 +145,17 @@ Ordre de mise en œuvre :
 
 - Référence exacte du connecteur J1/J2 des BA, à relire dans la BOM SC940D/SC941C/SC942C. Elle conditionne le connecteur de la sonde, pas les specs.
 - PCB fabriqué ou plaque à pastilles pour la première sonde. Les deux satisfont les specs ; la décision se prend à la tâche matérielle.
+
+
+## Extension Pico 2 — ticket #10
+
+Le matériel du ticket #10 et ses limites sont spécifiés dans
+`specs/sniffer-pcb-card/spec.md` et décrits dans `hardware/pico2/README.md`.
+Les non-objectifs « sans firmware » et « Pico hors périmètre » ci-dessus sont
+limités à la phase 1 FX2. L'extension conserve le décodeur passif ; elle ajoute
+un firmware Pico et un outillage hôte distinct.
+
+Décisions : huit voies PIO/DMA synchrones ; acquisition bornée en RAM avant USB ;
+IDC14 sans VPP ; ICSP6 séparé ; +15 V en traversée seulement ; qualification
+du chemin MCLR/NCP803 préalable à l'autorisation de programmation des BA.
+Aucun gain de performance ni résultat sur banc n'est déclaré avant mesure.

@@ -9,7 +9,7 @@
     "project_item": "PVTI_lADODqt0Wc4BavHTzhAbCAM"
   },
   "git": {
-    "branch": "feat/i2c-ba-sniffer-2026-10-009",
+    "branch": "feat/pico2-pcb-10",
     "pr_url": null
   },
   "openspec": {
@@ -24,7 +24,8 @@
       "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/ba-event-semantics/spec.md",
       "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-tooling/spec.md",
       "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/sniffer-probe-hardware/spec.md",
-      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-documentation/spec.md"
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-documentation/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/sniffer-pcb-card/spec.md"
     ]
   },
   "implementation": {
@@ -38,13 +39,20 @@
       "decoder/essensys_i2c_sniffer/semantics.py",
       "tests/test_corpus.py",
       "captures/corpus/README.md",
-      ".github/workflows/ci.yml"
+      ".github/workflows/ci.yml",
+      "hardware/pico2/README.md",
+      "decoder/essensys_pico/",
+      "firmware/",
+      "hardware/pico2/check_netlist.py",
+      "hardware/pico2/pico2-capture-draft.kicad_sch"
     ],
     "primary_surface": "ops"
   },
   "userguide": {
     "pages": [
-      "README.md"
+      "README.md",
+      "hardware/pico2/README.md",
+      "firmware/README.md"
     ],
     "language": "fr",
     "i18n_keys": [],
@@ -72,11 +80,14 @@
       "tests/test_transactions.py",
       "tests/test_annotations.py",
       "tests/test_crc.py",
-      "tests/test_correlate.py"
+      "tests/test_correlate.py",
+      "tests/test_pico_hex.py",
+      "tests/test_pico_capture.py",
+      "tests/test_pico_firmware_native.py"
     ]
   },
   "release": {
-    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug.",
+    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug. Extension Pico 2 en cours : capture huit voies PIO/DMA, outil USB avec CRC32, inspection HEX et schéma d’étude ; ICSP/PCB final et essais physiques en attente.",
     "target_tag": null,
     "surfaces": [
       "essensys-i2c-ba-sniffer",
@@ -90,7 +101,7 @@
   "security": {
     "sca_tool": "dependabot",
     "dependabot_alerts_url": null,
-    "last_scan_at": null,
+    "last_scan_at": "2026-11-14T10:24:25Z",
     "cve_findings": {
       "critical": 0,
       "high": 0,
@@ -100,7 +111,7 @@
     "secret_scan": {
       "status": "clean",
       "tool": "gitleaks",
-      "last_scan_at": null
+      "last_scan_at": "2026-11-14T10:24:10Z"
     },
     "muted_findings": [],
     "threat_model_url": "openspec/changes/i2c-ba-sniffer-2026-10-009/design.md",

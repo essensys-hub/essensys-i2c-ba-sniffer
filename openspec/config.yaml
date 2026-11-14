@@ -13,7 +13,9 @@ context: |
   Essensys (codes de trame 1 à 5, CRC-16 de crc.c, réponse 5 octets). Le change Pico
   essensys-i2c-ba-sniffer-2026-07-038 (essensys-memory) reste la phase 2 ; le module ESP32 N2
   (n2-esp32-spy-alarm-2026-10-008) reste la version permanente.
-  STRICTEMENT PASSIF : aucune émission sur le bus, aucune pull-up ajoutée, jamais le +15 V.
+  CAPTURE STRICTEMENT PASSIVE : aucune émission sur le bus, aucune pull-up ajoutée.
+  Sonde FX2 : jamais le +15 V. Carte Pico 2 (#10) : +15 V en traversée seulement,
+  analyse huit voies et ICSP séparé sur banc, spécifiés dans sniffer-pcb-card.
   TBTS : le 0 V n'est JAMAIS relié au PE ; la sonde ne doit pas créer de pont de masse (batterie,
   isolateur USB). Dépôt PUBLIC : aucune donnée privée (adresse, numéro de série, IP, MAC, installateur).
   Protocole HTTP legacy IoT inchangé. Gouvernance : essensys-feature-lifecycle/claude/GOVERNANCE.md

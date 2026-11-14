@@ -1,0 +1,80 @@
+{
+  "images": [
+    {
+      "board": "SC940D",
+      "source": "essensys-board-SC940/SC940D/Prog/ba v1_7 piece vie.hex",
+      "schema": "essensys.pic16f946.hex.v1",
+      "sha256": "10a6e06856dc1e8a15d60aed0aa7724985c4a568000269d5eac5874a02620d8f",
+      "device": "PIC16F946",
+      "config_raw": "0xFFF2",
+      "config_14bit": "0x3FF2",
+      "config": {
+        "FOSC": 2,
+        "MCLRE": 1,
+        "CP": 1,
+        "CPD": 1
+      },
+      "lvp_supported": false,
+      "vpp_volts": [
+        10,
+        12
+      ],
+      "entry": "VDD-first-compatible",
+      "program_words": 6237,
+      "eeprom_bytes": 0,
+      "calibration_policy": "never-write",
+      "hardware_programming_authorized": false
+    },
+    {
+      "board": "SC941C",
+      "source": "essensys-board-SC941C/SC941C/Prog/ba v1_7 piece eau.hex",
+      "schema": "essensys.pic16f946.hex.v1",
+      "sha256": "8d83b7198bf6a0409ec8f350dbf64e5f4b4345e16f72a9baa1af2afa755948c3",
+      "device": "PIC16F946",
+      "config_raw": "0xFFF2",
+      "config_14bit": "0x3FF2",
+      "config": {
+        "FOSC": 2,
+        "MCLRE": 1,
+        "CP": 1,
+        "CPD": 1
+      },
+      "lvp_supported": false,
+      "vpp_volts": [
+        10,
+        12
+      ],
+      "entry": "VDD-first-compatible",
+      "program_words": 6195,
+      "eeprom_bytes": 0,
+      "calibration_policy": "never-write",
+      "hardware_programming_authorized": false
+    },
+    {
+      "board": "SC942C",
+      "source": "essensys-board-SC942C/SC942C/Prog/ba v1_7 piece chambre.hex",
+      "schema": "essensys.pic16f946.hex.v1",
+      "sha256": "a7855bd83123cc4f3b5a18f1e0ece6f691aee7c4c0bd57a7bdaf544648bf3bc9",
+      "device": "PIC16F946",
+      "config_raw": "0xFFF2",
+      "config_14bit": "0x3FF2",
+      "config": {
+        "FOSC": 2,
+        "MCLRE": 1,
+        "CP": 1,
+        "CPD": 1
+      },
+      "lvp_supported": false,
+      "vpp_volts": [
+        10,
+        12
+      ],
+      "entry": "VDD-first-compatible",
+      "program_words": 6196,
+      "eeprom_bytes": 0,
+      "calibration_policy": "never-write",
+      "hardware_programming_authorized": false
+    }
+  ],
+  "physical_qualification": "pending"
+}
