@@ -20,7 +20,10 @@ détrompages et adaptateurs pour la nappe FC14P restent à qualifier. Le POC
 `essensys-bdm-programmer` ne fournit pas encore de transport matériel opérationnel.
 **Le schéma/PDF et les brochages ci-dessous décrivent l'étude antérieure à
 module Pico : ils ne constituent pas la nouvelle carte intégrée.** Le projet
-KiCad de cette nouvelle cible reste à concevoir.
+KiCad complet reste à terminer. Une [nouvelle étude intégrée](../integrated/README.md)
+est désormais disponible pour les parties numériques/capture et BP ; l'étage
+BA reste ouvert. Les [moteurs de protocole et le diagnostic USB](../../firmware/programmer/README.md)
+sont développés, sans activation matérielle autorisée.
 
 ## Étude antérieure : module Pico 2, capture PIO
 
@@ -124,10 +127,10 @@ uv run python hardware/pico2/inspect_ba_images.py /chemin/ESSENSYS
 
 La fiche usine « Fiche programmation SC940 v1 » indique PICkit 3 + « interface
 de programmation BA », carte alimentée. Elle ne détaille pas cette interface.
-Le 2026-11-14, l'utilisateur précise que cette interface comporte des composants
-électroniques. Leurs références, leur câblage et leur rôle restent inconnus :
-cette précision ne permet pas encore de conclure à une adaptation ou protection
-de VPP. Prochaine pièce nécessaire : schéma de l'interface, ou photos recto/verso
+Sa constitution (câble seul ou adaptation électronique), son câblage et son
+rôle restent à établir ; la réponse « Oui » à la question de connaissance de
+l'interface ne tranche pas entre ces possibilités. Aucune adaptation ou
+protection de VPP n'est prouvée. Pièce nécessaire : schéma, ou photos recto/verso
 avec marquages lisibles, puis relevé de continuité des connexions.
 Sur le schéma, MCLR rejoint la sortie RESET du NCP803 par **1 kΩ** (SC940D R39,
 SC941C R42, SC942C R50). La fiche NCP803 limite RESET à VCC + 0,3 V.

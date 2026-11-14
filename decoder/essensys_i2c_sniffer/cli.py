@@ -85,7 +85,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub = parser.add_subparsers(dest="command", required=True)
 
     live = sub.add_parser("live", help="capture en direct par analyseur logique (sigrok)")
-    live.add_argument("--driver", default="fx2lafw")
+    live.add_argument("--driver", default="fx2lafw", help="fx2lafw, avec option :conn si nécessaire")
     live.add_argument("--samplerate", type=parse_samplerate, default=MIN_SAMPLERATE)
     live.add_argument("--duration", type=float, help="durée de capture en secondes (défaut : jusqu'à Ctrl-C)")
     live.add_argument("--raw-out", help="enregistrer aussi le flux brut (.bin) et ses métadonnées (.json) pour rejeu")
@@ -134,10 +134,18 @@ def _end(printer: Printer, dec: Decoder, args) -> None:
 
 def cmd_live(args) -> int:
     check_samplerate(args.samplerate)
+    # Generic FX2 boards may expose 16 channels. Our raw decoder consumes one
+    # byte/sample; fx2lafw selects its 8-bit acquisition when D8..D15 are disabled.
+    # Binary output does not repack other drivers' 16-bit data (e.g. demo16).
+    if args.driver.partition(":")[0] != "fx2lafw":
+        raise SystemExit("erreur : le direct exige fx2lafw (contrat 8 voies / 1 octet par échantillon)")
+    if not (0 <= args.scl <= 7 and 0 <= args.sda <= 7 and args.scl != args.sda):
+        raise SystemExit("erreur : SCL et SDA doivent être deux voies distinctes entre 0 et 7")
     printer = Printer(args.format)
     start = datetime.now()
     _session(printer, f"live:{args.driver}", args.samplerate, start)
-    acq = [sigrok_bin(), "-d", args.driver, "--config", f"samplerate={args.samplerate}", "-O", "binary"]
+    acq = [sigrok_bin(), "-d", args.driver, "--config", f"samplerate={args.samplerate}",
+           "--channels", "D0,D1,D2,D3,D4,D5,D6,D7", "-O", "binary"]
     acq += ["--time", f"{int(args.duration * 1000)}"] if args.duration else ["--continuous"]
     proc = subprocess.Popen(acq, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     messages: "queue.Queue[str]" = queue.Queue()
@@ -150,7 +158,7 @@ def cmd_live(args) -> int:
     threading.Thread(target=errors, daemon=True).start()
     raw_out = open(args.raw_out, "wb") if args.raw_out else None
     if args.raw_out:
-        Path(args.raw_out + ".json").write_text(json.dumps({"samplerate": args.samplerate, "start_time": start.isoformat(timespec="seconds"), "scl": args.scl, "sda": args.sda}))
+        Path(args.raw_out + ".json").write_text(json.dumps({"samplerate": args.samplerate, "start_time": start.isoformat(timespec="seconds"), "scl": args.scl, "sda": args.sda, "unitsize": 1, "channels": 8}))
 
     def chunks():
         assert proc.stdout is not None
@@ -194,6 +202,9 @@ def cmd_replay(args) -> int:
         raw = subprocess.run([sigrok_bin(), "-i", str(path), "-O", "binary"], capture_output=True, check=True).stdout
     else:
         meta = _read_meta(path)
+        unit = meta.get("unitsize", 1)
+        if type(unit) is not int or unit != 1:
+            raise SystemExit("erreur : le flux brut doit contenir un octet par échantillon (unitsize 1)")
         rate = args.samplerate or meta.get("samplerate")
         if not rate:
             raise SystemExit("erreur : --samplerate est obligatoire pour ce fichier")

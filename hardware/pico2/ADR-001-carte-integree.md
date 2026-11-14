@@ -104,11 +104,13 @@ de fréquence d'échantillonnage ni d'absence de pertes.
   sans être présentés comme le firmware final du programmateur RP2350.
 - L'inspecteur HEX, le décodeur, le corpus et les protections d'entrée restent
   des éléments réutilisables. Le chemin d'acquisition final passe par le FX2.
-- La qualification de l'interface usine avec composants et du chemin
+- La qualification de l'interface usine, dont la constitution reste inconnue, et du chemin
   MCLR/NCP803 reste nécessaire pour les BA. Le support BP est demandé et requiert
   un protocole et une adaptation distincts ; aucune VPP ICSP sur un port BDM.
-- Aucun schéma complet, PCB routé, Gerber ou résultat de banc de cette nouvelle
-  architecture n'est déclaré disponible.
+- Le schéma d'étude intégré se trouve dans `hardware/integrated/`. L'étage BA
+  reste ouvert ; aucun schéma complet, PCB routé, Gerber ou résultat de banc
+  n'est déclaré disponible. Les moteurs C et le diagnostic USB du programmateur
+  se trouvent dans `firmware/programmer/`, sans activation matérielle.
 
 ## Action Items
 

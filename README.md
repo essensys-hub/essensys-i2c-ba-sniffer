@@ -18,18 +18,19 @@ Espion I2C **strictement passif** du bus interne de l'armoire Essensys : boîtie
 
 ## Installation
 
-**Précision de conception :** le ticket #10 vise maintenant une
-[carte intégrée RP2350 + analyseur FX2](hardware/pico2/ADR-001-carte-integree.md),
-avec une seule prise USB proposée. Le schéma à module Pico et son firmware PIO
-ci-dessous restent des prototypes de l'étude précédente.
+Le ticket #10 développe une [carte intégrée RP2350 + analyseur FX2](hardware/pico2/ADR-001-carte-integree.md),
+avec hub USB, deux connecteurs I2C et deux ports de programmation BP/BDM et BA/ICSP.
+Le [schéma intégré d'étude](hardware/integrated/README.md) et les
+[moteurs ICSP/BDM avec diagnostic USB](firmware/programmer/README.md) sont en
+cours de qualification. Le firmware diagnostic refuse toute activation cible ;
+la programmation utilisable sur matériel n'est pas encore livrée.
 
-La [phase Pico 2 huit voies](hardware/pico2/README.md), avec programmation ICSP
-des BA prévue, est en conception dans le ticket #10. Le firmware de capture
-et son [outil hôte](firmware/README.md) sont disponibles pour qualification sur
-banc. Le PCB complet et la programmation PIC restent à réaliser. Les consignes
-« trois fils, jamais +15 V » ci-dessus concernent la sonde FX2 historique ; le
-projet Pico prévoit une traversée J1/J2 à quatre conducteurs, sans alimentation
-du Pico par le +15 V. Aucun dossier de fabrication final n'est encore fourni.
+Le [module Pico et sa capture PIO](firmware/README.md) restent l'étude antérieure.
+Les deux images UF2 ont des affectations GPIO différentes : ne pas installer
+le firmware de capture sur la carte intégrée. Les consignes « trois fils,
+jamais +15 V » ci-dessus concernent la sonde FX2 historique ; la carte intégrée
+fait traverser les quatre conducteurs J1/J2 sans utiliser le +15 V pour son
+alimentation. Aucun dossier de fabrication final n'est encore fourni.
 
 ```bash
 sudo apt install sigrok-cli sigrok-firmware-fx2lafw   # Raspberry Pi OS / Debian
@@ -37,6 +38,12 @@ pip install git+https://github.com/essensys-hub/essensys-i2c-ba-sniffer
 ```
 
 ## Utilisation
+
+Le mode direct utilise exclusivement `fx2lafw` et sélectionne explicitement
+les huit voies D0 à D7, soit un octet par échantillon. Cela évite qu'un FX2
+générique soit acquis en seize voies puis décodé avec une largeur incorrecte.
+Les voies SCL/SDA doivent être distinctes et comprises entre 0 et 7. Le rejeu
+refuse les archives `.sr` et métadonnées brutes déclarant une autre largeur.
 
 ```bash
 # Capture en direct : D0 = SCL, D1 = SDA, 1 MHz minimum (20 fois le bus à 50 kHz)

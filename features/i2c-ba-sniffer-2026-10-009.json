@@ -45,7 +45,11 @@
       "firmware/",
       "hardware/pico2/check_netlist.py",
       "hardware/pico2/pico2-capture-draft.kicad_sch",
-      "hardware/pico2/ADR-001-carte-integree.md"
+      "hardware/pico2/ADR-001-carte-integree.md",
+      "hardware/integrated/",
+      "firmware/programmer/",
+      "decoder/essensys_pico/ba_plan.py",
+      "decoder/essensys_pico/programmer.py"
     ],
     "primary_surface": "ops"
   },
@@ -54,7 +58,9 @@
       "README.md",
       "hardware/pico2/README.md",
       "firmware/README.md",
-      "hardware/pico2/ADR-001-carte-integree.md"
+      "hardware/pico2/ADR-001-carte-integree.md",
+      "hardware/integrated/README.md",
+      "firmware/programmer/README.md"
     ],
     "language": "fr",
     "i18n_keys": [],
@@ -85,11 +91,17 @@
       "tests/test_correlate.py",
       "tests/test_pico_hex.py",
       "tests/test_pico_capture.py",
-      "tests/test_pico_firmware_native.py"
+      "tests/test_pico_firmware_native.py",
+      "tests/test_bdm_native.py",
+      "tests/test_icsp_native.py",
+      "tests/test_ba_plan.py",
+      "tests/test_programmer_client.py",
+      "tests/test_programmer_control.py",
+      "tests/test_integrated_gpio_contract.py"
     ]
   },
   "release": {
-    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug. Extension Pico 2 en cours : capture huit voies PIO/DMA, outil USB avec CRC32, inspection HEX et schéma d’étude ; ICSP/PCB final et essais physiques en attente. Cible matérielle révisée : RP2350 et FX2 intégrés, hub USB proposé ; schéma final à refaire. Deux ports de programmation dédiés confirmés : BP/BDM et BA/ICSP ; implémentation et qualification encore ouvertes.",
+    "changelog_entry": "Espion I2C passif et décodeur sigrok BP↔BA. Extension carte intégrée en développement : étude KiCad RP2350/FX2/hub, adaptation numérique BP, moteurs C ICSP et BDM, préparation HEX dense et firmware USB de diagnostic. Deux ports distincts BP/BDM et BA/ICSP ; activation matérielle indisponible, étage BA/VPP, programmation flash BP, PCB final et essais physiques restent ouverts. Le prototype Pico/PIO reste historique.",
     "target_tag": null,
     "surfaces": [
       "essensys-i2c-ba-sniffer",

@@ -113,3 +113,14 @@ restent valides pour ce prototype ; ils ne prouvent pas la nouvelle architecture
 - [ ] 9.18 Figer les brochages BP/BDM et BA/ICSP, détrompages et adaptateurs FC14P ; étendre les contrôles de nets à la séparation VPP/BDM et des alimentations cibles.
 - [ ] 9.19 Implémenter et qualifier le transport BDM RP2350 et l'outillage BP : identification, sauvegarde autorisée, préservation des zones sensibles, programmation, relecture et récupération documentée.
 - [ ] 9.20 Tester sur banc le BP et les trois variantes BA ; une cible active à la fois, autre port inactif, VPP absente du BP et arrêt sur défaut.
+
+### Développement logiciel et étude R0 (2026-11-14)
+
+- [x] 9.21 Implémenter les moteurs C portables ICSP PIC16F946 et BDM en lecture, avec cibles émulées, défauts injectés et temporisations bornées. Compiler pour hôte et Arm ; aucune écriture flash BP livrée.
+- [x] 9.22 Fournir l'UF2 diagnostic intégré, le client USB strict et le planificateur HEX hors matériel. Vérifier que toute sélection cible est refusée et que les sorties restent inactives.
+- [x] 9.23 Fournir l'étude KiCad intégrée R0, les contrats nets/GPIO et leurs contrôles CI. Conserver les cinq avertissements ERC connus, refuser le mode fabrication et laisser l'étage BA ouvert.
+- [x] 9.24 Imposer huit voies explicites au FX2 en acquisition directe et refuser les largeurs incompatibles ; ajouter une régression avec archive sigrok seize voies.
+
+Les moteurs sont compilés et testés sur hôte, sans activation matérielle.
+9.5–9.9 et 9.15–9.20 restent ouvertes : ces résultats ne qualifient pas les
+interfaces, une programmation réelle, les adaptateurs FC14P ou un PCB final.

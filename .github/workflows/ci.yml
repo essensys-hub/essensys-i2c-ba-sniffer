@@ -53,6 +53,22 @@ jobs:
           kicad-cli sch erc --exit-code-violations -o /tmp/pico-erc.rpt hardware/pico2/pico2-capture-draft.kicad_sch
           kicad-cli sch export netlist --format kicadxml -o /tmp/pico.xml hardware/pico2/pico2-capture-draft.kicad_sch
           python3 hardware/pico2/check_netlist.py /tmp/pico.xml
+      - name: Étude intégrée R0 — nets et avertissements ERC explicites
+        run: |
+          kicad-cli sch erc --format json --severity-all -o /tmp/integrated-erc.json hardware/integrated/essensys-integrated-study.kicad_sch
+          python3 hardware/integrated/check_erc.py /tmp/integrated-erc.json
+          kicad-cli sch export netlist --format kicadxml -o /tmp/integrated.xml hardware/integrated/essensys-integrated-study.kicad_sch
+          python3 hardware/integrated/check_netlist.py /tmp/integrated.xml
+          python3 hardware/integrated/test_erc.py /tmp/integrated-erc.json
+          python3 hardware/integrated/test_netlist.py /tmp/integrated.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integrated-r0-study-reports
+          path: |
+            /tmp/integrated-erc.json
+            /tmp/integrated.xml
+          if-no-files-found: warn
 
   pico2-firmware:
     runs-on: ubuntu-24.04
@@ -78,4 +94,11 @@ jobs:
           path: |
             build/pico2/essensys_pico2.uf2
             build/pico2/essensys_pico2.elf
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rp2350-programmer-diagnostic
+          path: |
+            build/pico2/essensys_programmer.uf2
+            build/pico2/essensys_programmer.elf
           if-no-files-found: error
