@@ -89,7 +89,7 @@
     ]
   },
   "release": {
-    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug. Extension Pico 2 en cours : capture huit voies PIO/DMA, outil USB avec CRC32, inspection HEX et schéma d’étude ; ICSP/PCB final et essais physiques en attente. Cible matérielle révisée : RP2350 et FX2 intégrés, hub USB proposé ; schéma final à refaire.",
+    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug. Extension Pico 2 en cours : capture huit voies PIO/DMA, outil USB avec CRC32, inspection HEX et schéma d’étude ; ICSP/PCB final et essais physiques en attente. Cible matérielle révisée : RP2350 et FX2 intégrés, hub USB proposé ; schéma final à refaire. Deux ports de programmation dédiés confirmés : BP/BDM et BA/ICSP ; implémentation et qualification encore ouvertes.",
     "target_tag": null,
     "surfaces": [
       "essensys-i2c-ba-sniffer",

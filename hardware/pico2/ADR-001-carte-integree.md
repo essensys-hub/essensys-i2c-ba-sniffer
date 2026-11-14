@@ -1,6 +1,6 @@
 # ADR-001 : Analyseur FX2 et RP2350 sur une carte unique
 
-**Status:** Proposed — intégration demandée par l'utilisateur ; références et interface cible à figer.
+**Status:** Proposed — intégration demandée par l'utilisateur ; deux ports BP/BA confirmés ; références et brochages à figer.
 **Date:** 2026-11-14
 **Deciders:** utilisateur Essensys et responsable de la conception électronique.
 
@@ -9,15 +9,16 @@
 La précision utilisateur remplace l'implantation à module Pico 2 enfiché par une
 carte unique intégrant la puce d'analyseur et, de préférence, le RP2350 nu. La
 connectique extérieure visée est un USB vers le PC (hypothèse de conception),
-deux connecteurs de traversée I2C J1/J2 et un connecteur de programmation cible.
+deux connecteurs de traversée I2C J1/J2 et deux connecteurs de programmation
+distincts : BP et boîtier secondaire (BA).
 Il ne faut plus un boîtier analyseur USB séparé ni une nappe d'analyse externe.
 
 Le terme « JTAG » ne fixe pas le protocole : les BA SC940/SC941/SC942 utilisent
 l'ICSP du PIC16F946 ; le BP SC944D expose J33 en JTAG/BDM, et le dépôt
-`essensys-bdm-programmer` vise le BDM pour sauvegarde/programmation. Une question
-est ouverte à l'utilisateur sur les cibles BA, BP ou les deux. Le périmètre BA
-initial reste requis jusqu'à clarification ; aucune prise universelle n'est
-déclarée compatible.
+`essensys-bdm-programmer` vise le BDM pour sauvegarde/programmation. L'utilisateur
+a confirmé deux prises dédiées, une par famille de cible. Les deux cibles font
+partie du ticket ; le dépôt BDM existant reste un POC avec transports matériels
+non implémentés, pas un programmateur déjà disponible.
 
 ## Decision
 
@@ -33,8 +34,10 @@ flowchart TB
     J1 -->|SDA / SCL : mesure seule| PROT[Protection et tampons 8 voies]
     TP[Points de test internes CH3..CH8] --> PROT
     PROT --> FX
-    RP --> PROG[Adaptation de programmation cible]
-    PROG --> CONN[Un connecteur de programmation]
+    RP --> BDM[Adaptation BDM]
+    BDM --> BP[Port BP : SC944D]
+    RP --> ICSP[Adaptation ICSP et VPP]
+    ICSP --> BA[Port BA : boîtier secondaire]
 ```
 
 - **Acquisition** : FX2LP, candidat CY7C68013A, chargé avec le firmware libre
@@ -57,11 +60,19 @@ flowchart TB
   protections ; six voies supplémentaires proposées sur points de test internes.
   Aucun sélecteur BUS/IDC n'est requis pour ces deux voies dédiées. Le mapping
   vers les entrées du FX2 sera vérifié contre `fx2lafw` avant schéma définitif.
-- **Programmation externe** : une seule prise dédiée ; protocole, format et
-  adaptation vers la cible attendent la réponse BA/BP. La nappe FC14P de 1 m
-  reste une contrainte à réconcilier pour cette prise, pas un brochage acquis.
-  Son ancien mapping « huit signaux + six masses » était celui de l'analyse et
-  ne doit jamais être réutilisé implicitement pour une sortie de programmation.
+- **Programmation externe** : deux prises dédiées, sérigraphiées **BP / BDM**
+  et **BA / ICSP**, avec deux adaptations électriques distinctes pilotées par
+  le RP2350. Le port BP rejoint J33 du SC944D après vérification du mode BDM
+  (JC1), du brochage et des niveaux. Le port BA rejoint les contacts ICSP des
+  SC940/SC941/SC942 via l'adaptateur qualifié.
+- **Sélection de cible** : une seule cible de programmation active à la fois ;
+  l'autre interface reste inactive/haute impédance. VPP ne possède aucun chemin
+  vers le port BP et reste coupée en mode BP, capture, reset et défaut. Les
+  alimentations cibles ne sont pas reliées ensemble par les prises.
+- **Nappe FC14P** : compatibilité mécanique et rôle dans les adaptateurs à
+  préciser pour les deux ports. Aucun brochage acquis ; son ancien mapping
+  « huit signaux + six masses » reste celui de l'analyse. Détrompage et marquage
+  doivent prévenir une permutation des câbles BP/BA.
 
 ## Options Considered
 
@@ -94,19 +105,20 @@ de fréquence d'échantillonnage ni d'absence de pertes.
 - L'inspecteur HEX, le décodeur, le corpus et les protections d'entrée restent
   des éléments réutilisables. Le chemin d'acquisition final passe par le FX2.
 - La qualification de l'interface usine avec composants et du chemin
-  MCLR/NCP803 reste nécessaire pour les BA. Le support BP, si demandé, requiert
+  MCLR/NCP803 reste nécessaire pour les BA. Le support BP est demandé et requiert
   un protocole et une adaptation distincts ; aucune VPP ICSP sur un port BDM.
 - Aucun schéma complet, PCB routé, Gerber ou résultat de banc de cette nouvelle
   architecture n'est déclaré disponible.
 
 ## Action Items
 
-1. [ ] Clarifier les cibles et le rôle de la nappe FC14P ; figer l'unique port de programmation.
-2. [ ] Sélectionner les références/boîtiers LCSC et chiffrer la BOM complète.
-3. [ ] Vérifier hub, budget USB, alimentation, séquencement et configuration USB.
-4. [ ] Dessiner RP2350 nu, FX2 et protections, avec mapping confirmé `fx2lafw`.
-5. [ ] Qualifier l'interface de programmation, puis compléter le schéma et le routage.
-6. [ ] Vérifier énumération des deux périphériques, capture, lecture/écriture cible et défauts sur banc.
+1. [x] Confirmer les deux ports dédiés : BP/BDM et boîtier secondaire/ICSP.
+2. [ ] Figer leurs brochages, détrompages et adaptateurs compatibles avec la nappe FC14P.
+3. [ ] Sélectionner les références/boîtiers LCSC et chiffrer la BOM complète.
+4. [ ] Vérifier hub, budget USB, alimentation, séquencement et configuration USB.
+5. [ ] Dessiner RP2350 nu, FX2 et protections, avec mapping confirmé `fx2lafw`.
+6. [ ] Qualifier les deux interfaces de programmation, puis compléter le schéma et le routage.
+7. [ ] Vérifier énumération des deux périphériques, capture, lecture/écriture cible et défauts sur banc.
 
 ## Sources
 

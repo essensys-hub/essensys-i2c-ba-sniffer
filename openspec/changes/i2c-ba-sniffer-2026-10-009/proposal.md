@@ -16,9 +16,9 @@ Ticket : [essensys-hub/essensys-feature-lifecycle#29](https://github.com/essensy
 
 La phase Pico est ajoutée à ce même change. Après précision utilisateur, la cible
 est une carte JLCPCB intégrant RP2350 nu et puce d'analyseur (FX2LP candidat),
-traversée quatre fils, une prise USB proposée via hub interne et un port de
-programmation cible. Le rôle de la nappe FC14P et la cible BA/ICSP ou BP/BDM
-restent à clarifier. L'étude à module Pico/PIO est conservée comme prototype. Le plan
+traversée quatre fils, une prise USB proposée via hub interne et deux ports de
+programmation dédiés, confirmés par l'utilisateur : BP/BDM et boîtier secondaire
+BA/ICSP. Brochages et adaptateurs FC14P restent à qualifier. L'étude à module Pico/PIO est conservée comme prototype. Le plan
 `essensys-i2c-ba-sniffer-2026-07-038` reste une source historique, sans nouvelle
 Feature. Les descriptions de phase 1 ci-dessous restent applicables à la sonde FX2.
 

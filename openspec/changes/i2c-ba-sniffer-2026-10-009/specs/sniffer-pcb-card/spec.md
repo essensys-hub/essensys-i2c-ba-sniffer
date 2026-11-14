@@ -2,8 +2,8 @@
 
 Étendre la Feature existante avec la carte intégrée du ticket #10 : analyseur
 huit voies et processeur RP2350 sur un PCB unique, traversée du bus et programmation
-cible. Le BA/PIC reste la cible initiale ; une demande de clarification distingue
-BA/ICSP et BP/BDM. L'analyseur externe reste l'oracle de comparaison. L'étude
+des BA/PIC en ICSP et du BP SC944D en BDM, via deux ports dédiés confirmés
+par l’utilisateur. L'analyseur externe reste l'oracle de comparaison. L'étude
 antérieure à module Pico/PIO est conservée comme prototype, non comme carte finale.
 
 ## ADDED Requirements
@@ -72,23 +72,44 @@ d'énumération SHALL être dimensionnés et vérifiés.
 
 ### Requirement: Connectique et distinction des protocoles
 
-La connectique extérieure proposée SHALL comprendre l'USB, J1/J2 et une prise de
-programmation cible. Son protocole, son brochage et le rôle de la nappe FC14P de
-1 m SHALL être figés après clarification BA/ICSP ou BP/BDM. Le brochage IDC14
-« huit voies + six masses » de l'étude antérieure ne SHALL pas être présenté
-comme un brochage de programmation, ni comme un standard JTAG.
+La connectique extérieure SHALL comprendre cinq prises : USB, J1/J2 I2C,
+port BP/BDM et port boîtier secondaire BA/ICSP. Les deux ports de programmation
+SHALL posséder des adaptations distinctes, un marquage explicite et un
+détrompage empêchant une permutation accidentelle de leurs liaisons. Brochages
+et adaptateurs compatibles avec la nappe FC14P de 1 m SHALL être qualifiés.
+L'ancien IDC14 « huit voies + six masses » ne SHALL pas servir implicitement
+de brochage de programmation.
 
-#### Scenario: Port cible non encore défini
+#### Scenario: Choix de la cible
 
-- **WHEN** la cible ou son adaptation électrique n'est pas confirmée
-- **THEN** le connecteur de programmation reste à définir et aucune compatibilité
-  ICSP/BDM, aucune présence de VPP ni liaison numéro à numéro n'est supposée
+- **WHEN** l'utilisateur sélectionne BP ou BA
+- **THEN** seule l'interface correspondante peut devenir active ; l'autre reste
+  inactive/haute impédance et les alimentations des deux cibles ne sont pas reliées
+- **AND** aucune VPP ICSP ne peut atteindre le port BP, y compris en défaut
 
-#### Scenario: Contrôle de câblage
+#### Scenario: Contrôle des connecteurs
 
-- **WHEN** la nappe et les adaptateurs sont contrôlés hors tension
-- **THEN** chaque contact correspond à la table spécifique à la cible, sans
-  inversion ; le repère 1 et le protocole sont marqués et vérifiés
+- **WHEN** les câbles et adaptateurs sont contrôlés hors tension
+- **THEN** chaque contact correspond à la table de sa cible, sans inversion ;
+  repère 1, détrompeur et marquage BP/BDM ou BA/ICSP sont vérifiés
+
+### Requirement: Interface BP en BDM
+
+Le RP2350 SHALL gérer l'interface BDM du BP SC944D/MCF52259 via son port dédié
+et une adaptation électrique qualifiée. La liaison vers J33, le mode BDM
+sélectionné par JC1, les niveaux et la référence de tension cible SHALL être
+vérifiés avant activation. Le POC existant à transports non implémentés ne SHALL
+pas être présenté comme un programmateur fonctionnel.
+
+#### Scenario: Préparation et programmation du BP
+
+- **WHEN** une opération BP est demandée sur banc isolé
+- **THEN** identité cible, connexion, mode et conditions électriques sont contrôlés
+- **AND** la lecture/sauvegarde est effectuée lorsque permise avant modification ;
+  les zones à préserver, la sécurité flash et la procédure de récupération sont
+  documentées et vérifiées avant effacement/écriture
+- **AND** la programmation n'est déclarée réussie qu'après vérification par relecture ;
+  un transport absent ou une cible protégée produit une erreur explicite sans contournement
 
 ### Requirement: Programmation spécifique PIC16F946
 
@@ -113,13 +134,13 @@ incomplet ou non pris en charge SHALL être refusé avant toute connexion matér
 ### Requirement: État inactif et défauts
 
 VPP SHALL être coupée au boot, reset, expiration de commande et défaut. Le mode
-capture SHALL interdire les commandes ICSP. Les tests SHALL utiliser un banc
+capture SHALL interdire les commandes de programmation ICSP et BDM. Les tests SHALL utiliser un banc
 isolé ; aucune armoire réelle ne SHALL être pilotée.
 
 #### Scenario: Défaut pendant la programmation
 
 - **WHEN** l'hôte disparaît ou une tension cible sort de la plage autorisée
-- **THEN** VPP est coupée, les sorties ICSP deviennent inactives et l'erreur est
+- **THEN** VPP est coupée, les sorties des deux interfaces deviennent inactives et l'erreur est
   rapportée ; la vérification ne peut pas être marquée réussie
 
 ### Requirement: Conception et fabrication reproductibles
@@ -138,8 +159,9 @@ fabricant, référence LCSC, pièces assemblées et pièces manuelles.
 ### Requirement: Validation physique séparée des tests logiciels
 
 La qualification SHALL inclure niveaux, montée, huit voies via les accès retenus,
-échanges USB des deux fonctions, comparaison à l’analyseur externe, câble de
-programmation retenu, VPP et programmation/relecture de chaque variante BA.
+échanges USB des deux fonctions, comparaison à l’analyseur externe, câbles de
+programmation BP et BA, VPP réservée au BA, port non sélectionné inactif et
+programmation/relecture du BP et de chaque variante BA.
 
 #### Scenario: Absence de prototype
 

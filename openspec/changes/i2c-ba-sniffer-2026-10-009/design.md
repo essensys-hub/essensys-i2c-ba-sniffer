@@ -168,7 +168,13 @@ Aucun gain de performance ni résultat sur banc n'est déclaré avant mesure.
 La nouvelle cible est décrite par `hardware/pico2/ADR-001-carte-integree.md` :
 RP2350 nu pour la programmation, analyseur FX2 intégré pour la capture et hub
 USB interne pour une seule prise externe proposée. Les deux connecteurs I2C
-restent traversants. La prise de programmation et le rôle de la nappe FC14P
-attendent la clarification BA/ICSP versus BP/BDM ; aucun port universel n'est
+restent traversants. Deux prises de programmation sont confirmées : BP/BDM et BA/ICSP.
+Leurs brochages et le rôle de la nappe FC14P restent à figer ; aucun port universel n'est
 présumé. Cette révision conserve l'inspecteur HEX et le décodeur. Les ERC/tests
 de l'ancien schéma et firmware PIO ne valident pas ce nouveau matériel.
+
+Les deux interfaces ont des adaptations distinctes, avec sélection explicite
+BP ou BA, une seule cible active à la fois et sorties de l'autre port inactives.
+VPP n'est routée que vers l'ICSP BA ; elle reste coupée en mode BP et capture.
+La référence BP est J33 du SC944D en mode BDM (JC1 à vérifier). Les transports du
+POC `essensys-bdm-programmer` restent à implémenter et à qualifier sur RP2350.

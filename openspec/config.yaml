@@ -17,8 +17,9 @@ context: |
   CAPTURE STRICTEMENT PASSIVE : aucune émission sur le bus, aucune pull-up ajoutée.
   Sonde FX2 : jamais le +15 V. Carte Pico 2 (#10) : +15 V en traversée seulement,
   nouvelle cible intégrée RP2350 nu + analyseur FX2 et hub USB interne proposé.
-  Une prise USB, deux I2C et un port de programmation cible ; rôle FC14P et
-  BA/ICSP versus BP/BDM à clarifier. L'ancien module Pico/PIO est un prototype.
+  Une prise USB, deux I2C et deux ports de programmation dédiés confirmés :
+  BP/BDM et BA/ICSP. Brochages/adaptateurs FC14P à qualifier ; VPP réservée au BA.
+  L'ancien module Pico/PIO est un prototype.
   Voir sniffer-pcb-card et hardware/pico2/ADR-001-carte-integree.md.
   TBTS : le 0 V n'est JAMAIS relié au PE ; la sonde ne doit pas créer de pont de masse (batterie,
   isolateur USB). Dépôt PUBLIC : aucune donnée privée (adresse, numéro de série, IP, MAC, installateur).

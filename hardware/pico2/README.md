@@ -11,10 +11,13 @@ L'utilisateur demande désormais de réunir **la puce d'analyseur et le processe
 RP2350 sur un seul PCB**, avec un minimum de prises externes. La proposition
 est détaillée dans [ADR-001](ADR-001-carte-integree.md) : FX2LP pour l'acquisition,
 RP2350 nu pour la programmation, hub USB interne pour une seule prise vers le PC,
-deux connecteurs I2C et un port de programmation cible.
+deux connecteurs I2C et **deux ports de programmation dédiés** : BP/BDM et
+boîtier secondaire BA/ICSP. Cela représente cinq prises extérieures avec l'USB.
 
-Le protocole de ce dernier port reste à clarifier (BA en ICSP, BP en BDM, ou les
-deux). Le rôle de la nappe FC14P devra être réconcilié avec cette connectique.
+Les deux ports ont des adaptations électriques distinctes ; une seule cible
+est active à la fois et aucune VPP ne rejoint le port BP. Les brochages,
+détrompages et adaptateurs pour la nappe FC14P restent à qualifier. Le POC
+`essensys-bdm-programmer` ne fournit pas encore de transport matériel opérationnel.
 **Le schéma/PDF et les brochages ci-dessous décrivent l'étude antérieure à
 module Pico : ils ne constituent pas la nouvelle carte intégrée.** Le projet
 KiCad de cette nouvelle cible reste à concevoir.
