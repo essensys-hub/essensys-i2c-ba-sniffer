@@ -1,4 +1,4 @@
-"""Capture Pico et inspection HEX ; aucune programmation de BA dans cette version."""
+"""Capture Pico, inspection HEX et diagnostic intégré ; programmation non exposée."""
 
 from __future__ import annotations
 
@@ -8,16 +8,29 @@ import sys
 from pathlib import Path
 
 from .hex_image import HexError, PicImage
+from .ba_plan import prepare_ba
+from .programmer import diagnostic_request
 from .transport import ProtocolError, capture, read_header, validate_request
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Pico 2 : acquisition 8 voies et inspection HEX hors matériel")
+    parser = argparse.ArgumentParser(description="Pico : capture historique, inspection HEX et diagnostic BP/BA")
     sub = parser.add_subparsers(dest="command", required=True)
     inspect = sub.add_parser("inspect-hex", help="vérifier une image PIC16F946 sans ouvrir de port")
     inspect.add_argument("file", type=Path)
+    plan = sub.add_parser("plan-ba", help="préparer le résumé d'une image BA, hors matériel")
+    plan.add_argument("file", type=Path)
+    plan.add_argument("--eeprom", choices=("preserve", "replace"),
+                      help="choix obligatoire si le HEX contient des données EEPROM")
     info = sub.add_parser("info", help="lire les capacités du firmware")
     info.add_argument("--port", required=True)
+    for name, help_text in (
+        ("programmer-info", "capacités du firmware intégré de diagnostic"),
+        ("programmer-status", "état inactif des ports BP/BA (sans mesure de tension)"),
+        ("programmer-stop", "remettre les sorties BP/BA à l'état inactif"),
+    ):
+        diagnostic = sub.add_parser(name, help=help_text)
+        diagnostic.add_argument("--port", required=True)
     acq = sub.add_parser("capture", help="acquisition bornée, fichier brut pour rejeu sigrok")
     acq.add_argument("--port", required=True)
     acq.add_argument("--samplerate", type=int, default=1_000_000)
@@ -54,6 +67,14 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "inspect-hex":
             print(json.dumps(PicImage.read(args.file).report(), indent=2))
+            return 0
+        if args.command == "plan-ba":
+            print(json.dumps(prepare_ba(PicImage.read(args.file), args.eeprom).report(), indent=2))
+            return 0
+        if args.command.startswith("programmer-"):
+            command = args.command.removeprefix("programmer-").upper()
+            with open_port(args.port, 1) as port:
+                print(json.dumps(diagnostic_request(port, command), indent=2))
             return 0
         if args.command == "info":
             with open_port(args.port, 5) as port:
