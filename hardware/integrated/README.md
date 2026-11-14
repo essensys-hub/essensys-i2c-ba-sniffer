@@ -10,6 +10,16 @@ silencieusement les études précédentes dans `../pico2/`. Les composants de
 `bom-candidates.csv` sont des candidats, sans références LCSC vérifiées ; les
 empreintes renseignées doivent encore être revues avant placement.
 
+## Voir le schéma KiCad
+
+[Ouvrir le PDF vectoriel pour zoomer](essensys-integrated-study.pdf) ou
+[le projet KiCad 10](essensys-integrated-study.kicad_pro), avec le
+[schéma éditable](essensys-integrated-study.kicad_sch) et les bibliothèques de
+ce dossier. L'aperçu ci-dessous est exporté du PDF KiCad, sans modification
+des connexions ; l'interface BA/VPP encore ouverte est signalée sur le dessin.
+
+![Schéma KiCad R0 : USB, RP2350, FX2 huit voies, traversée I2C et ports BP/BA](essensys-integrated-study.png)
+
 ## Architecture et fichiers
 
 ```mermaid
@@ -191,6 +201,8 @@ kicad-cli sch erc --format json --severity-all -o /tmp/essensys-integrated-check
 python3 hardware/integrated/check_erc.py /tmp/essensys-integrated-check/erc.json
 python3 hardware/integrated/test_erc.py /tmp/essensys-integrated-check/erc.json
 kicad-cli sch export pdf -o hardware/integrated/essensys-integrated-study.pdf hardware/integrated/essensys-integrated-study.kicad_sch
+# Aperçu pour le README (Poppler requis).
+pdftoppm -singlefile -scale-to 2600 -png hardware/integrated/essensys-integrated-study.pdf hardware/integrated/essensys-integrated-study
 ```
 
 Résultat R0 : **0 erreur ERC, 5 avertissements visibles** `isolated_pin_label`
