@@ -158,4 +158,7 @@ un firmware Pico et un outillage hôte distinct.
 Décisions : huit voies PIO/DMA synchrones ; acquisition bornée en RAM avant USB ;
 IDC14 sans VPP ; ICSP6 séparé ; +15 V en traversée seulement ; qualification
 du chemin MCLR/NCP803 préalable à l'autorisation de programmation des BA.
+L'utilisateur confirme le 2026-11-14 que l'interface PICkit → BA contient des
+composants électroniques ; schéma, références et fonctions restent à identifier.
+Ne pas la remplacer par un simple câblage sur la base de cette seule information.
 Aucun gain de performance ni résultat sur banc n'est déclaré avant mesure.

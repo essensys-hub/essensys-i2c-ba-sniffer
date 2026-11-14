@@ -107,6 +107,11 @@ uv run python hardware/pico2/inspect_ba_images.py /chemin/ESSENSYS
 
 La fiche usine « Fiche programmation SC940 v1 » indique PICkit 3 + « interface
 de programmation BA », carte alimentée. Elle ne détaille pas cette interface.
+Le 2026-11-14, l'utilisateur précise que cette interface comporte des composants
+électroniques. Leurs références, leur câblage et leur rôle restent inconnus :
+cette précision ne permet pas encore de conclure à une adaptation ou protection
+de VPP. Prochaine pièce nécessaire : schéma de l'interface, ou photos recto/verso
+avec marquages lisibles, puis relevé de continuité des connexions.
 Sur le schéma, MCLR rejoint la sortie RESET du NCP803 par **1 kΩ** (SC940D R39,
 SC941C R42, SC942C R50). La fiche NCP803 limite RESET à VCC + 0,3 V.
 La résistance seule ne démontre ni l'absence de surtension sur RESET ni une
