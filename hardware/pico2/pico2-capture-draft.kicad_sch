@@ -1,0 +1,9676 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(uuid a1ac64a9-fd7b-5215-aa7d-0c573fd64c02)
+	(paper "A3")
+	(title_block
+		(title "Pico 2 — acquisition 8 voies — étude")
+		(date "2026-11-14")
+		(rev "DRAFT-0")
+		(comment 1 "Refs #10 — Feature i2c-ba-sniffer-2026-10-009")
+		(comment 2 "NON FABRICABLE : ICSP et empreintes BA en attente")
+	)
+	(lib_symbols
+		(symbol
+			"Connector_Generic:Conn_02x02_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"J"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Value"
+				"Conn_02x02_Odd_Even"
+				(at 1.27 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Footprint"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"Connector*:*_2x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"Conn_02x02_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 3.81 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name
+						"Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name
+						"Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name
+						"Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name
+						"Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"Connector_Generic:Conn_02x07_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"J"
+				(at 1.27 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Value"
+				"Conn_02x07_Odd_Even"
+				(at 1.27 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Footprint"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"Connector*:*_2x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"Conn_02x07_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 8.89)
+					(end 3.81 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 7.747)
+					(end 2.54 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 5.207)
+					(end 2.54 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 2.667)
+					(end 2.54 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -4.953)
+					(end 2.54 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -7.493)
+					(end 2.54 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 7.62 0)
+					(length 3.81)
+					(name
+						"Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 7.62 180)
+					(length 3.81)
+					(name
+						"Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name
+						"Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 5.08 180)
+					(length 3.81)
+					(name
+						"Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name
+						"Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name
+						"Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name
+						"Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name
+						"Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name
+						"Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name
+						"Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name
+						"Pin_11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 -5.08 180)
+					(length 3.81)
+					(name
+						"Pin_12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name
+						"Pin_13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 7.62 -7.62 180)
+					(length 3.81)
+					(name
+						"Pin_14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"Jumper:Jumper_3_Open"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"JP"
+				(at -2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Value"
+				"Jumper_3_Open"
+				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Footprint"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				""
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Jumper, 3-pole, both open"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				private
+				"KLC_S5.1"
+				"This is a generic symbol, it has fp-filter, but no default footprint"
+				(at 0 -17.78 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				private
+				"KLC_S3.3"
+				"Graphical-Symbol: thickness is 6mm, fill is background"
+				(at -1.27 -20.32 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"Jumper SPDT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"Jumper* TestPoint*3Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"Jumper_3_Open_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol
+				"Jumper_3_Open_0_1"
+				(arc
+					(start -2.032 1.016)
+					(mid -1.143 1.3235)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.508)
+						(xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.143 1.3235)
+					(end 2.032 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol
+				"Jumper_3_Open_1_1"
+				(pin
+					passive
+					line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name
+						"A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name
+						"C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name
+						"B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Value"
+				"R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Footprint"
+				""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol
+				"R_1_1"
+				(pin
+					passive
+					line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"74xGxx:74LVC2G17"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"U"
+				(at -1.27 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Value"
+				"74LVC2G17"
+				(at 2.54 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Footprint"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				"http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Dual Buffer, Schmitt Triggered, Low-Voltage CMOS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"Dual Buffer Schmitt LVC CMOS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"SG-* SOT*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"74LVC2G17_1_1"
+				(polyline
+					(pts
+						(xy -7.62 6.35)
+						(xy -7.62 -6.35)
+						(xy 5.08 0)
+						(xy -7.62 6.35)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 1.27)
+						(xy -2.54 1.27)
+						(xy -2.54 -1.27)
+						(xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin
+					input
+					line
+					(at -15.24 0 0)
+					(length 7.62)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					output
+					line
+					(at 12.7 0 180)
+					(length 7.62)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol
+				"74LVC2G17_2_1"
+				(polyline
+					(pts
+						(xy -7.62 6.35)
+						(xy -7.62 -6.35)
+						(xy 5.08 0)
+						(xy -7.62 6.35)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 1.27)
+						(xy -2.54 1.27)
+						(xy -2.54 -1.27)
+						(xy 0 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin
+					input
+					line
+					(at -15.24 0 0)
+					(length 7.62)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					output
+					line
+					(at 12.7 0 180)
+					(length 7.62)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol
+				"74LVC2G17_3_0"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 5.08 5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol
+				"74LVC2G17_3_1"
+				(pin
+					power_in
+					line
+					(at 0 -10.16 90)
+					(length 5.08)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					power_in
+					line
+					(at 0 10.16 270)
+					(length 5.08)
+					(name
+						"VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"Power_Protection:SP0502BAHT"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"D"
+				(at 5.715 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Value"
+				"SP0502BAHT"
+				(at 5.715 0.635 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Footprint"
+				"Package_TO_SOT_SMD:SOT-23"
+				(at 5.715 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Datasheet"
+				"http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf"
+				(at 3.175 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"TVS Diode Array, 5.5V Standoff, 2 Channels, SOT-23 package"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"usb esd protection suppression transient"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"SP0502BAHT_0_0"
+				(pin
+					passive
+					line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name
+						"A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol
+				"SP0502BAHT_0_1"
+				(rectangle
+					(start -4.445 2.54)
+					(end 4.445 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.302 1.016)
+						(xy -3.302 1.27)
+						(xy -1.905 1.27)
+						(xy -1.778 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.54)
+						(xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27)
+						(xy -2.54 -1.27)
+						(xy 2.54 -1.27)
+						(xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.27)
+						(xy -1.905 0)
+						(xy -3.175 0)
+						(xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27)
+						(xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -1.27)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 1.016)
+						(xy 1.778 1.27)
+						(xy 3.175 1.27)
+						(xy 3.302 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54)
+						(xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27)
+						(xy 1.905 0)
+						(xy 3.175 0)
+						(xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol
+				"SP0502BAHT_1_1"
+				(pin
+					passive
+					line
+					(at -2.54 5.08 270)
+					(length 2.54)
+					(name
+						"K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name
+						"K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Value"
+				"C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Footprint"
+				""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol
+				"C_1_1"
+				(pin
+					passive
+					line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name
+						""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol
+			"MCU_Module:RaspberryPi_Pico"
+			(pin_names
+				(offset 0.762)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property
+				"Reference"
+				"A"
+				(at -19.05 35.56 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Value"
+				"RaspberryPi_Pico"
+				(at 7.62 35.56 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property
+				"Footprint"
+				"Module:RaspberryPi_Pico_Common_Unspecified"
+				(at 0 -46.99 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Datasheet"
+				"https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
+				(at 0 -49.53 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"Description"
+				"Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
+				(at 0 -52.07 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_keywords"
+				"RP2350A M33 RISC-V Hazard3 usb"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property
+				"ki_fp_filters"
+				"RaspberryPi?Pico?Common* RaspberryPi?Pico?SMD*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol
+				"RaspberryPi_Pico_0_1"
+				(rectangle
+					(start -19.05 34.29)
+					(end 19.05 -31.75)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 34.29)
+						(xy -3.81 33.655)
+						(xy -3.81 31.75)
+						(xy -3.175 31.75)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.429 32.766)
+						(xy -3.429 33.02)
+						(xy -3.175 33.02)
+						(xy -3.175 30.48)
+						(xy -2.921 30.48)
+						(xy -2.921 30.734)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 31.75)
+						(xy -1.905 33.02)
+						(xy -1.905 30.48)
+						(xy -3.175 31.75)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 34.29)
+						(xy -1.27 33.655)
+						(xy -1.27 31.75)
+						(xy -1.905 31.75)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -31.75)
+						(xy 1.27 -31.115)
+						(xy 1.27 -24.13)
+						(xy 18.415 -24.13)
+						(xy 19.05 -22.86)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol
+				"RaspberryPi_Pico_1_1"
+				(pin
+					bidirectional
+					line
+					(at -22.86 15.24 0)
+					(length 3.81)
+					(name
+						"GPIO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM0_A" output line)
+					(alternate "SPI0_RX" input line)
+					(alternate "UART0_TX" output line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 12.7 0)
+					(length 3.81)
+					(name
+						"GPIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SCL" bidirectional clock)
+					(alternate "PWM0_B" bidirectional line)
+					(alternate "UART0_RX" input line)
+					(alternate "USB_VBUS_DET" passive line)
+					(alternate "~{SPI0_CSn}" bidirectional line)
+				)
+				(pin
+					power_out
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "GND_IN" power_in line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 10.16 0)
+					(length 3.81)
+					(name
+						"GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM1_A" output line)
+					(alternate "SPI0_SCK" bidirectional clock)
+					(alternate "UART0_CTS" input line)
+					(alternate "USB_VBUS_EN" output line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 7.62 0)
+					(length 3.81)
+					(name
+						"GPIO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SCL" bidirectional clock)
+					(alternate "PWM1_B" bidirectional line)
+					(alternate "SPI0_TX" output line)
+					(alternate "UART0_RTS" output line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 5.08 0)
+					(length 3.81)
+					(name
+						"GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM2_A" output line)
+					(alternate "SPI0_RX" input line)
+					(alternate "UART1_TX" output line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 2.54 0)
+					(length 3.81)
+					(name
+						"GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SCL" bidirectional clock)
+					(alternate "PWM2_B" bidirectional line)
+					(alternate "UART1_RX" input line)
+					(alternate "USB_VBUS_EN" output line)
+					(alternate "~{SPI0_CSn}" bidirectional line)
+				)
+				(pin
+					passive
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 0 0)
+					(length 3.81)
+					(name
+						"GPIO6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM3_A" output line)
+					(alternate "SPI0_SCK" bidirectional clock)
+					(alternate "UART1_CTS" input line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -2.54 0)
+					(length 3.81)
+					(name
+						"GPIO7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SCL" bidirectional clock)
+					(alternate "PWM3_B" bidirectional line)
+					(alternate "SPI0_TX" output line)
+					(alternate "UART1_RTS" output line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -5.08 0)
+					(length 3.81)
+					(name
+						"GPIO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM4_A" output line)
+					(alternate "SPI1_RX" input line)
+					(alternate "UART1_TX" output line)
+					(alternate "USB_VBUS_EN" output line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -7.62 0)
+					(length 3.81)
+					(name
+						"GPIO9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SCL" bidirectional clock)
+					(alternate "PWM4_B" bidirectional line)
+					(alternate "UART1_RX" input line)
+					(alternate "USB_OVCUR_DET" input line)
+					(alternate "~{SPI1_CSn}" bidirectional line)
+				)
+				(pin
+					passive
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -10.16 0)
+					(length 3.81)
+					(name
+						"GPIO10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM5_A" output line)
+					(alternate "SPI1_SCK" bidirectional clock)
+					(alternate "UART1_CTS" input line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -12.7 0)
+					(length 3.81)
+					(name
+						"GPIO11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SCL" bidirectional clock)
+					(alternate "PWM5_B" bidirectional line)
+					(alternate "SPI1_TX" output line)
+					(alternate "UART1_RTS" output line)
+					(alternate "USB_VBUS_EN" output line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -15.24 0)
+					(length 3.81)
+					(name
+						"GPIO12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM6_A" output line)
+					(alternate "SPI1_RX" input line)
+					(alternate "UART0_TX" output line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -17.78 0)
+					(length 3.81)
+					(name
+						"GPIO13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SCL" bidirectional clock)
+					(alternate "PWM6_B" bidirectional line)
+					(alternate "UART0_RX" input line)
+					(alternate "USB_VBUS_DET" input line)
+					(alternate "~{SPI1_CSn}" bidirectional line)
+				)
+				(pin
+					passive
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -20.32 0)
+					(length 3.81)
+					(name
+						"GPIO14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM7_A" output line)
+					(alternate "SPI1_SCK" bidirectional clock)
+					(alternate "UART0_CTS" input line)
+					(alternate "USB_VBUS_EN" output line)
+				)
+				(pin
+					bidirectional
+					line
+					(at -22.86 -22.86 0)
+					(length 3.81)
+					(name
+						"GPIO15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SCL" bidirectional clock)
+					(alternate "PWM7_B" bidirectional line)
+					(alternate "SPI1_TX" output line)
+					(alternate "UART0_RTS" output line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 12.7 180)
+					(length 3.81)
+					(name
+						"GPIO16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM0_A" output line)
+					(alternate "SPI0_RX" input line)
+					(alternate "UART0_TX" output line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 10.16 180)
+					(length 3.81)
+					(name
+						"GPIO17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0_SCL" bidirectional clock)
+					(alternate "PWM0_B" bidirectional line)
+					(alternate "UART0_RX" input line)
+					(alternate "USB_VBUS_EN" output line)
+					(alternate "~{SPI0_CSn}" bidirectional line)
+				)
+				(pin
+					passive
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 7.62 180)
+					(length 3.81)
+					(name
+						"GPIO18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM1_A" output line)
+					(alternate "SPI0_SCK" bidirectional clock)
+					(alternate "UART0_CTS" input line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 5.08 180)
+					(length 3.81)
+					(name
+						"GPIO19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1_SCL" bidirectional clock)
+					(alternate "PWM1_B" bidirectional line)
+					(alternate "SPI0_TX" output line)
+					(alternate "UART0_RTS" output line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 2.54 180)
+					(length 3.81)
+					(name
+						"GPIO20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "CLOCK_GPIN0" input clock)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM2_A" output line)
+					(alternate "SPI0_RX" input line)
+					(alternate "UART1_TX" output line)
+					(alternate "USB_VBUS_EN" output line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 0 180)
+					(length 3.81)
+					(name
+						"GPIO21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "CLOCK_GPOUT0" output clock)
+					(alternate "I2C0_SCL" bidirectional clock)
+					(alternate "PWM2_B" bidirectional line)
+					(alternate "UART1_RX" input line)
+					(alternate "USB_OVCUR_DET" input line)
+					(alternate "~{SPI0_CSn}" bidirectional line)
+				)
+				(pin
+					passive
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 -2.54 180)
+					(length 3.81)
+					(name
+						"GPIO22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "CLOCK_GPIN1" input clock)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM3_A" output line)
+					(alternate "SPI0_SCK" bidirectional clock)
+					(alternate "UART1_CTS" input line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					passive
+					line
+					(at -22.86 22.86 0)
+					(length 3.81)
+					(name
+						"RUN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "~{RESET}" passive line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 -12.7 180)
+					(length 3.81)
+					(name
+						"GPIO26_ADC0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "ADC0" input line)
+					(alternate "GPIO26" bidirectional line)
+					(alternate "I2C1_SDA" bidirectional line)
+					(alternate "PWM5_A" output line)
+					(alternate "SPI1_SCK" bidirectional clock)
+					(alternate "UART1_CTS" input line)
+					(alternate "USB_VBUS_EN" output line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 -15.24 180)
+					(length 3.81)
+					(name
+						"GPIO27_ADC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "ADC1" input line)
+					(alternate "GPIO27" bidirectional line)
+					(alternate "I2C1_SCL" bidirectional clock)
+					(alternate "PWM5_B" bidirectional line)
+					(alternate "SPI1_TX" output line)
+					(alternate "UART1_RTS" output line)
+					(alternate "USB_OVCUR_DET" input line)
+				)
+				(pin
+					power_out
+					line
+					(at 22.86 -22.86 180)
+					(length 3.81)
+					(name
+						"AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "GND" passive line)
+				)
+				(pin
+					bidirectional
+					line
+					(at 22.86 -17.78 180)
+					(length 3.81)
+					(name
+						"GPIO28_ADC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "ADC2" input line)
+					(alternate "GPIO28" bidirectional line)
+					(alternate "I2C0_SDA" bidirectional line)
+					(alternate "PWM6_A" output line)
+					(alternate "SPI1_RX" input line)
+					(alternate "UART0_TX" output line)
+					(alternate "USB_VBUS_DET" input line)
+				)
+				(pin
+					power_in
+					line
+					(at 22.86 -7.62 180)
+					(length 3.81)
+					(name
+						"ADC_VREF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					power_out
+					line
+					(at 5.08 38.1 270)
+					(length 3.81)
+					(name
+						"3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					passive
+					line
+					(at -22.86 20.32 0)
+					(length 3.81)
+					(name
+						"3V3_EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "~{3V3_DISABLE}" passive line)
+				)
+				(pin
+					passive
+					line
+					(at 0 -35.56 90)
+					(length 3.81)
+					(hide yes)
+					(name
+						"GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin
+					power_in
+					line
+					(at -5.08 38.1 270)
+					(length 3.81)
+					(name
+						"VSYS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "VSYS_OUT" power_out line)
+				)
+				(pin
+					power_out
+					line
+					(at 0 38.1 270)
+					(length 3.81)
+					(name
+						"VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number
+						"40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "VBUS_IN" power_in line)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text
+		"PICO 2 — ACQUISITION 8 VOIES — SCHEMA D'ETUDE"
+		(exclude_from_sim no)
+		(at 12.7 15.24 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid ad990774-2dfd-5eb3-9b6d-596caf57835c)
+	)
+	(text
+		"NON FABRICABLE : ICSP absent ; empreintes BA et qualification électrique en attente.\nUSB uniquement pour l'alimentation. +15 V limité à la traversée J1/J2. Aucune pull-up sur les signaux."
+		(exclude_from_sim no)
+		(at 12.7 25.4 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+			)
+			(justify left bottom)
+		)
+		(uuid 529d7f53-ffbc-55db-b710-2c96638fd775)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
+		(at 40.64 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid b4ef1e79-9dc9-5b55-b372-b5a3cd59a878)
+		(property
+			"Reference"
+			"J1"
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"BA J1"
+			(at 38.1 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			""
+			(at 40.64 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 40.64 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Note"
+			"WR-MPC3 2x2 : empreinte mécanique à confirmer avant PCB"
+			(at 40.64 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 13538853-bb08-5f21-bc2b-49ef594d218b)
+		)
+		(pin
+			"2"
+			(uuid 1b1da823-fbd6-520e-af3f-43f5a33c301b)
+		)
+		(pin
+			"3"
+			(uuid d6584a75-7d9c-52cf-8bb9-56a262b92229)
+		)
+		(pin
+			"4"
+			(uuid f8ee36d7-1bb9-5e97-8b5c-d68fcfa66aca)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 35.56 40.64)
+			(xy 30.48 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8a647c0b-3208-5d93-b21c-3c29c3a62278)
+	)
+	(label
+		"SDA_BUS"
+		(at 30.48 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 09fab7c3-167f-5382-b3a6-42729248df79)
+	)
+	(wire
+		(pts
+			(xy 48.26 40.64)
+			(xy 53.34 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 74c44bc7-1037-56be-8b78-3a108fb923d4)
+	)
+	(label
+		"SCL_BUS"
+		(at 53.34 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 875c5353-9922-5c27-86a1-0c85c9dd373d)
+	)
+	(wire
+		(pts
+			(xy 35.56 43.18)
+			(xy 30.48 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 97a86868-e1b6-553c-a89a-3110550b1657)
+	)
+	(label
+		"GND"
+		(at 30.48 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 0cb337a2-c1c0-5160-a8cd-dc92f2e7a52d)
+	)
+	(wire
+		(pts
+			(xy 48.26 43.18)
+			(xy 53.34 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 49497722-98a3-52e0-9231-bbf8150cbed2)
+	)
+	(label
+		"+15V_PASS"
+		(at 53.34 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 8ab54ac6-1d2f-5d2e-a296-204392b3ce47)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
+		(at 40.64 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid ca66a85f-fa57-58b9-903d-670643e3f6e6)
+		(property
+			"Reference"
+			"J2"
+			(at 38.1 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"BA J2"
+			(at 38.1 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			""
+			(at 40.64 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 40.64 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Note"
+			"WR-MPC3 2x2 : empreinte mécanique à confirmer avant PCB"
+			(at 40.64 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 975d3ac3-aaa7-53cd-ae09-52bedb5903a0)
+		)
+		(pin
+			"2"
+			(uuid 50cc6365-98b7-550f-8dc0-d3900a330a53)
+		)
+		(pin
+			"3"
+			(uuid 632a21f5-80cd-53be-a0de-4b4bcdbe3b2e)
+		)
+		(pin
+			"4"
+			(uuid df25b3ca-a0e7-5e16-bda1-d5e795adc0d6)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 35.56 60.96)
+			(xy 30.48 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid eb91aa56-00ab-5247-8db6-6cc537f1b85f)
+	)
+	(label
+		"SDA_BUS"
+		(at 30.48 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid f50585aa-a64b-584a-b0a1-48136ec0db17)
+	)
+	(wire
+		(pts
+			(xy 48.26 60.96)
+			(xy 53.34 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 1539c484-668d-5e43-97b2-50dd37e9251b)
+	)
+	(label
+		"SCL_BUS"
+		(at 53.34 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 1b5d4bea-251e-50f8-835b-1085912ebdee)
+	)
+	(wire
+		(pts
+			(xy 35.56 63.5)
+			(xy 30.48 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 6b5ab7bf-e1d7-5659-af2a-90cfd140f1ca)
+	)
+	(label
+		"GND"
+		(at 30.48 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 63605261-66c2-5233-bf5c-d9939f3129c4)
+	)
+	(wire
+		(pts
+			(xy 48.26 63.5)
+			(xy 53.34 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid ae319c80-34c2-5dae-8657-bc5ac4dae840)
+	)
+	(label
+		"+15V_PASS"
+		(at 53.34 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 183c98bf-c03f-5f51-b35e-1c8adca518d8)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x07_Odd_Even")
+		(at 45.72 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid f0f22ea9-f5f0-5e87-9058-7a1b44a2e48a)
+		(property
+			"Reference"
+			"J3"
+			(at 40.64 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"IDC14 FC14P"
+			(at 35.56 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Connector_IDC:IDC-Header_2x07_P2.54mm_Vertical"
+			(at 45.72 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 45.72 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Note"
+			"Nappe femelle-femelle 1 m ; vérifier détrompeur et continuité"
+			(at 45.72 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 5a2dbe07-6d06-5594-bd31-c16482b19b99)
+		)
+		(pin
+			"2"
+			(uuid d2c7bcc3-7ede-583b-b964-f44eeb2ba658)
+		)
+		(pin
+			"3"
+			(uuid e7b56a49-80bb-5b4a-aeda-75f7eeb6a88c)
+		)
+		(pin
+			"4"
+			(uuid f2ff7f39-2715-55b7-81c9-01c47217a0a4)
+		)
+		(pin
+			"5"
+			(uuid 2a205c73-326b-548b-b0d2-9dbe23a8b7e1)
+		)
+		(pin
+			"6"
+			(uuid 01895719-be18-5122-aae3-d16342d76625)
+		)
+		(pin
+			"7"
+			(uuid b3d887b8-860d-5faf-bfe3-1a4bd5ea6930)
+		)
+		(pin
+			"8"
+			(uuid fdeb6418-1bd6-5ef4-9b05-8b2a7d33b678)
+		)
+		(pin
+			"9"
+			(uuid 5437910c-cee6-57d5-97c3-a66aa1526de1)
+		)
+		(pin
+			"10"
+			(uuid c2b7e625-eaee-5fe1-84c9-d6273bd22390)
+		)
+		(pin
+			"11"
+			(uuid 125b8e7e-6549-5006-97d2-37507ef199ad)
+		)
+		(pin
+			"12"
+			(uuid a03539d8-7baa-5afe-b2d9-a0685cd4a52d)
+		)
+		(pin
+			"13"
+			(uuid 40a9e322-d017-5c4f-8af2-530e1475498b)
+		)
+		(pin
+			"14"
+			(uuid 59ad8910-e59d-5873-b968-66ad234e2a0b)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 40.64 144.78)
+			(xy 35.56 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid b6dbc7cc-e085-5b67-94d6-37347b350c75)
+	)
+	(label
+		"CH1_IDC"
+		(at 35.56 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid a2cad798-15c5-56aa-a7cc-c75b967922b6)
+	)
+	(wire
+		(pts
+			(xy 53.34 144.78)
+			(xy 58.42 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 1e5da87d-0f0b-5a1d-86ba-35d92ecece22)
+	)
+	(label
+		"CH2_IDC"
+		(at 58.42 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 942562b1-ac8f-5634-addb-f3964dc520ad)
+	)
+	(wire
+		(pts
+			(xy 40.64 147.32)
+			(xy 35.56 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 6158ca53-8b4b-5377-8611-1c6365363db0)
+	)
+	(label
+		"CH3_IDC"
+		(at 35.56 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 2ee8f424-4622-53d6-b493-ab0568cd16b4)
+	)
+	(wire
+		(pts
+			(xy 53.34 147.32)
+			(xy 58.42 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 028834dd-f8ca-5d3d-9ae3-8cfacbb5430f)
+	)
+	(label
+		"CH4_IDC"
+		(at 58.42 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid de538496-1c89-5595-b214-314a26a61880)
+	)
+	(wire
+		(pts
+			(xy 40.64 149.86)
+			(xy 35.56 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 2832031e-3f39-5ee5-bdc0-8535b8631966)
+	)
+	(label
+		"CH5_IDC"
+		(at 35.56 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 629e0bb3-22dd-56c1-94b2-638ac4031715)
+	)
+	(wire
+		(pts
+			(xy 53.34 149.86)
+			(xy 58.42 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 9609eb60-6a40-5ba6-9798-ef7365bc7861)
+	)
+	(label
+		"CH6_IDC"
+		(at 58.42 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 20fe7a44-ae5a-5a08-b682-cba16dd548a5)
+	)
+	(wire
+		(pts
+			(xy 40.64 152.4)
+			(xy 35.56 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a9ba73c1-b309-5ec5-b6a2-ea951ff3dc7f)
+	)
+	(label
+		"CH7_IDC"
+		(at 35.56 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid b96be237-dd0b-5053-b61b-bbac2daffd76)
+	)
+	(wire
+		(pts
+			(xy 53.34 152.4)
+			(xy 58.42 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 401227b7-7899-556b-af33-957f703a1c10)
+	)
+	(label
+		"CH8_IDC"
+		(at 58.42 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 2be3874e-a42c-5c7a-a697-47926c2228f9)
+	)
+	(wire
+		(pts
+			(xy 40.64 154.94)
+			(xy 35.56 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a4abac5f-855d-598b-9d0b-f537a2f08aa8)
+	)
+	(label
+		"GND"
+		(at 35.56 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 66a755e1-444d-5ee8-8086-296b94b51b64)
+	)
+	(wire
+		(pts
+			(xy 53.34 154.94)
+			(xy 58.42 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 701252ac-e492-5d5b-8078-5a2e049a8370)
+	)
+	(label
+		"GND"
+		(at 58.42 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 88d91940-f910-56aa-9acc-e3765611bf7c)
+	)
+	(wire
+		(pts
+			(xy 40.64 157.48)
+			(xy 35.56 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 720a8a2a-5e29-509b-bc86-f352485580c2)
+	)
+	(label
+		"GND"
+		(at 35.56 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid c516310e-aff5-56e0-aef7-eb863d2a37b9)
+	)
+	(wire
+		(pts
+			(xy 53.34 157.48)
+			(xy 58.42 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid f91315b8-e2e6-518a-ae83-c8e48754c9f2)
+	)
+	(label
+		"GND"
+		(at 58.42 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 0303ab6e-ad6d-5293-bc27-2f19cda346d3)
+	)
+	(wire
+		(pts
+			(xy 40.64 160.02)
+			(xy 35.56 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 6212cc2a-a4c1-5bcc-85af-7607038d7264)
+	)
+	(label
+		"GND"
+		(at 35.56 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid ce979284-497c-5030-8733-8955b4508ab2)
+	)
+	(wire
+		(pts
+			(xy 53.34 160.02)
+			(xy 58.42 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 63a93c38-3e91-5c4c-8971-f4ce30c9b4b2)
+	)
+	(label
+		"GND"
+		(at 58.42 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 87a74e51-aa7f-5b26-88e9-22394e7d506b)
+	)
+	(text
+		"IDC : 1..8 signaux, 9..14 masses.\nAucune tension d'alimentation sur la nappe.\nPas de raccordement direct à l'analyseur 2x5."
+		(exclude_from_sim no)
+		(at 12.7 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 263f5569-c6b2-5919-8789-aed5dde74cb8)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_3_Open")
+		(at 63.5 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid d6ea12b3-d989-5626-a901-3aef345ec754)
+		(property
+			"Reference"
+			"JP1"
+			(at 60.96 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"BUS / IDC"
+			(at 60.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 63.5 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 63.5 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 4d346a28-496f-59c6-89cc-b91ae622f3b7)
+		)
+		(pin
+			"2"
+			(uuid 6526c2e2-37d6-5a82-b1dc-560df2f8d673)
+		)
+		(pin
+			"3"
+			(uuid 3abd9759-a9c1-5c3e-89d7-b83964749a34)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 58.42 81.28)
+			(xy 53.34 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid f55640c4-2310-5fd3-9170-d565395f043d)
+	)
+	(label
+		"SCL_BUS"
+		(at 53.34 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid aaf6fea9-22f3-5d00-ac48-818dff796372)
+	)
+	(wire
+		(pts
+			(xy 68.58 81.28)
+			(xy 73.66 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 01f2c148-ff01-56d7-801e-1c05cdec963b)
+	)
+	(label
+		"CH1_IDC"
+		(at 73.66 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 7b1b993d-7a7b-51d9-b89e-5ce2557ae0f1)
+	)
+	(wire
+		(pts
+			(xy 63.5 85.09)
+			(xy 63.5 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 2beaa349-51b8-5d5e-ba9a-959beb8f082e)
+	)
+	(label
+		"CH1_SOURCE"
+		(at 63.5 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid dcd98959-8957-58af-b40c-e47bbcb9c471)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_3_Open")
+		(at 63.5 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid ace195fa-2215-5eb3-885e-ee24865ce841)
+		(property
+			"Reference"
+			"JP2"
+			(at 60.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"BUS / IDC"
+			(at 60.96 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 63.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 63.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 4412d84b-7df5-5d68-9977-2a581e90176d)
+		)
+		(pin
+			"2"
+			(uuid b10c375f-4faa-56a5-b886-0baaa0c9fe5c)
+		)
+		(pin
+			"3"
+			(uuid f41c2bae-2acc-59d5-b09d-35de9e4ccd32)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 58.42 106.68)
+			(xy 53.34 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 48d7f52c-bb6b-5bc5-84fa-1ac0bdb7c279)
+	)
+	(label
+		"SDA_BUS"
+		(at 53.34 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 0aa1a0b1-626c-5130-9dfe-c64d52354377)
+	)
+	(wire
+		(pts
+			(xy 68.58 106.68)
+			(xy 73.66 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8c15cfb2-2a4f-591e-8c98-dbbabbcdaa7e)
+	)
+	(label
+		"CH2_IDC"
+		(at 73.66 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 729f3b8b-9f94-5b6c-a5de-37566972692f)
+	)
+	(wire
+		(pts
+			(xy 63.5 110.49)
+			(xy 63.5 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid cdaf9715-fff0-5495-b9a2-bbeffc109013)
+	)
+	(label
+		"CH2_SOURCE"
+		(at 63.5 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 79858a1f-2c2c-5a0f-ae81-c4b02ac35ff2)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 50.8 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid c5d27d83-0e51-5e41-b360-8afc0f897bd4)
+		(property
+			"Reference"
+			"R1"
+			(at 137.16 46.99 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 57.15 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid c0891946-18b6-5895-b8ab-6eadd008fc9f)
+		)
+		(pin
+			"2"
+			(uuid 31a0cdf6-ae57-5709-b1b0-b9f95375316c)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 50.8)
+			(xy 130.81 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 3870f64b-0bc2-5b6c-afa2-1d3f0fd3a54a)
+	)
+	(label
+		"CH1_SOURCE"
+		(at 130.81 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid cf77edb9-29a6-55bd-a7d7-c093aec409c2)
+	)
+	(wire
+		(pts
+			(xy 143.51 50.8)
+			(xy 148.59 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 50c92faf-15dc-58c3-9a45-ed1bd06cc044)
+	)
+	(label
+		"CH1_IN"
+		(at 148.59 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid f59182e2-f8be-5c7b-8a54-8c39e161318f)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid e6ffcc3d-5f75-5b2e-bc1c-6ed7a6c44dbd)
+		(property
+			"Reference"
+			"R9"
+			(at 185.42 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 9bc865c6-cc40-507f-b570-3a5b7de9ee87)
+		)
+		(pin
+			"2"
+			(uuid 010cd511-5545-5ad7-84ee-19a94b74436a)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 49.53)
+			(xy 182.88 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 29d4c5f9-8278-5f7b-b60e-3c23820d6ace)
+	)
+	(label
+		"CH1_IN"
+		(at 182.88 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid fd964ae6-9003-59ca-aaa7-b3831a65faa3)
+	)
+	(wire
+		(pts
+			(xy 182.88 57.15)
+			(xy 182.88 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid acab7225-45e6-53c7-afc9-35cbaca32534)
+	)
+	(label
+		"GND"
+		(at 182.88 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 86b998a3-925d-55b4-8306-dd3c4a431b54)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 13f74227-df2a-55db-ad3e-9ef922d04acf)
+		(property
+			"Reference"
+			"U1"
+			(at 264.16 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 96272f38-fcd9-5491-aacf-392e04e1fa6f)
+		)
+		(pin
+			"6"
+			(uuid 93e49bfc-6dc5-5995-b056-e87574867b20)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 50.8)
+			(xy 246.38 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 67b72a7f-7ed8-59f8-9d43-5080fda5692e)
+	)
+	(label
+		"CH1_IN"
+		(at 246.38 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid a482dcae-5e17-5937-a28b-12919e08fe43)
+	)
+	(wire
+		(pts
+			(xy 279.4 50.8)
+			(xy 284.48 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 6323e708-bb0e-5a05-a988-061da9555cb1)
+	)
+	(label
+		"GPIO0"
+		(at 284.48 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 5102ddaa-2586-5233-91f8-f02d33194f63)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 73.66 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 49c8323e-79f0-52aa-afd4-e9f96aa2d266)
+		(property
+			"Reference"
+			"R2"
+			(at 137.16 69.85 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 80.01 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid bdb6cdf6-98f6-5b5d-83a5-956ea5dc15e4)
+		)
+		(pin
+			"2"
+			(uuid 60853c73-4573-579b-962a-3ff457d248ff)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 73.66)
+			(xy 130.81 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 49b2f8c2-dc93-5cca-a450-129a8708fee4)
+	)
+	(label
+		"CH2_SOURCE"
+		(at 130.81 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 52e97c57-dc6f-5df6-ace1-e0693a425411)
+	)
+	(wire
+		(pts
+			(xy 143.51 73.66)
+			(xy 148.59 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 341c17cf-9b4f-5a43-8219-aab947b6a4aa)
+	)
+	(label
+		"CH2_IN"
+		(at 148.59 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 704d7f25-894d-57e5-a934-532ef2de8224)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid ec49740d-d47a-5294-b80b-045cb17dd1be)
+		(property
+			"Reference"
+			"R10"
+			(at 185.42 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 92431037-1d37-571a-8ebb-c83c7024a7bc)
+		)
+		(pin
+			"2"
+			(uuid 6bc3e7ec-dcbe-5b1e-b352-8e6c3714793c)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 72.39)
+			(xy 182.88 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 42255c9e-fce9-58bb-a7ff-add70e5b0a53)
+	)
+	(label
+		"CH2_IN"
+		(at 182.88 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid f39b0fb9-d8f5-5989-a771-3951f6ca060f)
+	)
+	(wire
+		(pts
+			(xy 182.88 80.01)
+			(xy 182.88 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid bc2c4565-c088-5c91-814a-9bcbdea3896e)
+	)
+	(label
+		"GND"
+		(at 182.88 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid be7a11d0-9c6d-5bda-9661-5d5c679c51c6)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 73.66 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 7972d864-a85c-5171-a987-ce2c5b1c526e)
+		(property
+			"Reference"
+			"U1"
+			(at 264.16 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid 9baf9ea3-653a-5844-96de-ec378711a81a)
+		)
+		(pin
+			"4"
+			(uuid 89f4c743-bb41-58b5-9b5a-25188cea9cb1)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U1")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 73.66)
+			(xy 246.38 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid d1ec0ba0-bd6e-55fe-8831-213d82aaabb4)
+	)
+	(label
+		"CH2_IN"
+		(at 246.38 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid ca263f54-c3ef-5607-bcf4-fcf94d1fbfa2)
+	)
+	(wire
+		(pts
+			(xy 279.4 73.66)
+			(xy 284.48 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8c10655b-7af0-51e2-b238-6f927494cb94)
+	)
+	(label
+		"GPIO1"
+		(at 284.48 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 94824034-387a-511f-b88b-54ae93a2b623)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid b4d415ed-a149-5008-ab66-6f75735b1131)
+		(property
+			"Reference"
+			"R3"
+			(at 137.16 92.71 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 102.87 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid d5ac67dd-7832-5714-b245-e0803846b61c)
+		)
+		(pin
+			"2"
+			(uuid 7001b859-0e65-5400-9428-3fa9a83e0b82)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 96.52)
+			(xy 130.81 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 2f5f668d-0184-5312-82c9-ba66967f6efe)
+	)
+	(label
+		"CH3_IDC"
+		(at 130.81 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 49662c2e-2193-5c3a-9a3a-db05048dfafc)
+	)
+	(wire
+		(pts
+			(xy 143.51 96.52)
+			(xy 148.59 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a85499a9-db0c-5d64-9f09-4cb92c70d3ba)
+	)
+	(label
+		"CH3_IN"
+		(at 148.59 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 1636bb97-3743-5753-823a-7f7e062733d8)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 383a6a67-c671-5ec5-9bb3-1cc84dfe4a8f)
+		(property
+			"Reference"
+			"R11"
+			(at 185.42 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 5ca98ce5-6665-52c8-80a1-0999cf3827ad)
+		)
+		(pin
+			"2"
+			(uuid 840b7cd4-7cf3-5b24-a295-51da46063f35)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 95.25)
+			(xy 182.88 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a3bac126-3285-55ba-ba24-c29b945b8b34)
+	)
+	(label
+		"CH3_IN"
+		(at 182.88 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 08f305ca-23b0-5d83-bba1-bd7ffcc3b175)
+	)
+	(wire
+		(pts
+			(xy 182.88 102.87)
+			(xy 182.88 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8b18dd31-c861-5792-a6d3-50ea099f4698)
+	)
+	(label
+		"GND"
+		(at 182.88 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 5f3d7a4e-cd0a-5b31-9037-02588f6d3b5f)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 5370ed1e-0df7-54c1-bdce-8c74100c308a)
+		(property
+			"Reference"
+			"U2"
+			(at 264.16 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 4f9fb8b7-82cc-5c9f-b866-5892bc193e2a)
+		)
+		(pin
+			"6"
+			(uuid 8edc662b-9e9d-5fa9-ab40-a0ef68a2f58f)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 96.52)
+			(xy 246.38 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid b85c2b57-8dfd-568f-99ee-3fefa7ad75da)
+	)
+	(label
+		"CH3_IN"
+		(at 246.38 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid ff37cb02-c07d-524a-af34-ce65b1bd16e3)
+	)
+	(wire
+		(pts
+			(xy 279.4 96.52)
+			(xy 284.48 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 738f3e55-48e9-5e8c-a012-96320a760230)
+	)
+	(label
+		"GPIO2"
+		(at 284.48 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 95632289-93fc-5d11-ad11-ce6e5f6bf1a4)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 8c62e354-cb6f-5aea-ab03-45002e8f75de)
+		(property
+			"Reference"
+			"R4"
+			(at 137.16 115.57 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 125.73 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 0988238b-874a-5de0-a2d3-fb59fa7b3ce1)
+		)
+		(pin
+			"2"
+			(uuid e88bc668-2d5a-55a3-b0c9-aa7506686b90)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 119.38)
+			(xy 130.81 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 501d6713-49ec-51f5-81df-2dd6a56888f1)
+	)
+	(label
+		"CH4_IDC"
+		(at 130.81 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 6490f3a7-c84f-5755-97c0-078d3c258ad0)
+	)
+	(wire
+		(pts
+			(xy 143.51 119.38)
+			(xy 148.59 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 035c9b45-d15d-5dcf-ae18-c28a175c8e2d)
+	)
+	(label
+		"CH4_IN"
+		(at 148.59 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 7da8ffaf-d306-583d-b800-3a7345dd2ef6)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 72eed087-f945-50db-822c-d81804a787ce)
+		(property
+			"Reference"
+			"R12"
+			(at 185.42 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 2d997bfa-5e3f-543e-a143-cd05bece3d75)
+		)
+		(pin
+			"2"
+			(uuid f1f55af9-4127-5bc9-b859-6563417ffc82)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 118.11)
+			(xy 182.88 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid d6feef27-623f-5517-8696-c165a9543ae6)
+	)
+	(label
+		"CH4_IN"
+		(at 182.88 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid d23ec156-a7c4-5a54-ac9c-406e659ffec5)
+	)
+	(wire
+		(pts
+			(xy 182.88 125.73)
+			(xy 182.88 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 735a5f41-7909-5679-9a7f-32f17b840443)
+	)
+	(label
+		"GND"
+		(at 182.88 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 1948b7f4-2267-5f04-96fd-2cd33f176c4b)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 119.38 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 8d5b739b-7c1a-551e-ab3d-4b68bb7d68e0)
+		(property
+			"Reference"
+			"U2"
+			(at 264.16 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid 6279390b-e672-5b68-a0a1-5c1eaf90c97a)
+		)
+		(pin
+			"4"
+			(uuid de305f01-5fbc-549c-af3e-83fe1e05f7ea)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U2")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 119.38)
+			(xy 246.38 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid e3f4af32-b3e4-5b0d-81c4-1f200e1de75c)
+	)
+	(label
+		"CH4_IN"
+		(at 246.38 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 809a10ad-1c6e-55d3-bd47-c17f42aed955)
+	)
+	(wire
+		(pts
+			(xy 279.4 119.38)
+			(xy 284.48 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 5a9822a0-ae5e-5d31-b39a-eebd7d9b567f)
+	)
+	(label
+		"GPIO3"
+		(at 284.48 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid ef99831c-3e3d-5506-995b-9f14f085d1b2)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 142.24 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 37711f28-6e10-5b18-ba69-c75b0e201895)
+		(property
+			"Reference"
+			"R5"
+			(at 137.16 138.43 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 148.59 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 4f9b2430-5128-56dd-a23e-a893ac71e88a)
+		)
+		(pin
+			"2"
+			(uuid 52e16887-7b27-5196-ab53-476c656d7e30)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 142.24)
+			(xy 130.81 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid b09063d2-a167-57ba-a403-9dbefea773f9)
+	)
+	(label
+		"CH5_IDC"
+		(at 130.81 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 104efb03-9f67-59f9-9080-d454a11dcff9)
+	)
+	(wire
+		(pts
+			(xy 143.51 142.24)
+			(xy 148.59 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid ace62ecc-8560-536b-96d1-8b84f030e672)
+	)
+	(label
+		"CH5_IN"
+		(at 148.59 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 579b75b6-72de-5f40-8940-f1187c8c8a5c)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid a30187de-97f2-5d14-9385-e4e8e29efe78)
+		(property
+			"Reference"
+			"R13"
+			(at 185.42 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid c6e325e1-8d05-5b6b-8f42-bd4388d1a8cc)
+		)
+		(pin
+			"2"
+			(uuid 538a5cb7-bb28-5578-ba3c-f5241a653f00)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 140.97)
+			(xy 182.88 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 05bef8a0-ed04-5433-85e4-3671166420d2)
+	)
+	(label
+		"CH5_IN"
+		(at 182.88 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid d3341429-aceb-572a-86f1-14c5245de389)
+	)
+	(wire
+		(pts
+			(xy 182.88 148.59)
+			(xy 182.88 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid c0f5d8cb-6c26-5563-9542-68b1016757a5)
+	)
+	(label
+		"GND"
+		(at 182.88 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 6ce296eb-b0b9-5457-8197-9c064dcf5395)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid c13719ad-b088-5961-8617-0c1385f95fcc)
+		(property
+			"Reference"
+			"U3"
+			(at 264.16 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 08f4d359-8173-5fc0-a115-978ee43028ff)
+		)
+		(pin
+			"6"
+			(uuid 7900916b-3405-530b-a26e-e17a988f0f0b)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 142.24)
+			(xy 246.38 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 21eccb13-d615-5fef-abb9-63398505a58c)
+	)
+	(label
+		"CH5_IN"
+		(at 246.38 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 0f780dbe-379f-5585-93f9-6210c59906ae)
+	)
+	(wire
+		(pts
+			(xy 279.4 142.24)
+			(xy 284.48 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 952d2f47-b5d4-558c-9ef9-9d1676155877)
+	)
+	(label
+		"GPIO4"
+		(at 284.48 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 4902fa9f-17fb-53e5-bc28-a02eddc5941d)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 165.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 4cce3e39-6211-5cc2-92f6-2c59ae909105)
+		(property
+			"Reference"
+			"R6"
+			(at 137.16 161.29 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 171.45 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid cf0fa30d-6f6b-5382-8140-7fe998bca649)
+		)
+		(pin
+			"2"
+			(uuid 185213f8-4807-5782-8973-581fb62ea321)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 165.1)
+			(xy 130.81 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid aea01fbd-c2ca-574b-ac2a-c636efb1c8d9)
+	)
+	(label
+		"CH6_IDC"
+		(at 130.81 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 578dc605-1dd7-5dd7-8ef6-57845ad23939)
+	)
+	(wire
+		(pts
+			(xy 143.51 165.1)
+			(xy 148.59 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 5c974416-c889-5504-b85f-1e12a97ef22d)
+	)
+	(label
+		"CH6_IN"
+		(at 148.59 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 27bcbb67-0cd7-5268-93de-5f76e7a1de4c)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 167.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 4465af75-3067-58cf-9a96-e573c8d8f911)
+		(property
+			"Reference"
+			"R14"
+			(at 185.42 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid f3060f45-3d2c-50aa-a37b-8d3711f2dc1f)
+		)
+		(pin
+			"2"
+			(uuid 519a1f5c-1153-5df6-99f3-954eb0e59265)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 163.83)
+			(xy 182.88 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid cbdd6b3b-91d5-5fda-95a5-242f0c0fb24c)
+	)
+	(label
+		"CH6_IN"
+		(at 182.88 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 623cbf29-9365-5778-979d-e317d4663ddb)
+	)
+	(wire
+		(pts
+			(xy 182.88 171.45)
+			(xy 182.88 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid c77d6c81-14e8-5066-aed0-058aaf6be640)
+	)
+	(label
+		"GND"
+		(at 182.88 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid a66730bf-a4ea-50ee-a507-51b48ad84964)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 165.1 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 3b3b5980-403a-5031-af4a-96b83d2c68ec)
+		(property
+			"Reference"
+			"U3"
+			(at 264.16 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid 972a055a-7cdc-5bc8-87ec-733050123717)
+		)
+		(pin
+			"4"
+			(uuid 354ddb8d-fda5-5c58-ba78-eb889b754f93)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U3")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 165.1)
+			(xy 246.38 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 49a22acc-dac8-5943-afa7-b935546ecb28)
+	)
+	(label
+		"CH6_IN"
+		(at 246.38 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 4e5845c2-b624-5088-b5a4-0d9c025c37f9)
+	)
+	(wire
+		(pts
+			(xy 279.4 165.1)
+			(xy 284.48 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 25cdbaf9-200c-5340-b83f-293db5674a1e)
+	)
+	(label
+		"GPIO5"
+		(at 284.48 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid b8df9f0b-e9ab-5856-abb4-076de8f05f66)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 187.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid d955d12c-6b83-5a10-9214-07e9251ff6b9)
+		(property
+			"Reference"
+			"R7"
+			(at 137.16 184.15 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 194.31 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 83d61f31-863b-54aa-b5a0-8f900bd5d399)
+		)
+		(pin
+			"2"
+			(uuid b2ce0fd5-e4ad-56df-be21-bf5b982a6be1)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 187.96)
+			(xy 130.81 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid c7b5824e-a19e-55ed-b253-3bfc94fb3241)
+	)
+	(label
+		"CH7_IDC"
+		(at 130.81 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 5d6e42bc-08c6-5723-b2ef-bd14d32b51a7)
+	)
+	(wire
+		(pts
+			(xy 143.51 187.96)
+			(xy 148.59 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 819bca04-c4e3-5099-9e13-f45143819f63)
+	)
+	(label
+		"CH7_IN"
+		(at 148.59 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid fea61631-d7a2-595e-9011-8437475458d9)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 43d1e985-f98e-52ab-b128-f6fb5e34f3e1)
+		(property
+			"Reference"
+			"R15"
+			(at 185.42 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid b5129653-96e4-5106-82d6-b4995107d904)
+		)
+		(pin
+			"2"
+			(uuid 5f73e61f-2f2f-5c42-b04e-faca9b303c11)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 186.69)
+			(xy 182.88 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid fbdbef3c-afac-5fbd-a13b-6c5c610be570)
+	)
+	(label
+		"CH7_IN"
+		(at 182.88 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 38a61963-e210-55e6-a0ca-ac1dc922a5fe)
+	)
+	(wire
+		(pts
+			(xy 182.88 194.31)
+			(xy 182.88 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 51740326-ab68-5594-ad50-1ae240680c49)
+	)
+	(label
+		"GND"
+		(at 182.88 196.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 00d67dc0-6849-5d32-8847-adbeb8a5d5e6)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 79a56771-850b-5b72-b051-a9365617100e)
+		(property
+			"Reference"
+			"U4"
+			(at 264.16 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 73919c5b-f5c4-56f6-bdac-d57c125430e1)
+		)
+		(pin
+			"6"
+			(uuid c094b9f8-a947-58d3-b5a2-d079d5e93a8a)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 187.96)
+			(xy 246.38 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 0616a41f-0d44-56da-98a6-11d98229792f)
+	)
+	(label
+		"CH7_IN"
+		(at 246.38 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid d6ec5113-f85b-5ada-97a8-7dabe565e9ae)
+	)
+	(wire
+		(pts
+			(xy 279.4 187.96)
+			(xy 284.48 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 76db628a-4d38-5b34-9854-131ac25a0f44)
+	)
+	(label
+		"GPIO6"
+		(at 284.48 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 0f0519ce-c1c2-51e7-8110-15b0063c1291)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 210.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid b53ec970-36cb-5089-878c-b6cd5edd4bf7)
+		(property
+			"Reference"
+			"R8"
+			(at 137.16 207.01 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1k"
+			(at 137.16 217.17 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 139.7 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 139.7 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid f799404d-717a-5b9c-a8f3-a6f55d574947)
+		)
+		(pin
+			"2"
+			(uuid 91580880-3cd7-5c7a-b56c-366e9c6b8a80)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 210.82)
+			(xy 130.81 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 7982372f-1fb1-5093-b9d3-cc120495ab40)
+	)
+	(label
+		"CH8_IDC"
+		(at 130.81 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 50c477ea-a670-5701-ac1e-24b3e898dfa7)
+	)
+	(wire
+		(pts
+			(xy 143.51 210.82)
+			(xy 148.59 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 09ab926a-1b64-59d8-a032-60354469964c)
+	)
+	(label
+		"CH8_IN"
+		(at 148.59 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 0b3ce730-6312-51f6-9c97-b13f7e08c986)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 213.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid b532c364-404d-506c-b882-70cf46088e96)
+		(property
+			"Reference"
+			"R16"
+			(at 185.42 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"1M"
+			(at 185.42 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Resistor_SMD:R_0603_1608Metric"
+			(at 182.88 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 182.88 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid d84ea54d-8155-59ca-b6aa-4cc4bec9a6e3)
+		)
+		(pin
+			"2"
+			(uuid 5e2ea755-93b4-5067-886c-1cb943e585ab)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 182.88 209.55)
+			(xy 182.88 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a6a8561d-39eb-58b1-b4e4-c6818d459c42)
+	)
+	(label
+		"CH8_IN"
+		(at 182.88 207.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 0e861908-d93c-582d-ac9f-bab65f3ae738)
+	)
+	(wire
+		(pts
+			(xy 182.88 217.17)
+			(xy 182.88 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 84d31513-8c2c-5cdf-966a-2462c3557e70)
+	)
+	(label
+		"GND"
+		(at 182.88 219.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 46754570-6fca-5484-b8c7-4af8c12e6d22)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 266.7 210.82 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid a692324a-84df-501a-9db8-e4344eb8add4)
+		(property
+			"Reference"
+			"U4"
+			(at 264.16 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 256.54 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 266.7 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 266.7 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 266.7 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 266.7 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid fedf26eb-736d-5e41-8e28-569f38db1a8b)
+		)
+		(pin
+			"4"
+			(uuid 2688afe8-0a6b-5f08-a110-9ee48a307565)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U4")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 251.46 210.82)
+			(xy 246.38 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 584fb83f-2cad-5c70-8037-9314dc6b3e75)
+	)
+	(label
+		"CH8_IN"
+		(at 246.38 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid b913b523-5f35-5244-b91c-506864ed5293)
+	)
+	(wire
+		(pts
+			(xy 279.4 210.82)
+			(xy 284.48 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 73210be8-40a4-5dd1-841b-5aa7a0c21c65)
+	)
+	(label
+		"GPIO7"
+		(at 284.48 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 0849fcf0-aa05-537d-b50e-9b3b164c628b)
+	)
+	(symbol
+		(lib_id "Power_Protection:SP0502BAHT")
+		(at 226.06 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid b30987f6-b372-53c0-a9b3-b753ad514018)
+		(property
+			"Reference"
+			"D1"
+			(at 233.68 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SP0502BAHTG"
+			(at 218.44 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23"
+			(at 226.06 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 226.06 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Littelfuse"
+			(at 226.06 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C207261"
+			(at 226.06 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid b464617e-9d96-507f-b28e-761b1fca8335)
+		)
+		(pin
+			"1"
+			(uuid 75688b96-d5fe-565e-a4c0-6c03b134cc3f)
+		)
+		(pin
+			"2"
+			(uuid 56aeb108-45a9-5f3b-840e-07d0d366273e)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 223.52 57.15)
+			(xy 223.52 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid c485ee31-dcf6-5669-be77-48d052cfad83)
+	)
+	(label
+		"CH1_IN"
+		(at 223.52 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 3a12bf3a-3891-55a3-84ef-86834901aaec)
+	)
+	(wire
+		(pts
+			(xy 228.6 57.15)
+			(xy 238.76 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 852b4c60-2225-5231-bbb9-5e9896af3aa1)
+	)
+	(label
+		"CH2_IN"
+		(at 238.76 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid dd6ac2cc-f03f-5730-a9f4-f87f85e2c27a)
+	)
+	(wire
+		(pts
+			(xy 226.06 67.31)
+			(xy 226.06 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid e7d3ba6d-dc0e-58a5-b9f1-ae7438725bf6)
+	)
+	(label
+		"GND"
+		(at 226.06 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 4c8ebc13-643a-5c20-973d-ba378a0defd4)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 129.54 233.68 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 6161c230-01f8-5665-9e98-6bf16267d343)
+		(property
+			"Reference"
+			"U1"
+			(at 132.08 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 132.08 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 129.54 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 129.54 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 129.54 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 129.54 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"2"
+			(uuid 61c9ab44-8236-5208-a195-799a8cb3ccec)
+		)
+		(pin
+			"5"
+			(uuid 9d132474-6e2a-5157-b08c-8a13b4c804e2)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U1")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 129.54 223.52)
+			(xy 129.54 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 938e0580-eacf-582f-833d-38f8254b8e20)
+	)
+	(label
+		"+3V3"
+		(at 129.54 220.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 88fd1904-4b72-554c-a1bd-3f70f2689894)
+	)
+	(wire
+		(pts
+			(xy 129.54 243.84)
+			(xy 129.54 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8daa13d7-f75c-5213-84f7-d33e857de230)
+	)
+	(label
+		"GND"
+		(at 129.54 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 68a1021c-1f04-5c3c-8f7d-67dd2a198886)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.94 233.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 925c9925-65a3-53f7-a925-1339c1b5d989)
+		(property
+			"Reference"
+			"C1"
+			(at 157.48 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"100n"
+			(at 157.48 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Capacitor_SMD:C_0603_1608Metric"
+			(at 154.94 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 154.94 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid a168fdb3-d7f3-5d7e-94c0-4988524a7765)
+		)
+		(pin
+			"2"
+			(uuid 462de017-a546-53c2-844d-ea22770fe088)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 154.94 229.87)
+			(xy 154.94 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid e2f2fa5d-3361-5b59-9dc6-051ca2643fc0)
+	)
+	(label
+		"+3V3"
+		(at 154.94 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 5a4e6479-6541-5f2d-b70b-9186757b604b)
+	)
+	(wire
+		(pts
+			(xy 154.94 237.49)
+			(xy 154.94 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid f84de06b-5805-5a5a-b700-b9ed7e633aa3)
+	)
+	(label
+		"GND"
+		(at 154.94 240.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 48045464-29ed-56b5-846b-8e5a6b17a723)
+	)
+	(symbol
+		(lib_id "Power_Protection:SP0502BAHT")
+		(at 226.06 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 127d12d8-1c29-5d2f-a94a-bea797392c69)
+		(property
+			"Reference"
+			"D2"
+			(at 233.68 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SP0502BAHTG"
+			(at 218.44 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23"
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Littelfuse"
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C207261"
+			(at 226.06 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid 7de0e90c-e563-5b08-b58a-c1305abed25f)
+		)
+		(pin
+			"1"
+			(uuid d84c0de0-1299-5190-b165-5520cf06520e)
+		)
+		(pin
+			"2"
+			(uuid 6114398a-f983-5ebd-bbe6-6f16c0d41280)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 223.52 102.87)
+			(xy 223.52 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid ebafa3e7-f88c-5883-b7db-4e56e915f5e9)
+	)
+	(label
+		"CH3_IN"
+		(at 223.52 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 757a8e59-8ec2-595b-b386-48ca95d6a9db)
+	)
+	(wire
+		(pts
+			(xy 228.6 102.87)
+			(xy 238.76 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 0badbba1-1732-577e-90b3-fddad0c55c82)
+	)
+	(label
+		"CH4_IN"
+		(at 238.76 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid d67b031e-6d7b-5764-8f6c-72e7bede386d)
+	)
+	(wire
+		(pts
+			(xy 226.06 113.03)
+			(xy 226.06 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid cb2c1786-05ce-5b2c-87e5-1ac7c6e5725f)
+	)
+	(label
+		"GND"
+		(at 226.06 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 117c4c52-ea4b-514c-bd9c-4c0189e95a1d)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 195.58 233.68 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid af6cab4d-f6b3-56f8-b59b-0b3f325b523b)
+		(property
+			"Reference"
+			"U2"
+			(at 198.12 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 198.12 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 195.58 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 195.58 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 195.58 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 195.58 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"2"
+			(uuid cb804dd9-2284-523e-9484-8f2821006e11)
+		)
+		(pin
+			"5"
+			(uuid 8ec60bde-fff2-57b5-ba83-aa40100aa07f)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U2")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 195.58 223.52)
+			(xy 195.58 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 7a2ac8a4-10e1-5f92-9689-2fb9974857b1)
+	)
+	(label
+		"+3V3"
+		(at 195.58 220.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid e8905f9c-e34d-5096-9965-cc906e2bd98a)
+	)
+	(wire
+		(pts
+			(xy 195.58 243.84)
+			(xy 195.58 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 743600f5-32cc-56b4-8872-9e19187b29b3)
+	)
+	(label
+		"GND"
+		(at 195.58 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid b0c634a9-ee6a-5821-b72a-436aede01222)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 233.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid f50848e3-2d93-5ad4-bdb1-bf0c2af584a8)
+		(property
+			"Reference"
+			"C2"
+			(at 223.52 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"100n"
+			(at 223.52 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Capacitor_SMD:C_0603_1608Metric"
+			(at 220.98 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 220.98 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 1e528a07-1451-51ca-b766-5443334c46fb)
+		)
+		(pin
+			"2"
+			(uuid 41fa7453-d1da-5208-9ad3-096dd81153f8)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 220.98 229.87)
+			(xy 220.98 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 9302d12c-d13d-5456-9738-2be1a7663ee2)
+	)
+	(label
+		"+3V3"
+		(at 220.98 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 3639cf81-79f5-57ec-b9bc-3c55b5b11432)
+	)
+	(wire
+		(pts
+			(xy 220.98 237.49)
+			(xy 220.98 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 29544f25-8cc1-59c3-b50d-54312aebdb8d)
+	)
+	(label
+		"GND"
+		(at 220.98 240.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid f199af1a-3f08-5e6d-87dc-504674e4bea8)
+	)
+	(symbol
+		(lib_id "Power_Protection:SP0502BAHT")
+		(at 226.06 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid dfdd5ee7-beed-5368-ad3c-43f45b79d57d)
+		(property
+			"Reference"
+			"D3"
+			(at 233.68 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SP0502BAHTG"
+			(at 218.44 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23"
+			(at 226.06 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 226.06 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Littelfuse"
+			(at 226.06 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C207261"
+			(at 226.06 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid 9298187e-c695-5d0f-87ac-1a1a421d8387)
+		)
+		(pin
+			"1"
+			(uuid 4814bda4-1290-5d17-8662-399092a7a55a)
+		)
+		(pin
+			"2"
+			(uuid 0373c174-6e98-55ff-a914-8eee5ee957a1)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 223.52 148.59)
+			(xy 223.52 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a28fc178-7293-5ade-8f54-0c75df8be800)
+	)
+	(label
+		"CH5_IN"
+		(at 223.52 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid c325be9c-f8c5-529a-8444-df9716441451)
+	)
+	(wire
+		(pts
+			(xy 228.6 148.59)
+			(xy 238.76 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid c3bd390c-fcab-513e-b87f-407317fe5f95)
+	)
+	(label
+		"CH6_IN"
+		(at 238.76 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 650b3399-be92-5fab-82d4-b04ecf2d6832)
+	)
+	(wire
+		(pts
+			(xy 226.06 158.75)
+			(xy 226.06 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid d00570b6-c712-58e1-bbd0-d9d371a9b292)
+	)
+	(label
+		"GND"
+		(at 226.06 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid ab06104e-6702-5ff7-8d4a-ff65e1e3f849)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 261.62 233.68 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 9a0a9ca9-681e-50c3-b02c-c4163d687a9f)
+		(property
+			"Reference"
+			"U3"
+			(at 264.16 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 264.16 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 261.62 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 261.62 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 261.62 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 261.62 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"2"
+			(uuid 51054abd-274f-5da4-aed3-702326bd67b3)
+		)
+		(pin
+			"5"
+			(uuid 91b3c6bc-bf18-555c-ace2-7a538868ee12)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U3")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 261.62 223.52)
+			(xy 261.62 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid e95fc1e2-339f-5780-a1eb-3821e9d9f264)
+	)
+	(label
+		"+3V3"
+		(at 261.62 220.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 7dfe1f8a-6c28-5f33-ba52-5e55198437c1)
+	)
+	(wire
+		(pts
+			(xy 261.62 243.84)
+			(xy 261.62 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid b278d158-8f71-531b-b01b-59884a367e4e)
+	)
+	(label
+		"GND"
+		(at 261.62 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid d0ecab7b-008f-5a81-ad3d-433bc6f5ef87)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 287.02 233.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid a155d73a-f84e-5682-88f3-2533d8388ac8)
+		(property
+			"Reference"
+			"C3"
+			(at 289.56 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"100n"
+			(at 289.56 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Capacitor_SMD:C_0603_1608Metric"
+			(at 287.02 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 287.02 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid a12abe09-9147-518f-842f-62be0713b3eb)
+		)
+		(pin
+			"2"
+			(uuid cf57eac3-1b4f-5c8a-a48a-7f51b1e31139)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 287.02 229.87)
+			(xy 287.02 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 3da4b44a-7c87-52af-9e74-4c35c9b86adf)
+	)
+	(label
+		"+3V3"
+		(at 287.02 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 68634774-5577-5bf7-a1bf-6dc91232261d)
+	)
+	(wire
+		(pts
+			(xy 287.02 237.49)
+			(xy 287.02 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 6bb7cbae-b2da-5617-a560-14b73b1441a2)
+	)
+	(label
+		"GND"
+		(at 287.02 240.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 8be6f63d-0def-57e6-8744-ae2440fd71b9)
+	)
+	(symbol
+		(lib_id "Power_Protection:SP0502BAHT")
+		(at 226.06 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 0ae07a2e-42c4-59bd-9645-62dd46f8e526)
+		(property
+			"Reference"
+			"D4"
+			(at 233.68 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SP0502BAHTG"
+			(at 218.44 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23"
+			(at 226.06 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 226.06 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Littelfuse"
+			(at 226.06 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C207261"
+			(at 226.06 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"3"
+			(uuid 186b39b4-8340-5f6b-a956-35caf77f47c0)
+		)
+		(pin
+			"1"
+			(uuid feecd9b3-bbcc-57a9-8380-5882c40bb1d1)
+		)
+		(pin
+			"2"
+			(uuid e6523529-50e9-5726-ab50-45a5c8c34005)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 223.52 194.31)
+			(xy 223.52 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 68d76b49-9c1e-5f68-9e29-db10c1df2b23)
+	)
+	(label
+		"CH7_IN"
+		(at 223.52 191.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 318382bb-ea05-56a6-a5fe-ae5d28e63bab)
+	)
+	(wire
+		(pts
+			(xy 228.6 194.31)
+			(xy 238.76 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid b6ed2025-8787-576e-98e6-0725df97e706)
+	)
+	(label
+		"CH8_IN"
+		(at 238.76 194.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 53101d13-55de-5a97-98a7-c29ea306e270)
+	)
+	(wire
+		(pts
+			(xy 226.06 204.47)
+			(xy 226.06 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid cbb24708-d715-5add-8c46-f9c239132d05)
+	)
+	(label
+		"GND"
+		(at 226.06 207.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid cb7fe0a3-57c7-5d2a-ab7e-d6ead1ebb28b)
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 327.66 233.68 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 7f72b9c2-bcc1-5547-bd13-cd1900c67f2a)
+		(property
+			"Reference"
+			"U4"
+			(at 330.2 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"SN74LVC2G17DBVR"
+			(at 330.2 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property
+			"Footprint"
+			"Package_TO_SOT_SMD:SOT-23-6"
+			(at 327.66 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 327.66 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Manufacturer"
+			"Texas Instruments"
+			(at 327.66 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"LCSC"
+			"C10429"
+			(at 327.66 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"2"
+			(uuid 139b7372-063a-588a-b1a9-9be8b0bb0468)
+		)
+		(pin
+			"5"
+			(uuid add6eaa3-dd24-5fa2-aab0-a35fb5c3eb78)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "U4")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 327.66 223.52)
+			(xy 327.66 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 734a5156-6ec9-5ee3-8b97-743b5534d3d4)
+	)
+	(label
+		"+3V3"
+		(at 327.66 220.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid d5fed59e-7a0c-5102-b43d-82ad284f794c)
+	)
+	(wire
+		(pts
+			(xy 327.66 243.84)
+			(xy 327.66 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid a02d6032-a70d-514a-9d3f-6177d8c3e558)
+	)
+	(label
+		"GND"
+		(at 327.66 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid a161b619-5a70-574b-97f1-23ab9bad8c32)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 353.06 233.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid c967ca0d-a0e2-5769-b253-f0cec33e5298)
+		(property
+			"Reference"
+			"C4"
+			(at 355.6 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"100n"
+			(at 355.6 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Capacitor_SMD:C_0603_1608Metric"
+			(at 353.06 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 353.06 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 1a583c17-427b-577f-96e4-d0d8895b11fd)
+		)
+		(pin
+			"2"
+			(uuid 04bbceb7-8750-56dc-98b6-88d889ece04e)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 353.06 229.87)
+			(xy 353.06 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 99072913-8a27-5123-a46d-3bd0d238e4ea)
+	)
+	(label
+		"+3V3"
+		(at 353.06 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid d5052fc4-5d37-5473-a6a9-191abeac65df)
+	)
+	(wire
+		(pts
+			(xy 353.06 237.49)
+			(xy 353.06 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 47456bf1-ea32-5c48-a7de-5216c794aaff)
+	)
+	(label
+		"GND"
+		(at 353.06 240.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 802f0969-c694-5dd2-873a-36a287f3ff1d)
+	)
+	(symbol
+		(lib_id "MCU_Module:RaspberryPi_Pico")
+		(at 353.06 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid 352f33a9-8307-5fe1-8f1d-171aec98def6)
+		(property
+			"Reference"
+			"A1"
+			(at 342.9 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Value"
+			"Raspberry Pi Pico 2"
+			(at 342.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property
+			"Footprint"
+			"Module:RaspberryPi_Pico_Common_Unspecified"
+			(at 353.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Datasheet"
+			""
+			(at 353.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property
+			"Note"
+			"Symbole brochage commun Pico/Pico 2 ; module assemblé manuellement"
+			(at 353.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin
+			"1"
+			(uuid 834a2092-919e-5a89-859b-38f631d12bd9)
+		)
+		(pin
+			"2"
+			(uuid 539942cd-6305-5f04-b565-cef025248685)
+		)
+		(pin
+			"3"
+			(uuid 45d920a7-145a-5f75-91a6-dea54c3fd27a)
+		)
+		(pin
+			"4"
+			(uuid 9a69107a-3351-5738-8ce7-09fb16eb8fe0)
+		)
+		(pin
+			"5"
+			(uuid 10a1db70-026b-5cd9-9faf-87587c2b6247)
+		)
+		(pin
+			"6"
+			(uuid c2c66f32-03a6-5b06-a26d-d36d96a3bcb3)
+		)
+		(pin
+			"7"
+			(uuid 133703e3-6ec6-57f1-afa3-87fe8b5b2d1f)
+		)
+		(pin
+			"8"
+			(uuid d6c97029-ff86-5234-b0a5-1e0fe862196d)
+		)
+		(pin
+			"9"
+			(uuid f9dda4b4-3928-5a32-9db1-65f274d2f139)
+		)
+		(pin
+			"10"
+			(uuid 356df400-0e12-55ac-a6db-7e34c3a63d18)
+		)
+		(pin
+			"11"
+			(uuid 8b27327d-2f00-5968-b0f6-7b777e3df1f4)
+		)
+		(pin
+			"12"
+			(uuid 3cf94a55-936d-5a2e-8a06-a2737af784dc)
+		)
+		(pin
+			"13"
+			(uuid 6f11f99a-8dc7-5358-8d75-6c764084c220)
+		)
+		(pin
+			"14"
+			(uuid 798a594f-a103-573b-b882-80d40222517f)
+		)
+		(pin
+			"15"
+			(uuid b2aaf69f-c659-53e9-9e61-249afc52a2cc)
+		)
+		(pin
+			"16"
+			(uuid 19f56fe6-92ab-5eac-84ea-0f088cf28a10)
+		)
+		(pin
+			"17"
+			(uuid 96920103-f1cb-5d88-8ef5-fb891a637b8f)
+		)
+		(pin
+			"18"
+			(uuid 8505faba-f3b9-5339-8e41-3d6ed305207b)
+		)
+		(pin
+			"19"
+			(uuid 7cd1a1bf-c191-55a5-9337-156c259df089)
+		)
+		(pin
+			"20"
+			(uuid bda55890-97bb-509d-871e-d3126c49d5e2)
+		)
+		(pin
+			"21"
+			(uuid ab4e3ea0-8b5f-5def-8ab5-ffedc89a8fe3)
+		)
+		(pin
+			"22"
+			(uuid e899c776-6bbc-53e1-8e82-3ab44891e477)
+		)
+		(pin
+			"23"
+			(uuid 08015cc7-47de-5702-ac41-420f46113b49)
+		)
+		(pin
+			"24"
+			(uuid 9b294587-8c3d-56d3-ac68-0cb0b4432262)
+		)
+		(pin
+			"25"
+			(uuid 039c60a3-3e1d-57c3-bda5-a626629d9687)
+		)
+		(pin
+			"26"
+			(uuid daa0b4fb-3f87-512c-9029-ad12962fad9d)
+		)
+		(pin
+			"27"
+			(uuid 0308b4fa-8e6e-5501-9523-f423651284c3)
+		)
+		(pin
+			"28"
+			(uuid cf0aa4ec-a572-5130-9dfb-6b7b3dc415c6)
+		)
+		(pin
+			"29"
+			(uuid 7b6e2456-3817-5edc-82f4-7d99b688755f)
+		)
+		(pin
+			"30"
+			(uuid cb846cdb-aa0a-5eac-adb8-349e7055f04c)
+		)
+		(pin
+			"31"
+			(uuid 02037256-a9d7-56ca-bb3b-b8c2b0bf17ea)
+		)
+		(pin
+			"32"
+			(uuid 30bf6a6f-e14a-5a2d-873c-e212985a7c1b)
+		)
+		(pin
+			"33"
+			(uuid e39b13ed-157c-55eb-b6e2-ef07229208b5)
+		)
+		(pin
+			"34"
+			(uuid 0b886202-2772-53a8-8266-c70fd0b80565)
+		)
+		(pin
+			"35"
+			(uuid f2ec5f0e-0549-513e-bfa8-8bfad8362237)
+		)
+		(pin
+			"36"
+			(uuid 040f7ead-30cf-5d6b-8a64-f1cd9a68c58e)
+		)
+		(pin
+			"37"
+			(uuid d20a8a23-e797-595c-877e-7997086fb7e0)
+		)
+		(pin
+			"38"
+			(uuid 9dfe14bd-a62f-5c81-99e2-33a0dff5574e)
+		)
+		(pin
+			"39"
+			(uuid 92af6eb6-2de4-56e3-996b-e1c1cbb4b5c2)
+		)
+		(pin
+			"40"
+			(uuid 62d4c674-6b26-572b-a89e-7abbfb6414e3)
+		)
+		(instances
+			(project
+				"pico2-capture-draft"
+				(path
+					"/a1ac64a9-fd7b-5215-aa7d-0c573fd64c02"
+					(reference "A1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 330.2 101.6)
+			(xy 325.12 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 9c5bf366-ef1e-55e5-ab16-732ee9580bb2)
+	)
+	(label
+		"GPIO0"
+		(at 325.12 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid eb2c6a2a-dd3a-5289-812f-927feef411e5)
+	)
+	(wire
+		(pts
+			(xy 330.2 104.14)
+			(xy 325.12 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid af68303c-5883-5762-955b-aab87043c393)
+	)
+	(label
+		"GPIO1"
+		(at 325.12 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 67423e8a-01b5-544a-ab48-b558f7763a73)
+	)
+	(wire
+		(pts
+			(xy 353.06 152.4)
+			(xy 353.06 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid b26e0b7e-90b2-5d44-a538-09072a4b81d8)
+	)
+	(label
+		"GND"
+		(at 353.06 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 6174fd51-93a7-54d0-989c-4269de2279df)
+	)
+	(wire
+		(pts
+			(xy 330.2 106.68)
+			(xy 325.12 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8ddb9bc5-43ed-5fe8-8e75-6cd921e25b41)
+	)
+	(label
+		"GPIO2"
+		(at 325.12 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid f8e9e587-8542-5877-8084-516348444cfa)
+	)
+	(wire
+		(pts
+			(xy 330.2 109.22)
+			(xy 325.12 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 95c5d97f-b833-5c0a-845c-52384b96f76e)
+	)
+	(label
+		"GPIO3"
+		(at 325.12 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid daaa5273-16fb-5e75-9846-30e36bb4f7e5)
+	)
+	(wire
+		(pts
+			(xy 330.2 111.76)
+			(xy 325.12 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 8f6b3ed4-e52a-5fe2-ba6f-6744705acd84)
+	)
+	(label
+		"GPIO4"
+		(at 325.12 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 6148ee03-bf71-5719-95c6-ef199c00f979)
+	)
+	(wire
+		(pts
+			(xy 330.2 114.3)
+			(xy 325.12 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 94fe19df-2b8f-554c-97b0-c34e32fa699f)
+	)
+	(label
+		"GPIO5"
+		(at 325.12 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 055ae38e-cd46-567b-94ad-12fd829c1059)
+	)
+	(wire
+		(pts
+			(xy 330.2 116.84)
+			(xy 325.12 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid 73cd6518-8396-5a0a-ba52-9991d14101ff)
+	)
+	(label
+		"GPIO6"
+		(at 325.12 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid 98a5ae5c-6d7d-5c5b-af2a-524ecbb800f6)
+	)
+	(wire
+		(pts
+			(xy 330.2 119.38)
+			(xy 325.12 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid e51634e2-0298-5c3f-a419-87f6279463a7)
+	)
+	(label
+		"GPIO7"
+		(at 325.12 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid f23813f5-105e-56c8-b036-5ee476ce2c15)
+	)
+	(no_connect
+		(at 330.2 121.92)
+		(uuid c09f8e2f-f801-5b3d-8d44-b0dc56fdffea)
+	)
+	(no_connect
+		(at 330.2 124.46)
+		(uuid 3558b8a9-55b9-5a50-9951-1148c516944a)
+	)
+	(no_connect
+		(at 330.2 127)
+		(uuid d8db8607-1fd1-52ce-b332-d57c3da965c6)
+	)
+	(no_connect
+		(at 330.2 129.54)
+		(uuid 99fbc878-ca10-5450-91c5-2a93d3520fc4)
+	)
+	(no_connect
+		(at 330.2 132.08)
+		(uuid 314cb390-669a-58bf-bc47-961e85f79b37)
+	)
+	(no_connect
+		(at 330.2 134.62)
+		(uuid ef52f8f5-67a2-561f-891f-8bf120d91c85)
+	)
+	(no_connect
+		(at 330.2 137.16)
+		(uuid 0cca6627-de2e-57f0-91d9-01b8732f2940)
+	)
+	(no_connect
+		(at 330.2 139.7)
+		(uuid 406aef5c-dc88-5812-8052-362885df1a3b)
+	)
+	(no_connect
+		(at 375.92 104.14)
+		(uuid 44b90c5a-90af-58bb-a9c1-e8a19d24db85)
+	)
+	(no_connect
+		(at 375.92 106.68)
+		(uuid 086da3f5-3e61-5b7d-be00-8cb31df1aac1)
+	)
+	(no_connect
+		(at 375.92 109.22)
+		(uuid 9cc2ef4a-4535-578f-a180-82c874b31204)
+	)
+	(no_connect
+		(at 375.92 111.76)
+		(uuid 65b27e85-952c-5c54-b6f0-65e6dd72a73c)
+	)
+	(no_connect
+		(at 375.92 114.3)
+		(uuid ae956c63-3e9d-52c8-a4fd-78c2d8cdbb52)
+	)
+	(no_connect
+		(at 375.92 116.84)
+		(uuid abd9a8f3-8258-597a-a3d5-9a53eba9ba38)
+	)
+	(no_connect
+		(at 375.92 119.38)
+		(uuid 28844e8e-0331-500d-bcf8-93fe0cc78c22)
+	)
+	(no_connect
+		(at 330.2 93.98)
+		(uuid 9f26a158-43db-5d82-bfa6-4ddc1bb62253)
+	)
+	(no_connect
+		(at 375.92 129.54)
+		(uuid 9bfde15f-c9fd-5c28-8974-d2cfab1c4292)
+	)
+	(no_connect
+		(at 375.92 132.08)
+		(uuid f01873c4-9a49-5960-b27b-b4f5aa4317a7)
+	)
+	(no_connect
+		(at 375.92 139.7)
+		(uuid 9e3df978-c0bd-559d-8ad4-e6dee279ae29)
+	)
+	(no_connect
+		(at 375.92 134.62)
+		(uuid 4b601286-48c6-5d54-8298-ea925e87c868)
+	)
+	(no_connect
+		(at 375.92 124.46)
+		(uuid 2a5325e3-88fc-5c76-96ab-79a49488e8d8)
+	)
+	(wire
+		(pts
+			(xy 358.14 78.74)
+			(xy 358.14 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid fa0fcda9-7119-598a-8866-be73e8e9da9b)
+	)
+	(label
+		"+3V3"
+		(at 358.14 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid f1c55c14-e1bd-5e27-8430-e7f7b0908d3a)
+	)
+	(no_connect
+		(at 330.2 96.52)
+		(uuid 40779851-17c0-5335-a96f-6bc825b82560)
+	)
+	(no_connect
+		(at 347.98 78.74)
+		(uuid 6b5ed636-df8a-5dd3-9ae5-350aed69b1ac)
+	)
+	(no_connect
+		(at 353.06 78.74)
+		(uuid e0a80d3a-80e3-5a6e-9f57-1015dc30c81b)
+	)
+	(text
+		"GPIO0..7 en entrée uniquement.\nUSB sur le module Pico 2.\nICSP non implémenté sur cette feuille.\nR série / capacité SP0502 à qualifier :\n10 MS/s est une limite logicielle,\npas une bande passante mesurée."
+		(exclude_from_sim no)
+		(at 307.34 205.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid 961fd06d-f34c-5944-abfa-f97f5438a0b6)
+	)
+	(sheet_instances
+		(path
+			"/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
