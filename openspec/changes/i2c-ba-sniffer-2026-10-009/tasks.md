@@ -67,3 +67,60 @@
 
 - [x] 8.1 Ajouter au wiki essensys-memory une page sur l'outil (entité du dépôt et concept « espion I2C passif »), et noter que le change `essensys-i2c-ba-sniffer-2026-07-038` devient la phase 2 (Pico). Vérifier : wikilinks résolus et index mis à jour.
 - [ ] 8.2 Après la capture réelle (6.4), consigner la synthèse anonymisée dans la page de l'incident foudre. Vérifier : relecture, aucune donnée privée.
+
+
+## 9. Carte Pico 2 — analyse huit voies et ICSP (issue #10)
+
+Ce lot relève du même change et de la Feature #29. Les tâches de banc historiques
+5/6/8 ne sont pas implicitement terminées par cette extension.
+
+- [x] 9.1 Étendre proposal/design/specs/manifest, définir modes, connecteurs et limites.
+- [x] 9.2 Fournir un inspecteur Intel HEX strict et un rapport reproductible des trois BA v1.7 (configuration, SHA256, EEPROM, calibration).
+- [x] 9.3 Implémenter et compiler le firmware Pico 2 de capture huit voies PIO/DMA, borné, avec erreurs explicites et protocole USB documenté.
+- [x] 9.4 Fournir l'outil hôte de capture/rejeu et les tests de transfert tronqué, CRC, huit voies et compatibilité avec le décodeur passif.
+- [ ] 9.5 Qualifier l'interface usine et le chemin MCLR/NCP803 des BA ; trancher VPP/VDD et les adaptations ICSP sans dépasser les limites composants.
+- [ ] 9.6 Produire le schéma KiCad complet, connecteurs vérifiés, huit voies protégées, VPP et ICSP séparés ; ERC et netlist propres.
+- [ ] 9.7 Router le PCB avec les règles JLCPCB ; DRC sans violation et parité schéma/PCB vérifiée en CI.
+- [ ] 9.8 Implémenter le firmware/outil de programmation PIC16F946, avec sauvegarde EEPROM, préservation calibration, vérification et arrêt sur défaut.
+- [ ] 9.9 Générer Gerber/perçages/BOM/CPL, références LCSC et instructions ; aucune commande automatique.
+- [x] 9.10 Mettre à jour documentation centrale et mémoire, publier une PR traçable et faire passer les contrôles disponibles.
+- [ ] 9.11 Après fabrication : mesures des huit voies avec nappe 1 m, comparaison FX2 et vérification du bus Pico éteint.
+- [ ] 9.12 Après qualification ICSP : programmer/revérifier les trois variantes BA sur banc ; rapport anonymisé avant clôture.
+
+État du premier lot : 9.1 à 9.4 vérifiés sur hôte ; schéma d’étude capture seule
+(ERC/netlist), sans ICSP ni PCB. 9.6 reste ouverte : la carte complète dépend
+de 9.5. Aucun essai physique ni fichier de fabrication final n’est déclaré fait.
+
+9.10 : PR code #11, documentation essensys-doc#42 et mémoire essensys-memory#40.
+CI code/sécurité verte sur `d3914be`, build MkDocs strict vert. Les PR restent
+ouvertes en brouillon ; la tâche #10 reste « En cours », sans clôture ni commande.
+
+
+### Révision intégrée demandée par l'utilisateur (même ticket #10)
+
+Les tâches 9.1–9.4 cochées décrivent le premier lot sur module Pico. Leurs tests
+restent valides pour ce prototype ; ils ne prouvent pas la nouvelle architecture.
+
+- [x] 9.13 Documenter l'intégration RP2350 nu + analyseur FX2 et le hub USB interne proposé ; distinguer les anciens livrables.
+- [x] 9.14 Confirmer les deux connecteurs de programmation demandés : BP/BDM et boîtier secondaire BA/ICSP.
+- [ ] 9.15 Sélectionner les puces LCSC, calculer le bilan d'alimentation USB et vérifier énumération/suspend/défauts du hub.
+- [ ] 9.16 Refaire le schéma KiCad avec RP2350 nu, FX2, hub, horloges, mémoires, protections et accès de maintenance ; conserver J1/J2 traversants.
+- [ ] 9.17 Valider la capture fx2lafw intégrée et l'accès USB du programmateur ; les fonctions programmateur restent conditionnées aux tâches 9.5/9.8 et 9.18–9.20.
+
+9.6–9.9 et 9.11–9.12 s'appliquent à cette carte intégrée finale. Le schéma
+`pico2-capture-draft` reste l'étude antérieure, pas un dossier de fabrication.
+
+- [ ] 9.18 Figer les brochages BP/BDM et BA/ICSP, détrompages et adaptateurs FC14P ; étendre les contrôles de nets à la séparation VPP/BDM et des alimentations cibles.
+- [ ] 9.19 Implémenter et qualifier le transport BDM RP2350 et l'outillage BP : identification, sauvegarde autorisée, préservation des zones sensibles, programmation, relecture et récupération documentée.
+- [ ] 9.20 Tester sur banc le BP et les trois variantes BA ; une cible active à la fois, autre port inactif, VPP absente du BP et arrêt sur défaut.
+
+### Développement logiciel et étude R0 (2026-11-14)
+
+- [x] 9.21 Implémenter les moteurs C portables ICSP PIC16F946 et BDM en lecture, avec cibles émulées, défauts injectés et temporisations bornées. Compiler pour hôte et Arm ; aucune écriture flash BP livrée.
+- [x] 9.22 Fournir l'UF2 diagnostic intégré, le client USB strict et le planificateur HEX hors matériel. Vérifier que toute sélection cible est refusée et que les sorties restent inactives.
+- [x] 9.23 Fournir l'étude KiCad intégrée R0, les contrats nets/GPIO et leurs contrôles CI. Conserver les cinq avertissements ERC connus, refuser le mode fabrication et laisser l'étage BA ouvert.
+- [x] 9.24 Imposer huit voies explicites au FX2 en acquisition directe et refuser les largeurs incompatibles ; ajouter une régression avec archive sigrok seize voies.
+
+Les moteurs sont compilés et testés sur hôte, sans activation matérielle.
+9.5–9.9 et 9.15–9.20 restent ouvertes : ces résultats ne qualifient pas les
+interfaces, une programmation réelle, les adaptateurs FC14P ou un PCB final.

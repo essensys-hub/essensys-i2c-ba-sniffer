@@ -1,5 +1,6 @@
 import json
 import re
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -39,6 +40,39 @@ def test_live_acquisition_is_read_only(monkeypatch):
         cli.main(["live", "--duration", "1"])
     cmd = seen["cmd"]
     assert cmd[:3] == ["sigrok-cli", "-d", "fx2lafw"] and "-O" in cmd and cmd[cmd.index("-O") + 1] == "binary"
+    assert cmd[cmd.index("--channels") + 1] == "D0,D1,D2,D3,D4,D5,D6,D7"
+
+
+@pytest.mark.parametrize("options", [["--driver", "demo:num_logic_channels=16"],
+    ["--scl", "8"], ["--sda", "-1"], ["--scl", "1", "--sda", "1"]])
+def test_live_rejects_unknown_width_before_acquisition(monkeypatch, options):
+    def forbidden(*args, **kwargs):
+        pytest.fail("invalid acquisition started")
+    monkeypatch.setattr(cli.subprocess, "Popen", forbidden)
+    with pytest.raises(SystemExit):
+        cli.main(["live", *options])
+
+
+@needs_sigrok
+def test_replay_refuses_real_sigrok_16bit_stream(tmp_path):
+    path = tmp_path / "wide.sr"
+    subprocess.run([cli.sigrok_bin(), "-d", "demo:logic_channels=16:analog_channels=0",
+                    "--samples", "32", "--config", "samplerate=1000000",
+                    "-O", "srzip", "-o", str(path)], check=True, capture_output=True)
+    raw = subprocess.run([cli.sigrok_bin(), "-i", str(path), "-O", "binary"],
+                         check=True, capture_output=True).stdout
+    assert len(raw) == 64
+    with pytest.raises(SystemExit, match="unitsize 1"):
+        cli.main(["replay", str(path)])
+
+
+@pytest.mark.parametrize("width", [2, "1", True])
+def test_raw_metadata_width_is_not_silently_reinterpreted(tmp_path, width):
+    path = tmp_path / "raw.bin"
+    path.write_bytes(b"\x01\x00" * 8)
+    Path(str(path) + ".json").write_text(json.dumps({"samplerate": 1000000, "unitsize": width}))
+    with pytest.raises(SystemExit, match="unitsize 1"):
+        cli.main(["replay", str(path)])
 
 
 @pytest.mark.parametrize("rate", ["500k", "999999"])

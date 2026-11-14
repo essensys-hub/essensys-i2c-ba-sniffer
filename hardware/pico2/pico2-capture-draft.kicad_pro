@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "filename": "pico2-capture-draft.kicad_pro",
+    "version": 3
+  },
+  "schematic": {},
+  "sheets": [
+    [
+      "a1ac64a9-fd7b-5215-aa7d-0c573fd64c02",
+      "Capture"
+    ]
+  ],
+  "text_variables": {}
+}

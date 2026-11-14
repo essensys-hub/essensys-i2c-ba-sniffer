@@ -9,8 +9,8 @@
     "project_item": "PVTI_lADODqt0Wc4BavHTzhAbCAM"
   },
   "git": {
-    "branch": "feat/i2c-ba-sniffer-2026-10-009",
-    "pr_url": null
+    "branch": "feat/pico2-pcb-10",
+    "pr_url": "https://github.com/essensys-hub/essensys-i2c-ba-sniffer/pull/11"
   },
   "openspec": {
     "change_id": "i2c-ba-sniffer-2026-10-009",
@@ -24,7 +24,8 @@
       "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/ba-event-semantics/spec.md",
       "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-tooling/spec.md",
       "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/sniffer-probe-hardware/spec.md",
-      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-documentation/spec.md"
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/debug-documentation/spec.md",
+      "openspec/changes/i2c-ba-sniffer-2026-10-009/specs/sniffer-pcb-card/spec.md"
     ]
   },
   "implementation": {
@@ -38,13 +39,28 @@
       "decoder/essensys_i2c_sniffer/semantics.py",
       "tests/test_corpus.py",
       "captures/corpus/README.md",
-      ".github/workflows/ci.yml"
+      ".github/workflows/ci.yml",
+      "hardware/pico2/README.md",
+      "decoder/essensys_pico/",
+      "firmware/",
+      "hardware/pico2/check_netlist.py",
+      "hardware/pico2/pico2-capture-draft.kicad_sch",
+      "hardware/pico2/ADR-001-carte-integree.md",
+      "hardware/integrated/",
+      "firmware/programmer/",
+      "decoder/essensys_pico/ba_plan.py",
+      "decoder/essensys_pico/programmer.py"
     ],
     "primary_surface": "ops"
   },
   "userguide": {
     "pages": [
-      "README.md"
+      "README.md",
+      "hardware/pico2/README.md",
+      "firmware/README.md",
+      "hardware/pico2/ADR-001-carte-integree.md",
+      "hardware/integrated/README.md",
+      "firmware/programmer/README.md"
     ],
     "language": "fr",
     "i18n_keys": [],
@@ -72,11 +88,20 @@
       "tests/test_transactions.py",
       "tests/test_annotations.py",
       "tests/test_crc.py",
-      "tests/test_correlate.py"
+      "tests/test_correlate.py",
+      "tests/test_pico_hex.py",
+      "tests/test_pico_capture.py",
+      "tests/test_pico_firmware_native.py",
+      "tests/test_bdm_native.py",
+      "tests/test_icsp_native.py",
+      "tests/test_ba_plan.py",
+      "tests/test_programmer_client.py",
+      "tests/test_programmer_control.py",
+      "tests/test_integrated_gpio_contract.py"
     ]
   },
   "release": {
-    "changelog_entry": "Nouvel outil de debug : espion I2C passif du bus BP↔BA (analyseur logique + sigrok), décodeur Python du protocole Essensys, sonde KiCad/Fritzing et documentation /docs/debug.",
+    "changelog_entry": "Espion I2C passif et décodeur sigrok BP↔BA. Extension carte intégrée en développement : étude KiCad RP2350/FX2/hub, adaptation numérique BP, moteurs C ICSP et BDM, préparation HEX dense et firmware USB de diagnostic. Deux ports distincts BP/BDM et BA/ICSP ; activation matérielle indisponible, étage BA/VPP, programmation flash BP, PCB final et essais physiques restent ouverts. Le prototype Pico/PIO reste historique.",
     "target_tag": null,
     "surfaces": [
       "essensys-i2c-ba-sniffer",
@@ -90,7 +115,7 @@
   "security": {
     "sca_tool": "dependabot",
     "dependabot_alerts_url": null,
-    "last_scan_at": null,
+    "last_scan_at": "2026-11-14T10:24:25Z",
     "cve_findings": {
       "critical": 0,
       "high": 0,
@@ -100,7 +125,7 @@
     "secret_scan": {
       "status": "clean",
       "tool": "gitleaks",
-      "last_scan_at": null
+      "last_scan_at": "2026-11-14T10:24:10Z"
     },
     "muted_findings": [],
     "threat_model_url": "openspec/changes/i2c-ba-sniffer-2026-10-009/design.md",

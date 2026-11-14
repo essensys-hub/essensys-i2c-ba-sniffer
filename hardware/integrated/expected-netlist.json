@@ -1,0 +1,913 @@
+{
+  "CYF1": {
+    "1": "FX_XIN",
+    "2": "GND"
+  },
+  "CYF2": {
+    "1": "FX_XOUT",
+    "2": "GND"
+  },
+  "CYH1": {
+    "1": "HUB_XIN",
+    "2": "GND"
+  },
+  "CYH2": {
+    "1": "HUB_XOUT",
+    "2": "GND"
+  },
+  "CYR1": {
+    "1": "RP_XIN",
+    "2": "GND"
+  },
+  "CYR2": {
+    "1": "RP_XOUT_R",
+    "2": "GND"
+  },
+  "C_BPA": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_BPAND": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_BPB": {
+    "1": "BP_VREF",
+    "2": "GND"
+  },
+  "C_BUF1": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_BUF2": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_BUF3": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_BUF4": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FB": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD1": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD2": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD3": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD4": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD5": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD6": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD7": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FD8": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_FLASH": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_FRST": {
+    "1": "FX_RESET_N",
+    "2": "GND"
+  },
+  "C_FXIN": {
+    "1": "VBUS_FX",
+    "2": "GND"
+  },
+  "C_FXOUT": {
+    "1": "+3V3_FX",
+    "2": "GND"
+  },
+  "C_HB": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HCR": {
+    "1": "HUB_CRFILT",
+    "2": "GND"
+  },
+  "C_HD1": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HD2": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HD3": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HD4": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HD5": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HD6": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HIN": {
+    "1": "VBUS_USB",
+    "2": "GND"
+  },
+  "C_HOUT": {
+    "1": "+3V3_HUB",
+    "2": "GND"
+  },
+  "C_HPLL": {
+    "1": "HUB_PLLFILT",
+    "2": "GND"
+  },
+  "C_HRST": {
+    "1": "HUB_RESET_N",
+    "2": "GND"
+  },
+  "C_RAV": {
+    "1": "RP_VREG_AVDD",
+    "2": "GND"
+  },
+  "C_RC1": {
+    "1": "+1V1_RP",
+    "2": "GND"
+  },
+  "C_RC2": {
+    "1": "+1V1_RP",
+    "2": "GND"
+  },
+  "C_RC3": {
+    "1": "+1V1_RP",
+    "2": "GND"
+  },
+  "C_RCORE": {
+    "1": "+1V1_RP",
+    "2": "GND"
+  },
+  "C_RD1": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD10": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD2": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD3": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD4": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD5": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD6": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD7": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD8": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RD9": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RPIN": {
+    "1": "VBUS_RP",
+    "2": "GND"
+  },
+  "C_RPOUT": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RST": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_RVIN": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_SENSE": {
+    "1": "+3V3_RP",
+    "2": "GND"
+  },
+  "C_SW1": {
+    "1": "VBUS_USB",
+    "2": "GND"
+  },
+  "C_SW2": {
+    "1": "VBUS_USB",
+    "2": "GND"
+  },
+  "C_VADC": {
+    "1": "RP_ADC_BP_VREF",
+    "2": "GND"
+  },
+  "D_IN1": {
+    "1": "CH1_PROT",
+    "2": "CH2_PROT",
+    "3": "GND"
+  },
+  "D_IN2": {
+    "1": "CH3_PROT",
+    "2": "CH4_PROT",
+    "3": "GND"
+  },
+  "D_IN3": {
+    "1": "CH5_PROT",
+    "2": "CH6_PROT",
+    "3": "GND"
+  },
+  "D_IN4": {
+    "1": "CH7_PROT",
+    "2": "CH8_PROT",
+    "3": "GND"
+  },
+  "J_BA": {
+    "1": "BA_VPP",
+    "2": "BA_VDD_SENSE",
+    "3": "GND",
+    "4": "BA_PGD",
+    "5": "BA_PGC",
+    "6": null
+  },
+  "J_BP": {
+    "1": "BP_TCLK_UNUSED",
+    "10": "GND",
+    "2": "BP_BKPT_N",
+    "3": "BP_DSO",
+    "4": "BP_DSI",
+    "5": "BP_ALLPST",
+    "6": "BP_DSCLK",
+    "7": "BP_VREF",
+    "8": "BP_RESET_N",
+    "9": "GND"
+  },
+  "J_I2C_IN": {
+    "1": "SDA_BUS",
+    "2": "SCL_BUS",
+    "3": "GND",
+    "4": "+15V_PASS"
+  },
+  "J_I2C_OUT": {
+    "1": "SDA_BUS",
+    "2": "SCL_BUS",
+    "3": "GND",
+    "4": "+15V_PASS"
+  },
+  "J_USB": {
+    "1": "VBUS_USB",
+    "2": "USB_UP_DM",
+    "3": "USB_UP_DP",
+    "4": null,
+    "5": "GND",
+    "SH": "GND"
+  },
+  "L_RP": {
+    "1": "RP_LX",
+    "2": "+1V1_RP"
+  },
+  "Q_BP1": {
+    "1": "BP_GATE1",
+    "2": "GND",
+    "3": "BP_BKPT_N"
+  },
+  "Q_BP2": {
+    "1": "BP_GATE2",
+    "2": "GND",
+    "3": "BP_RESET_N"
+  },
+  "R_BAOE": {
+    "1": "RP_BA_OE",
+    "2": "GND"
+  },
+  "R_BOOT": {
+    "1": "QSPI_CS_N",
+    "2": "RP_BOOTSW"
+  },
+  "R_BPALL": {
+    "1": "BP_ALLPST",
+    "2": "GND"
+  },
+  "R_BPCLK": {
+    "1": "BP_DSCLK_BUF",
+    "2": "BP_DSCLK"
+  },
+  "R_BPDI": {
+    "1": "BP_DSI_BUF",
+    "2": "BP_DSI"
+  },
+  "R_BPDSO": {
+    "1": "BP_DSO",
+    "2": "GND"
+  },
+  "R_BPOE": {
+    "1": "RP_BP_OE",
+    "2": "GND"
+  },
+  "R_BPPU1": {
+    "1": "BP_BKPT_N",
+    "2": "BP_VREF"
+  },
+  "R_BPPU2": {
+    "1": "BP_RESET_N",
+    "2": "BP_VREF"
+  },
+  "R_CS": {
+    "1": "QSPI_CS_N",
+    "2": "+3V3_RP"
+  },
+  "R_DM": {
+    "1": "USB_RP_DM",
+    "2": "RP_DM_PAD"
+  },
+  "R_DP": {
+    "1": "USB_RP_DP",
+    "2": "RP_DP_PAD"
+  },
+  "R_FRST": {
+    "1": "FX_RESET_N",
+    "2": "+3V3_FX"
+  },
+  "R_FSCL": {
+    "1": "FX_SCL",
+    "2": "+3V3_FX"
+  },
+  "R_FSDA": {
+    "1": "FX_SDA",
+    "2": "+3V3_FX"
+  },
+  "R_FWU": {
+    "1": "FX_WU2",
+    "2": "+3V3_FX"
+  },
+  "R_GATE1": {
+    "1": "BP_GATE1",
+    "2": "GND"
+  },
+  "R_GATE2": {
+    "1": "BP_GATE2",
+    "2": "GND"
+  },
+  "R_HBIAS": {
+    "1": "HUB_RBIAS",
+    "2": "GND"
+  },
+  "R_HCFG0": {
+    "1": "HUB_CFG0",
+    "2": "GND"
+  },
+  "R_HCFG1": {
+    "1": "HUB_CFG1",
+    "2": "+3V3_HUB"
+  },
+  "R_HNR0": {
+    "1": "HUB_NONREM0",
+    "2": "GND"
+  },
+  "R_HNR1": {
+    "1": "HUB_NONREM1",
+    "2": "+3V3_HUB"
+  },
+  "R_HRST": {
+    "1": "HUB_RESET_N",
+    "2": "+3V3_HUB"
+  },
+  "R_HVB1": {
+    "1": "VBUS_USB",
+    "2": "HUB_VBUS_DET"
+  },
+  "R_HVB2": {
+    "1": "HUB_VBUS_DET",
+    "2": "GND"
+  },
+  "R_IN1": {
+    "1": "SCL_BUS",
+    "2": "CH1_PROT"
+  },
+  "R_IN2": {
+    "1": "SDA_BUS",
+    "2": "CH2_PROT"
+  },
+  "R_IN3": {
+    "1": "CH3_TP",
+    "2": "CH3_PROT"
+  },
+  "R_IN4": {
+    "1": "CH4_TP",
+    "2": "CH4_PROT"
+  },
+  "R_IN5": {
+    "1": "CH5_TP",
+    "2": "CH5_PROT"
+  },
+  "R_IN6": {
+    "1": "CH6_TP",
+    "2": "CH6_PROT"
+  },
+  "R_IN7": {
+    "1": "CH7_TP",
+    "2": "CH7_PROT"
+  },
+  "R_IN8": {
+    "1": "CH8_TP",
+    "2": "CH8_PROT"
+  },
+  "R_OC1": {
+    "1": "HUB_OC1_N",
+    "2": "+3V3_HUB"
+  },
+  "R_OC2": {
+    "1": "HUB_OC2_N",
+    "2": "+3V3_HUB"
+  },
+  "R_PD1": {
+    "1": "CH1_PROT",
+    "2": "GND"
+  },
+  "R_PD2": {
+    "1": "CH2_PROT",
+    "2": "GND"
+  },
+  "R_PD3": {
+    "1": "CH3_PROT",
+    "2": "GND"
+  },
+  "R_PD4": {
+    "1": "CH4_PROT",
+    "2": "GND"
+  },
+  "R_PD5": {
+    "1": "CH5_PROT",
+    "2": "GND"
+  },
+  "R_PD6": {
+    "1": "CH6_PROT",
+    "2": "GND"
+  },
+  "R_PD7": {
+    "1": "CH7_PROT",
+    "2": "GND"
+  },
+  "R_PD8": {
+    "1": "CH8_PROT",
+    "2": "GND"
+  },
+  "R_PW1": {
+    "1": "HUB_PWR1",
+    "2": "GND"
+  },
+  "R_PW2": {
+    "1": "HUB_PWR2",
+    "2": "GND"
+  },
+  "R_REQ1": {
+    "1": "RP_BP_BKPT",
+    "2": "GND"
+  },
+  "R_REQ2": {
+    "1": "RP_BP_RESET",
+    "2": "GND"
+  },
+  "R_RSTPD": {
+    "1": "BP_RESET_SENSE_IN",
+    "2": "GND"
+  },
+  "R_RSTS": {
+    "1": "BP_RESET_N",
+    "2": "BP_RESET_SENSE_IN"
+  },
+  "R_RUN": {
+    "1": "RP_RUN",
+    "2": "+3V3_RP"
+  },
+  "R_VADC": {
+    "1": "RP_ADC_BP_VREF",
+    "2": "GND"
+  },
+  "R_VBOT": {
+    "1": "BP_VREF_DIV",
+    "2": "GND"
+  },
+  "R_VPPEN": {
+    "1": "RP_BA_VPP_EN",
+    "2": "GND"
+  },
+  "R_VREG": {
+    "1": "+3V3_RP",
+    "2": "RP_VREG_AVDD"
+  },
+  "R_VTOP": {
+    "1": "BP_VREF",
+    "2": "BP_VREF_DIV"
+  },
+  "R_XO": {
+    "1": "RP_XOUT",
+    "2": "RP_XOUT_R"
+  },
+  "SW_BOOT": {
+    "1": "RP_BOOTSW",
+    "2": "GND"
+  },
+  "SW_RUN": {
+    "1": "RP_RUN",
+    "2": "GND"
+  },
+  "TP_CH3": {
+    "1": "CH3_TP"
+  },
+  "TP_CH4": {
+    "1": "CH4_TP"
+  },
+  "TP_CH5": {
+    "1": "CH5_TP"
+  },
+  "TP_CH6": {
+    "1": "CH6_TP"
+  },
+  "TP_CH7": {
+    "1": "CH7_TP"
+  },
+  "TP_CH8": {
+    "1": "CH8_TP"
+  },
+  "TP_GPIO0": {
+    "1": "RP_BA_PGC"
+  },
+  "TP_GPIO1": {
+    "1": "RP_BA_PGD_OUT"
+  },
+  "TP_GPIO2": {
+    "1": "RP_BA_PGD_IN"
+  },
+  "TP_GPIO26": {
+    "1": "RP_ADC_BA_VDD"
+  },
+  "TP_GPIO27": {
+    "1": "RP_ADC_BA_VPP"
+  },
+  "TP_GPIO3": {
+    "1": "RP_BA_PGD_DIR"
+  },
+  "TP_GPIO4": {
+    "1": "RP_BA_OE"
+  },
+  "TP_GPIO5": {
+    "1": "RP_BA_VPP_EN"
+  },
+  "TP_S0": {
+    "1": "RP_SWCLK"
+  },
+  "TP_S1": {
+    "1": "RP_SWDIO"
+  },
+  "TP_S2": {
+    "1": "RP_RUN"
+  },
+  "U_BPAND": {
+    "1": "RP_BP_BKPT",
+    "2": "RP_BP_OE",
+    "3": "BP_GATE2",
+    "4": "GND",
+    "5": "RP_BP_RESET",
+    "6": "RP_BP_OE",
+    "7": "BP_GATE1",
+    "8": "+3V3_RP"
+  },
+  "U_BPX": {
+    "1": "+3V3_RP",
+    "10": "BP_ALLPST",
+    "11": "BP_DSO",
+    "12": "BP_DSI_BUF",
+    "13": "BP_DSCLK_BUF",
+    "14": "BP_VREF",
+    "2": "RP_BP_DSCLK",
+    "3": "RP_BP_DSI",
+    "4": "RP_BP_DSO",
+    "5": "RP_BP_ALLPST",
+    "6": null,
+    "7": "GND",
+    "8": "RP_BP_OE",
+    "9": null
+  },
+  "U_BUF1": {
+    "1": "CH1_PROT",
+    "2": "GND",
+    "3": "CH2_PROT",
+    "4": "FX_D1",
+    "5": "+3V3_FX",
+    "6": "FX_D0"
+  },
+  "U_BUF2": {
+    "1": "CH3_PROT",
+    "2": "GND",
+    "3": "CH4_PROT",
+    "4": "FX_D3",
+    "5": "+3V3_FX",
+    "6": "FX_D2"
+  },
+  "U_BUF3": {
+    "1": "CH5_PROT",
+    "2": "GND",
+    "3": "CH6_PROT",
+    "4": "FX_D5",
+    "5": "+3V3_FX",
+    "6": "FX_D4"
+  },
+  "U_BUF4": {
+    "1": "CH7_PROT",
+    "2": "GND",
+    "3": "CH8_PROT",
+    "4": "FX_D7",
+    "5": "+3V3_FX",
+    "6": "FX_D6"
+  },
+  "U_FLASH": {
+    "1": "QSPI_CS_N",
+    "2": "QSPI_D1",
+    "3": "QSPI_D2",
+    "4": "GND",
+    "5": "QSPI_D0",
+    "6": "QSPI_CLK",
+    "7": "QSPI_D3",
+    "8": "+3V3_RP"
+  },
+  "U_FX": {
+    "1": null,
+    "10": "+3V3_FX",
+    "11": "FX_XOUT",
+    "12": "FX_XIN",
+    "13": "GND",
+    "14": "+3V3_FX",
+    "15": "USB_FX_DP",
+    "16": "USB_FX_DM",
+    "17": "GND",
+    "18": "+3V3_FX",
+    "19": "GND",
+    "2": null,
+    "20": null,
+    "21": "GND",
+    "22": "FX_SCL",
+    "23": "FX_SDA",
+    "24": "+3V3_FX",
+    "25": "FX_D0",
+    "26": "FX_D1",
+    "27": "FX_D2",
+    "28": "FX_D3",
+    "29": "FX_D4",
+    "3": null,
+    "30": "FX_D5",
+    "31": "FX_D6",
+    "32": "FX_D7",
+    "33": "GND",
+    "34": "+3V3_FX",
+    "35": "GND",
+    "36": null,
+    "37": null,
+    "38": null,
+    "39": "+3V3_FX",
+    "4": "GND",
+    "40": null,
+    "41": null,
+    "42": null,
+    "43": "FX_WU2",
+    "44": null,
+    "45": null,
+    "46": null,
+    "47": null,
+    "48": "GND",
+    "49": "FX_RESET_N",
+    "5": null,
+    "50": "+3V3_FX",
+    "51": "+3V3_FX",
+    "52": null,
+    "53": null,
+    "54": null,
+    "55": null,
+    "56": null,
+    "6": "+3V3_FX",
+    "7": "GND",
+    "8": "GND",
+    "9": "GND"
+  },
+  "U_FXREG": {
+    "1": "VBUS_FX",
+    "2": "GND",
+    "3": "VBUS_FX",
+    "4": null,
+    "5": "+3V3_FX"
+  },
+  "U_HREG": {
+    "1": "VBUS_USB",
+    "2": "GND",
+    "3": "VBUS_USB",
+    "4": null,
+    "5": "+3V3_HUB"
+  },
+  "U_HUB": {
+    "1": "USB_FX_DM",
+    "10": "+3V3_HUB",
+    "11": "GND",
+    "12": "HUB_PWR1",
+    "13": "HUB_OC1_N",
+    "14": "HUB_CRFILT",
+    "15": "+3V3_HUB",
+    "16": "HUB_PWR2",
+    "17": "HUB_OC2_N",
+    "18": null,
+    "19": null,
+    "2": "USB_FX_DP",
+    "20": null,
+    "21": null,
+    "22": "HUB_NONREM1",
+    "23": "+3V3_HUB",
+    "24": "HUB_CFG0",
+    "25": "HUB_CFG1",
+    "26": "HUB_RESET_N",
+    "27": "HUB_VBUS_DET",
+    "28": "HUB_NONREM0",
+    "29": "+3V3_HUB",
+    "3": "USB_RP_DM",
+    "30": "USB_UP_DM",
+    "31": "USB_UP_DP",
+    "32": "HUB_XOUT",
+    "33": "HUB_XIN",
+    "34": "HUB_PLLFILT",
+    "35": "HUB_RBIAS",
+    "36": "+3V3_HUB",
+    "37": "GND",
+    "4": "USB_RP_DP",
+    "5": "+3V3_HUB",
+    "6": null,
+    "7": null,
+    "8": null,
+    "9": null
+  },
+  "U_RP": {
+    "1": "+3V3_RP",
+    "10": null,
+    "11": "+3V3_RP",
+    "12": "RP_BP_DSCLK",
+    "13": "RP_BP_DSI",
+    "14": "RP_BP_DSO",
+    "15": "RP_BP_BKPT",
+    "16": "RP_BP_RESET",
+    "17": "RP_BP_ALLPST",
+    "18": "RP_BP_OE",
+    "19": "RP_BP_RESET_SENSE",
+    "2": "RP_BA_PGC",
+    "20": "+3V3_RP",
+    "21": "RP_XIN",
+    "22": "RP_XOUT",
+    "23": "+1V1_RP",
+    "24": "RP_SWCLK",
+    "25": "RP_SWDIO",
+    "26": "RP_RUN",
+    "27": null,
+    "28": null,
+    "29": null,
+    "3": "RP_BA_PGD_OUT",
+    "30": "+3V3_RP",
+    "31": null,
+    "32": null,
+    "33": null,
+    "34": null,
+    "35": null,
+    "36": null,
+    "37": null,
+    "38": "+3V3_RP",
+    "39": "+1V1_RP",
+    "4": "RP_BA_PGD_IN",
+    "40": "RP_ADC_BA_VDD",
+    "41": "RP_ADC_BA_VPP",
+    "42": "RP_ADC_BP_VREF",
+    "43": null,
+    "44": "+3V3_RP",
+    "45": "+3V3_RP",
+    "46": "RP_VREG_AVDD",
+    "47": "GND",
+    "48": "RP_LX",
+    "49": "+3V3_RP",
+    "5": "RP_BA_PGD_DIR",
+    "50": "+1V1_RP",
+    "51": "RP_DM_PAD",
+    "52": "RP_DP_PAD",
+    "53": "+3V3_RP",
+    "54": "+3V3_RP",
+    "55": "QSPI_D3",
+    "56": "QSPI_CLK",
+    "57": "QSPI_D0",
+    "58": "QSPI_D2",
+    "59": "QSPI_D1",
+    "6": "+1V1_RP",
+    "60": "QSPI_CS_N",
+    "61": "GND",
+    "7": "RP_BA_OE",
+    "8": "RP_BA_VPP_EN",
+    "9": null
+  },
+  "U_RPREG": {
+    "1": "VBUS_RP",
+    "2": "GND",
+    "3": "VBUS_RP",
+    "4": null,
+    "5": "+3V3_RP"
+  },
+  "U_RST": {
+    "1": null,
+    "2": "BP_RESET_SENSE_IN",
+    "3": "GND",
+    "4": "RP_BP_RESET_SENSE",
+    "5": "+3V3_RP"
+  },
+  "U_SENSE": {
+    "1": "GND",
+    "10": null,
+    "11": null,
+    "12": null,
+    "13": null,
+    "14": null,
+    "15": "GND",
+    "16": "+3V3_RP",
+    "2": "BP_VREF_DIV",
+    "3": null,
+    "4": "RP_ADC_BP_VREF",
+    "5": null,
+    "6": null,
+    "7": null,
+    "8": "GND",
+    "9": null
+  },
+  "U_SW1": {
+    "1": "VBUS_FX",
+    "2": "GND",
+    "3": "HUB_OC1_N",
+    "4": "HUB_PWR1",
+    "5": "VBUS_USB"
+  },
+  "U_SW2": {
+    "1": "VBUS_RP",
+    "2": "GND",
+    "3": "HUB_OC2_N",
+    "4": "HUB_PWR2",
+    "5": "VBUS_USB"
+  },
+  "YF": {
+    "1": "FX_XIN",
+    "2": "GND",
+    "3": "FX_XOUT",
+    "4": "GND"
+  },
+  "YH": {
+    "1": "HUB_XIN",
+    "2": "GND",
+    "3": "HUB_XOUT",
+    "4": "GND"
+  },
+  "YR": {
+    "1": "RP_XIN",
+    "2": "GND",
+    "3": "RP_XOUT_R",
+    "4": "GND"
+  }
+}

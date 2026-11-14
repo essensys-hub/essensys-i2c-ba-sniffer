@@ -145,3 +145,63 @@ Ordre de mise en œuvre :
 
 - Référence exacte du connecteur J1/J2 des BA, à relire dans la BOM SC940D/SC941C/SC942C. Elle conditionne le connecteur de la sonde, pas les specs.
 - PCB fabriqué ou plaque à pastilles pour la première sonde. Les deux satisfont les specs ; la décision se prend à la tâche matérielle.
+
+
+## Extension du ticket #10 — révisions de conception
+
+Le matériel du ticket #10 et ses limites sont spécifiés dans
+`specs/sniffer-pcb-card/spec.md` et décrits dans `hardware/pico2/README.md`.
+Les non-objectifs « sans firmware » et « Pico hors périmètre » ci-dessus sont
+limités à la phase 1 FX2. L'extension conserve le décodeur passif ; elle ajoute
+un firmware Pico et un outillage hôte distinct.
+
+Étude initiale, désormais remplacée comme cible finale : huit voies PIO/DMA synchrones ; acquisition bornée en RAM avant USB ;
+IDC14 sans VPP ; ICSP6 séparé ; +15 V en traversée seulement ; qualification
+du chemin MCLR/NCP803 préalable à l'autorisation de programmation des BA.
+La constitution de l'interface PICkit → BA reste inconnue : la réponse « Oui »
+du 2026-11-14 indique que l'utilisateur connaît l'interface, sans trancher entre
+câble et montage électronique. Schéma, références et fonctions restent à établir.
+Aucun gain de performance ni résultat sur banc n'est déclaré avant mesure.
+
+### Précision utilisateur : intégration de deux puces sur le PCB
+
+La nouvelle cible est décrite par `hardware/pico2/ADR-001-carte-integree.md` :
+RP2350 nu pour la programmation, analyseur FX2 intégré pour la capture et hub
+USB interne pour une seule prise externe proposée. Les deux connecteurs I2C
+restent traversants. Deux prises de programmation sont confirmées : BP/BDM et BA/ICSP.
+Leurs brochages et le rôle de la nappe FC14P restent à figer ; aucun port universel n'est
+présumé. Cette révision conserve l'inspecteur HEX et le décodeur. Les ERC/tests
+de l'ancien schéma et firmware PIO ne valident pas ce nouveau matériel.
+
+Les deux interfaces ont des adaptations distinctes, avec sélection explicite
+BP ou BA, une seule cible active à la fois et sorties de l'autre port inactives.
+VPP n'est routée que vers l'ICSP BA ; elle reste coupée en mode BP et capture.
+La référence BP est J33 du SC944D en mode BDM (JC1 à vérifier). Les transports du
+POC `essensys-bdm-programmer` restent à implémenter et à qualifier sur RP2350.
+
+### Lot de développement intégré R0 (2026-11-14)
+
+`hardware/integrated/` contient une étude KiCad reproductible de 169 composants :
+RP2350A nu, FX2 huit voies, hub USB2512B, alimentations commutées et adaptation
+numérique BP. Le retour RESET BP a sa propre entrée GPIO15 ; le futur HAL devra
+mémoriser tout front de reset pendant une session. L'interface analogique BA
+reste ouverte. Le contrôle ERC accepte exactement cinq avertissements connus
+et visibles, aucune erreur ni exclusion ; le mode fabrication échoue.
+
+`firmware/programmer/` fournit des moteurs C portables ICSP PIC16F946
+(lecture/effacement/programmation/relecture, calibration et EEPROM préservées)
+et BDM MCF52259 (arrêt explicite, lecture bornée, reprise GO ; aucune écriture
+flash). Ils sont testés avec des cibles émulées et compilés pour Arm, sans HAL
+activant les ports. L'UF2 distinct expose INFO/STATUS/STOP et refuse la sélection
+d'une cible. Le client USB vérifie ce contrat ; `plan-ba` prépare les images
+hors matériel, avec une politique EEPROM explicite et sans autoriser de flash.
+
+L'acquisition directe impose le pilote `fx2lafw` et D0..D7. Le profil générique
+du FX2 peut proposer seize voies ; laisser la largeur implicite produirait deux
+octets par échantillon alors que le décodeur en attend un. Les autres pilotes
+ne sont pas présumés compacter le flux après sélection des voies. Les archives
+et métadonnées annonçant une largeur différente sont refusées.
+
+Ces livrables ne terminent ni 9.8 ni 9.16 ni 9.19 : HAL, sauvegardes réelles,
+écriture flash BP, qualification électrique/USB, mécanique FC14P, PCB et essais
+restent nécessaires. Le firmware historique PIO utilise un autre contrat GPIO.
