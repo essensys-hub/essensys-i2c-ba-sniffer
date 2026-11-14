@@ -18,6 +18,11 @@ Espion I2C **strictement passif** du bus interne de l'armoire Essensys : boîtie
 
 ## Installation
 
+**Précision de conception :** le ticket #10 vise maintenant une
+[carte intégrée RP2350 + analyseur FX2](hardware/pico2/ADR-001-carte-integree.md),
+avec une seule prise USB proposée. Le schéma à module Pico et son firmware PIO
+ci-dessous restent des prototypes de l'étude précédente.
+
 La [phase Pico 2 huit voies](hardware/pico2/README.md), avec programmation ICSP
 des BA prévue, est en conception dans le ticket #10. Le firmware de capture
 et son [outil hôte](firmware/README.md) sont disponibles pour qualification sur

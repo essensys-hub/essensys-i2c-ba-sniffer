@@ -1,11 +1,25 @@
-# Carte Pico 2 : analyse huit voies et ICSP des BA
+# Carte intégrée : analyse huit voies et programmation
 
 Feature `i2c-ba-sniffer-2026-10-009`, [ticket #10](https://github.com/essensys-hub/essensys-i2c-ba-sniffer/issues/10).
 
 **État : conception en cours, aucun prototype validé, aucun fichier prêt à commander.**
 Les résultats logiciels ne constituent pas une qualification électrique.
 
-## Architecture retenue
+## Nouvelle cible : carte intégrée RP2350 + analyseur
+
+L'utilisateur demande désormais de réunir **la puce d'analyseur et le processeur
+RP2350 sur un seul PCB**, avec un minimum de prises externes. La proposition
+est détaillée dans [ADR-001](ADR-001-carte-integree.md) : FX2LP pour l'acquisition,
+RP2350 nu pour la programmation, hub USB interne pour une seule prise vers le PC,
+deux connecteurs I2C et un port de programmation cible.
+
+Le protocole de ce dernier port reste à clarifier (BA en ICSP, BP en BDM, ou les
+deux). Le rôle de la nappe FC14P devra être réconcilié avec cette connectique.
+**Le schéma/PDF et les brochages ci-dessous décrivent l'étude antérieure à
+module Pico : ils ne constituent pas la nouvelle carte intégrée.** Le projet
+KiCad de cette nouvelle cible reste à concevoir.
+
+## Étude antérieure : module Pico 2, capture PIO
 
 ```mermaid
 flowchart LR
@@ -35,7 +49,7 @@ un tampon SN74LVC2G17 et un rappel faible au 0 V. Valeurs, capacités et limites
 doivent être dimensionnées et vérifiées avant routage final. Une chaîne validée
 pour le bus à 50 kHz ne prouve pas une bande passante de 24 MHz.
 
-## Contrat des connecteurs
+## Connecteurs de l’étude antérieure
 
 Numérotation de l'IDC selon les contacts de l'embase ; vérifier côté câble au
 multimètre avant branchement. Les deux rangées ne désignent pas une vue arrière.
@@ -73,7 +87,7 @@ empreinte d'embase 2 × 5 standard.
 L'adaptateur **croise donc les contacts 4 et 5** entre l'ICSP au format PICkit
 et les points TOP des BA ; ne pas réaliser une liaison numéro à numéro.
 
-## Acquisition et logiciel
+## Prototype antérieur : acquisition et logiciel
 
 - GPIO0..7 : huit entrées PIO contiguës, tirages internes désactivés.
 - Acquisition bornée en RAM, puis transfert USB ; aucune promesse de flux continu.

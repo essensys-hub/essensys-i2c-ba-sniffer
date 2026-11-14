@@ -147,7 +147,7 @@ Ordre de mise en œuvre :
 - PCB fabriqué ou plaque à pastilles pour la première sonde. Les deux satisfont les specs ; la décision se prend à la tâche matérielle.
 
 
-## Extension Pico 2 — ticket #10
+## Extension du ticket #10 — révisions de conception
 
 Le matériel du ticket #10 et ses limites sont spécifiés dans
 `specs/sniffer-pcb-card/spec.md` et décrits dans `hardware/pico2/README.md`.
@@ -155,10 +155,20 @@ Les non-objectifs « sans firmware » et « Pico hors périmètre » ci-dessus s
 limités à la phase 1 FX2. L'extension conserve le décodeur passif ; elle ajoute
 un firmware Pico et un outillage hôte distinct.
 
-Décisions : huit voies PIO/DMA synchrones ; acquisition bornée en RAM avant USB ;
+Étude initiale, désormais remplacée comme cible finale : huit voies PIO/DMA synchrones ; acquisition bornée en RAM avant USB ;
 IDC14 sans VPP ; ICSP6 séparé ; +15 V en traversée seulement ; qualification
 du chemin MCLR/NCP803 préalable à l'autorisation de programmation des BA.
 L'utilisateur confirme le 2026-11-14 que l'interface PICkit → BA contient des
 composants électroniques ; schéma, références et fonctions restent à identifier.
 Ne pas la remplacer par un simple câblage sur la base de cette seule information.
 Aucun gain de performance ni résultat sur banc n'est déclaré avant mesure.
+
+### Précision utilisateur : intégration de deux puces sur le PCB
+
+La nouvelle cible est décrite par `hardware/pico2/ADR-001-carte-integree.md` :
+RP2350 nu pour la programmation, analyseur FX2 intégré pour la capture et hub
+USB interne pour une seule prise externe proposée. Les deux connecteurs I2C
+restent traversants. La prise de programmation et le rôle de la nappe FC14P
+attendent la clarification BA/ICSP versus BP/BDM ; aucun port universel n'est
+présumé. Cette révision conserve l'inspecteur HEX et le décodeur. Les ERC/tests
+de l'ancien schéma et firmware PIO ne valident pas ce nouveau matériel.

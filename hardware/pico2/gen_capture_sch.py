@@ -32,7 +32,7 @@ def terminal(point, net, direction="left", length=5.08):
     s.items[-1][3] = s.fx(j=["right" if direction == "left" else "left", "bottom"])
 
 
-s.text("PICO 2 — ACQUISITION 8 VOIES — SCHEMA D'ETUDE", 12.7, 15.24, 2.2, bold=True)
+s.text("ETUDE ANTERIEURE — MODULE PICO / PIO — VOIR ADR-001", 12.7, 15.24, 2.2, bold=True)
 s.text("NON FABRICABLE : ICSP absent ; empreintes BA et qualification électrique en attente.\n"
        "USB uniquement pour l'alimentation. +15 V limité à la traversée J1/J2. Aucune pull-up sur les signaux.",
        12.7, 25.4, 1.4)
@@ -125,10 +125,10 @@ s.text("GPIO0..7 en entrée uniquement.\nUSB sur le module Pico 2.\nICSP non imp
 
 sch = ["kicad_sch", ["version", "20250114"], ["generator", s.S("eeschema")],
        ["uuid", s.ROOT], ["paper", s.S("A3")],
-       ["title_block", ["title", s.S("Pico 2 — acquisition 8 voies — étude")],
+       ["title_block", ["title", s.S("ETUDE ANTERIEURE — Pico module / capture PIO")],
         ["date", s.S("2026-11-14")], ["rev", s.S("DRAFT-0")],
         ["comment", "1", s.S("Refs #10 — Feature i2c-ba-sniffer-2026-10-009")],
-        ["comment", "2", s.S("NON FABRICABLE : ICSP et empreintes BA en attente")]],
+        ["comment", "2", s.S("REMPLACEE PAR ADR-001 RP2350 + FX2 — NON FABRICABLE")]],
        ["lib_symbols"] + s.libsyms] + s.items + [
            ["sheet_instances", ["path", s.S("/"), ["page", s.S("1")]]], ["embedded_fonts", "no"]]
 Path(s.OUT, s.NAME + ".kicad_sch").write_text(s.dump(sch) + "\n")

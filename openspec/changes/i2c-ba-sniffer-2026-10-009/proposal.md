@@ -14,8 +14,11 @@ Ticket : [essensys-hub/essensys-feature-lifecycle#29](https://github.com/essensy
 
 ## Extension approuvée : ticket #10
 
-La phase Pico est désormais ajoutée à ce même change : carte JLCPCB à huit voies,
-nappe FC14P 1 m, traversée quatre fils et programmateur ICSP séparé. Le plan
+La phase Pico est ajoutée à ce même change. Après précision utilisateur, la cible
+est une carte JLCPCB intégrant RP2350 nu et puce d'analyseur (FX2LP candidat),
+traversée quatre fils, une prise USB proposée via hub interne et un port de
+programmation cible. Le rôle de la nappe FC14P et la cible BA/ICSP ou BP/BDM
+restent à clarifier. L'étude à module Pico/PIO est conservée comme prototype. Le plan
 `essensys-i2c-ba-sniffer-2026-07-038` reste une source historique, sans nouvelle
 Feature. Les descriptions de phase 1 ci-dessous restent applicables à la sonde FX2.
 
@@ -42,7 +45,7 @@ Feature. Les descriptions de phase 1 ci-dessous restent applicables à la sonde 
 ## Capabilities
 
 ### New Capabilities
-- `sniffer-pcb-card` : carte Pico 2, huit voies, IDC14 et ICSP des BA (ticket #10).
+- `sniffer-pcb-card` : carte intégrée RP2350 + analyseur, huit voies et programmation cible (ticket #10).
 - `sigrok-capture` : acquisition passive par analyseur logique et sigrok (configuration, direct ou rejeu), détection électrique logique (NACK d'adresse, ligne bloquée, trame tronquée), garantie de non-émission.
 - `i2c-frame-decode` : reconstruction des transactions BP↔BA, identité des BA, longueurs par code de trame, CRC-16, écho de réponse, répétitions et abandons, rejeu identique au direct.
 - `ba-event-semantics` : traduction des trames en commandes observées, avec les profils de sorties par type de BA, les règles de priorité du firmware BA et les drapeaux ACTIONS.

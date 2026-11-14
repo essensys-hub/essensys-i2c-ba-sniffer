@@ -1,56 +1,94 @@
 ## Purpose
 
-Étendre la Feature existante avec la carte Pico 2 du ticket #10 : analyseur logique
-huit voies, traversée du bus et programmateur ICSP des BA. La sonde FX2 reste une
-variante indépendante et l'oracle de comparaison.
+Étendre la Feature existante avec la carte intégrée du ticket #10 : analyseur
+huit voies et processeur RP2350 sur un PCB unique, traversée du bus et programmation
+cible. Le BA/PIC reste la cible initiale ; une demande de clarification distingue
+BA/ICSP et BP/BDM. L'analyseur externe reste l'oracle de comparaison. L'étude
+antérieure à module Pico/PIO est conservée comme prototype, non comme carte finale.
 
 ## ADDED Requirements
 
-### Requirement: Traversée indépendante de l'alimentation du Pico
+### Requirement: Traversée indépendante de l'alimentation de la carte
 
 La carte SHALL assurer une liaison cuivre directe SDA/SCL/0 V/+15 V entre les deux
-connecteurs du bus. Le +15 V SHALL rester séparé de l'alimentation USB du Pico et
+connecteurs du bus. Le +15 V SHALL rester séparé de l'alimentation USB de l’instrument et
 des GPIO. Les branches de mesure SHALL être à haute impédance, sans pull-up.
 
-#### Scenario: Pico hors tension
+#### Scenario: Instrument hors tension
 
-- **WHEN** le Pico est éteint, redémarre ou est débranché de l'USB
+- **WHEN** l’instrument est éteint, redémarre ou est débranché de l'USB
 - **THEN** la continuité des quatre conducteurs subsiste et les limites électriques
   du bus sont respectées sur banc
 
+### Requirement: Analyseur et processeur intégrés
+
+La carte SHALL intégrer un composant d'acquisition huit voies compatible avec
+la chaîne sigrok/fx2lafw et le RP2350 directement sur le PCB, avec ses mémoires,
+horloges et alimentations nécessaires. Aucun module analyseur ou Pico enfiché
+ne SHALL être requis pour le fonctionnement final. La référence FX2LP est une
+candidate à vérifier dans la BOM ; le boîtier de référence ne l'identifie pas.
+
+#### Scenario: Utilisation de la carte complète
+
+- **WHEN** l'utilisateur branche l'instrument au PC
+- **THEN** acquisition et programmation sont fournies par les composants du même
+  PCB ; aucune carte analyseur ni module Pico externe n'est nécessaire
+
 ### Requirement: Huit voies synchrones protégées
 
-La carte SHALL capturer huit bits simultanés par PIO et DMA, bit 0 = CH1/SCL,
+L'analyseur intégré SHALL capturer huit bits simultanés, bit 0 = CH1/SCL,
 bit 1 = CH2/SDA. Toutes les entrées SHALL être tamponnées et protégées ; SDA/SCL
-utilisent SN74LVC2G17 et SP0502. Aucune sortie Pico ne SHALL atteindre le bus.
-Les sélecteurs de source SHALL éviter de relier une source IDC au bus existant.
+utilisent SN74LVC2G17 et SP0502. Aucune sortie RP2350 ou FX2 ne SHALL piloter le
+bus observé. CH3..CH8 SHALL être accessibles sur points de test internes selon
+la connectique minimale proposée, à documenter avant schéma final.
 
-#### Scenario: Capture bornée sans dépendance au débit USB
+#### Scenario: Acquisition et transfert
 
-- **WHEN** une acquisition valide est demandée
-- **THEN** le Pico remplit un tampon borné avant de transmettre le résultat, avec
-  fréquence réelle, nombre d'échantillons, état et contrôle d'intégrité
-- **AND** une erreur ou un transfert tronqué est signalé comme échec, jamais succès
+- **WHEN** une acquisition valide est demandée par l'outillage hôte
+- **THEN** fréquence réelle, nombre d'échantillons et erreurs signalées par le
+  pilote sont conservés avec le résultat ; un transfert interrompu n'est pas
+  déclaré complet
+- **AND** les limites de détection des pertes sont documentées et testées sur banc
 
 #### Scenario: Performance déclarée
 
 - **WHEN** les performances sont documentées
-- **THEN** limites calculées et limites mesurées sur le PCB sont distinguées ; le
-  marquage 24 MHz du FX2 ne constitue pas une validation du Pico
+- **THEN** limites calculées et limites mesurées du PCB sont distinguées ; le
+  marquage 24 MHz du boîtier de référence ne valide pas la bande passante de la carte
 
-### Requirement: Nappe FC14P et séparation ICSP
+### Requirement: Une prise USB pour deux fonctions
 
-L'analyse SHALL utiliser une embase mâle IDC 2 × 7 détrompée, compatible avec la
-nappe Sourcingmap FC14P de 1 m. Les 14 contacts SHALL être documentés avec huit
-signaux et six masses. VPP SHALL être absente de ce connecteur. La prise PICkit
-six points SHALL être distincte. L'adaptateur 14/10 points du FX2 SHALL être
-documenté et contrôlé avant utilisation.
+L'architecture SHALL proposer une seule prise USB extérieure et un hub USB 2.0
+High-Speed interne avec deux périphériques : l'analyseur et le RP2350. Le flux
+High-Speed de capture ne SHALL pas traverser le contrôleur USB Full-Speed du
+RP2350. Les profils d'alimentation, courants, états suspendus et séquences
+d'énumération SHALL être dimensionnés et vérifiés.
+
+#### Scenario: Énumération et capture
+
+- **WHEN** un hôte compatible raccorde le câble USB unique
+- **THEN** les deux fonctions sont identifiées et l'analyseur dispose du chemin
+  USB High-Speed, sans seconde prise extérieure ni pont de données via le RP2350
+
+### Requirement: Connectique et distinction des protocoles
+
+La connectique extérieure proposée SHALL comprendre l'USB, J1/J2 et une prise de
+programmation cible. Son protocole, son brochage et le rôle de la nappe FC14P de
+1 m SHALL être figés après clarification BA/ICSP ou BP/BDM. Le brochage IDC14
+« huit voies + six masses » de l'étude antérieure ne SHALL pas être présenté
+comme un brochage de programmation, ni comme un standard JTAG.
+
+#### Scenario: Port cible non encore défini
+
+- **WHEN** la cible ou son adaptation électrique n'est pas confirmée
+- **THEN** le connecteur de programmation reste à définir et aucune compatibilité
+  ICSP/BDM, aucune présence de VPP ni liaison numéro à numéro n'est supposée
 
 #### Scenario: Contrôle de câblage
 
 - **WHEN** la nappe et les adaptateurs sont contrôlés hors tension
-- **THEN** chaque contact correspond à la table publiée, sans inversion ni mise en
-  commun de signaux ; le repère de broche 1 est visible
+- **THEN** chaque contact correspond à la table spécifique à la cible, sans
+  inversion ; le repère 1 et le protocole sont marqués et vérifiés
 
 ### Requirement: Programmation spécifique PIC16F946
 
@@ -99,8 +137,9 @@ fabricant, référence LCSC, pièces assemblées et pièces manuelles.
 
 ### Requirement: Validation physique séparée des tests logiciels
 
-La qualification SHALL inclure niveaux, montée, huit voies sur nappe 1 m,
-comparaison FX2, VPP et programmation/relecture de chaque variante BA.
+La qualification SHALL inclure niveaux, montée, huit voies via les accès retenus,
+échanges USB des deux fonctions, comparaison à l’analyseur externe, câble de
+programmation retenu, VPP et programmation/relecture de chaque variante BA.
 
 #### Scenario: Absence de prototype
 

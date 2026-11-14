@@ -94,3 +94,18 @@ de 9.5. Aucun essai physique ni fichier de fabrication final n’est déclaré f
 9.10 : PR code #11, documentation essensys-doc#42 et mémoire essensys-memory#40.
 CI code/sécurité verte sur `d3914be`, build MkDocs strict vert. Les PR restent
 ouvertes en brouillon ; la tâche #10 reste « En cours », sans clôture ni commande.
+
+
+### Révision intégrée demandée par l'utilisateur (même ticket #10)
+
+Les tâches 9.1–9.4 cochées décrivent le premier lot sur module Pico. Leurs tests
+restent valides pour ce prototype ; ils ne prouvent pas la nouvelle architecture.
+
+- [x] 9.13 Documenter l'intégration RP2350 nu + analyseur FX2 et le hub USB interne proposé ; distinguer les anciens livrables.
+- [ ] 9.14 Clarifier la cible du port de programmation (BA/ICSP, BP/BDM, ou les deux) et le rôle de la nappe FC14P.
+- [ ] 9.15 Sélectionner les puces LCSC, calculer le bilan d'alimentation USB et vérifier énumération/suspend/défauts du hub.
+- [ ] 9.16 Refaire le schéma KiCad avec RP2350 nu, FX2, hub, horloges, mémoires, protections et accès de maintenance ; conserver J1/J2 traversants.
+- [ ] 9.17 Valider la capture fx2lafw intégrée et l'accès USB du programmateur ; les fonctions programmateur restent conditionnées aux tâches 9.5/9.8.
+
+9.6–9.9 et 9.11–9.12 s'appliquent à cette carte intégrée finale. Le schéma
+`pico2-capture-draft` reste l'étude antérieure, pas un dossier de fabrication.

@@ -4,11 +4,11 @@
 	(uuid a1ac64a9-fd7b-5215-aa7d-0c573fd64c02)
 	(paper "A3")
 	(title_block
-		(title "Pico 2 — acquisition 8 voies — étude")
+		(title "ETUDE ANTERIEURE — Pico module / capture PIO")
 		(date "2026-11-14")
 		(rev "DRAFT-0")
 		(comment 1 "Refs #10 — Feature i2c-ba-sniffer-2026-10-009")
-		(comment 2 "NON FABRICABLE : ICSP et empreintes BA en attente")
+		(comment 2 "REMPLACEE PAR ADR-001 RP2350 + FX2 — NON FABRICABLE")
 	)
 	(lib_symbols
 		(symbol
@@ -3346,7 +3346,7 @@
 		)
 	)
 	(text
-		"PICO 2 — ACQUISITION 8 VOIES — SCHEMA D'ETUDE"
+		"ETUDE ANTERIEURE — MODULE PICO / PIO — VOIR ADR-001"
 		(exclude_from_sim no)
 		(at 12.7 15.24 0)
 		(effects
@@ -3356,7 +3356,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid ad990774-2dfd-5eb3-9b6d-596caf57835c)
+		(uuid 8b088107-f9aa-57c9-bf8c-ccffb0891d34)
 	)
 	(text
 		"NON FABRICABLE : ICSP absent ; empreintes BA et qualification électrique en attente.\nUSB uniquement pour l'alimentation. +15 V limité à la traversée J1/J2. Aucune pull-up sur les signaux."

@@ -1,6 +1,10 @@
 # Pico 2 — acquisition huit voies
 
 Premier lot du [ticket #10](https://github.com/essensys-hub/essensys-i2c-ba-sniffer/issues/10).
+Ce firmware de capture PIO correspond à l'étude initiale sur module Pico 2.
+La [nouvelle architecture intégrée RP2350 + FX2](../hardware/pico2/ADR-001-carte-integree.md)
+confie l'acquisition principale au FX2 ; ce prototype ne programme pas les BA
+et n'est pas le firmware final de cette nouvelle carte.
 **Compilé, testé sur l'hôte, non essayé sur Pico physique. La programmation des
 BA n'est pas disponible.** La conception ICSP dépend de la qualification décrite
 dans [le dossier matériel](../hardware/pico2/README.md).
