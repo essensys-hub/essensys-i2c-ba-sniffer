@@ -10,7 +10,7 @@
   },
   "git": {
     "branch": "feat/pico2-pcb-10",
-    "pr_url": null
+    "pr_url": "https://github.com/essensys-hub/essensys-i2c-ba-sniffer/pull/11"
   },
   "openspec": {
     "change_id": "i2c-ba-sniffer-2026-10-009",
