@@ -13,9 +13,11 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+pico = ["pyserial>=3.5,<4"]
 
 [project.scripts]
 essensys-i2c-sniff = "essensys_i2c_sniffer.cli:main"
+essensys-pico = "essensys_pico.cli:main"
 
 [tool.setuptools]
 package-dir = { "" = "decoder" }
