@@ -1,0 +1,49 @@
+{
+  "schema": "essensys.integrated.gpio.v1",
+  "revision": "R0-unqualified",
+  "hardware_qualified": false,
+  "interfaces_connected": false,
+  "bp_digital_connected": true,
+  "ba_interface_connected": false,
+  "gpio": {
+    "BA_PGC": 0,
+    "BA_PGD_OUT": 1,
+    "BA_PGD_IN": 2,
+    "BA_PGD_DIR": 3,
+    "BA_OE": 4,
+    "BA_VPP_EN": 5,
+    "BP_DSCLK": 8,
+    "BP_DSI": 9,
+    "BP_DSO": 10,
+    "BP_BKPT": 11,
+    "BP_RESET": 12,
+    "BP_ALLPST": 13,
+    "BP_OE": 14,
+    "BP_RESET_SENSE": 15,
+    "ADC_BA_VDD": 26,
+    "ADC_BA_VPP": 27,
+    "ADC_BP_VREF": 28
+  },
+  "active_high_enables": [
+    "BA_OE",
+    "BA_VPP_EN",
+    "BP_OE"
+  ],
+  "open_drain_required": [
+    "BP_BKPT",
+    "BP_RESET"
+  ],
+  "active_high_requests": [
+    "BP_BKPT",
+    "BP_RESET"
+  ],
+  "adc_frontend_implemented": false,
+  "bp_vref_adc": {
+    "implemented": true,
+    "gain_nominal": 0.5,
+    "input_ohms_nominal": 20000,
+    "settle_ms_min": 2,
+    "power_off_switch": "TMUX1574",
+    "qualified": false
+  }
+}
