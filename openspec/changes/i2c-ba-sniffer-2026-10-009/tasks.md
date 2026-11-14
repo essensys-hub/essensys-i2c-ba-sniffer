@@ -83,10 +83,14 @@ Ce lot relève du même change et de la Feature #29. Les tâches de banc histori
 - [ ] 9.7 Router le PCB avec les règles JLCPCB ; DRC sans violation et parité schéma/PCB vérifiée en CI.
 - [ ] 9.8 Implémenter le firmware/outil de programmation PIC16F946, avec sauvegarde EEPROM, préservation calibration, vérification et arrêt sur défaut.
 - [ ] 9.9 Générer Gerber/perçages/BOM/CPL, références LCSC et instructions ; aucune commande automatique.
-- [ ] 9.10 Mettre à jour documentation centrale et mémoire, publier une PR traçable et faire passer les contrôles disponibles.
+- [x] 9.10 Mettre à jour documentation centrale et mémoire, publier une PR traçable et faire passer les contrôles disponibles.
 - [ ] 9.11 Après fabrication : mesures des huit voies avec nappe 1 m, comparaison FX2 et vérification du bus Pico éteint.
 - [ ] 9.12 Après qualification ICSP : programmer/revérifier les trois variantes BA sur banc ; rapport anonymisé avant clôture.
 
 État du premier lot : 9.1 à 9.4 vérifiés sur hôte ; schéma d’étude capture seule
 (ERC/netlist), sans ICSP ni PCB. 9.6 reste ouverte : la carte complète dépend
 de 9.5. Aucun essai physique ni fichier de fabrication final n’est déclaré fait.
+
+9.10 : PR code #11, documentation essensys-doc#42 et mémoire essensys-memory#40.
+CI code/sécurité verte sur `d3914be`, build MkDocs strict vert. Les PR restent
+ouvertes en brouillon ; la tâche #10 reste « En cours », sans clôture ni commande.
